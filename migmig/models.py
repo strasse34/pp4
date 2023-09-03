@@ -23,7 +23,7 @@ class FlightDetails(models.Model):
     lname = models.CharField(max_length=50, blank=None)
     mobile_number = models.CharField(max_length=14, blank=None)
     address = models.CharField(max_length=200, blank=None)
-    email = models.EmailField(unique=True, blank=None)
+    email = models.EmailField(blank=None)
 
     class Meta:
         ordering = ["-created_on"]
@@ -32,7 +32,8 @@ class FlightDetails(models.Model):
         return f" from {self.origin} to {self.destination}"
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.created_on)
+        slug_source = f"{self.origin}-{self.destination}-{self.traveler}"
+        self.slug = slugify(slug_source)
         super(FlightDetails, self).save(*args, **kwargs)
 
 
