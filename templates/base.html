@@ -1,0 +1,110 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="h-100">
+
+<head>
+    <title>CodeStar Blog</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
+    </script>
+    <link rel="icon" href="{% static 'images/migmig.ico' %}" type=" image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/others.css' %}" />
+
+</head>
+
+<body class="d-flex flex-column h-100 main-bg">
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-sm bg-light fixed-top">
+      <img src="{% static 'images/migmig.png' %}" alt="migmig" class="migmig mr-2" />
+      <a class="navbar-brand" href="">MigMigShipment</a>
+
+      <button class="navbar-toggler navbar-light ml-auto" type="button" data-toggle="collapse"
+        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
+              {% if user.is_authenticated %}
+              <li class="nav-item">
+                  <a class="nav-link">Hello! {{ username }}</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/">Upcomming Flights</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="/">My Flights</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+            </li>
+              {% else %}
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+              </li>
+              {% endif %}
+          </ul>
+      </div>
+  </nav>
+
+    <main class="flex-shrink-0 main-bg">
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer mt-auto text-center">
+      <div>
+        <small>
+          <a href="/">Terms of Service</a> |
+          <a href="/">Privacy Policy</a>
+        </small>
+    </div>
+    <div>
+        <small style="letter-spacing: 4px;"><i class="fa-regular fa-copyright ml-1"></i> 2023 MigMigShimpment.</small>
+    </div>
+    <p class="pt-2">
+        <a target="_blank" href="/"><i aria-hidden="true" class="fa-brands fa-facebook-f ms-3"></i></a>
+        <a target="_blank" href="/"><i aria-hidden="true" class="fa-brands fa-twitter ms-3"></i></a>
+        <a target="_blank" href="/"><i aria-hidden="true" class="fa-brands fa-instagram ms-3"></i></a>
+        <a target="_blank" href="/"><i aria-hidden="true" class="fa-brands fa-youtube ms-3"></i></a>
+      </p>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+      ></script>
+      <script
+      src="https://kit.fontawesome.com/b0f5111e3c.js"
+      crossorigin="anonymous"
+      ></script>
+      <script
+      src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+      ></script>
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+      crossorigin="anonymous"
+      ></script>
+</body>
+
+</html>
