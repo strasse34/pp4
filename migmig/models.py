@@ -10,7 +10,7 @@ class FlightDetails(models.Model):
     traveler = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="traveler"
     )
-    traveler_image = CloudinaryField('image', default='placeholder', blank=None)
+    traveler_image = CloudinaryField('image', default='placeholder')
     origin = models.CharField(max_length=200, blank=None)
     destination = models.CharField(max_length=200, blank=None)
     flight_date = models.DateField()

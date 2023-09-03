@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+
+
+
+{% block content %}
+
+<div class="container-fluid" style="margin-top: 80px;">
+    <div class="col-12 mb-3 left" >
+        <h4>Upcomming Flights</h4>
+        <div class="row">
+            <div class="card text-center m-1 col-lg-3">
+                <div class="card-body">
+                    <img src="{{ flightinfo.traveler_image.url }}" class="rounded-circle"
+                        height="50px"
+                        width="50px" alt="traveler">
+                    <h5 class="card-title">{{ flightinfo.fname }} {{ flightinfo.lname }}</h5>
+                    
+                    <p>From: {{ flightinfo.origin }}</p>
+                    <p>To: {{ flightinfo.destination }}</p>
+                    <p>Flight Date: {{ flightinfo.flight_date }}</p>
+                    <p>Weight Capacity: {{ flightinfo.weight_capacity }} kg</p>
+                    <p>Posted on: {{ flightinfo.created_on }}</p>
+                    <br>
+                    <h6>You can contact with traveler with below information</h6>
+                    <p>Address: {{ flightinfo.address }}</p>
+                    <p>Email Address: {{ flightinfo.email }}</p>
+                    <p>Phone No.: {{ flightinfo.mobile_number }}</p>
+                    
+                </div>
+            </div>
+    </div>
+</div>
+    
+
+{%endblock%}
