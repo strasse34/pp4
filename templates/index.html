@@ -5,8 +5,49 @@
 
 {% block content %}
 
-<p>Hello this is main page</p>
+<div class="container-fluid" style="margin-top: 80px;">
+    <div class="col-12 mb-3 left" >
+        <h4>Upcomming Flights</h4>
+        <div class="row">
+            {% for flight_details in flightdetails_list %}
+            <div class="card text-center m-1 col-lg-3">
+                <div class="card-body">
+                    <img src="{{ flight_details.traveler_image.url }}" class="rounded-circle"
+                        height="50px"
+                        width="50px" alt="traveler">
+                    <h5 class="card-title">{{ flight_details.fname }} {{ flight_details.lname }}</h5>
+                    <p class="card-text">is going to travel:</p>
+                    <p>From: {{ flight_details.origin }}</p>
+                    <p>To: {{ flight_details.destination }}</p>
+                    <p>Weight Capacity: {{ flight_details.weight_capacity }} kg</p>
+                    <a href="/" class="btn btn-primary btn-sm">Contact Traveler</a>
+                </div>
+            </div>
+            {% if forloop.counter|divisibleby:3 %}
+        </div>
+        <div class="row">
+            {% endif %}
+            {% endfor %}
 
+        <div/>
+    </div>
+</div>
+    
+    
+    
+{% if is_paginated %}
+<nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+        <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+        {% endif %}
+        {% if page_obj.has_next %}
+        <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
 
 
 {%endblock%}
