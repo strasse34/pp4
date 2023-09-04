@@ -13,7 +13,7 @@
             <div class="col-md-8 mt-3 offset-md-2">
                 <h3>Add new flight</h3>
                 <br>
-                <form method="POST" class="form text-muted" action="{% url 'add_flight' %}">
+                <form method="POST" class="form text-muted" action="{% url 'add_flight' %}" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="update-btn-group">
