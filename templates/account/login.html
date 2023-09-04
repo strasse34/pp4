@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+{% load i18n %}
+
+
+{% block head_title %}{% trans "Log in" %}{% endblock %}
+
+{% block content %}
+
+<div class="container" style="margin-top: 80px;">
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2">
+      <h3>{% trans "Log In" %}</h3>
+      <p>{% blocktrans %}If you have not created an account yet, 
+        then <a class="link text-decoration-none" href="{{ signup_url }}">Register</a>
+        first.{% endblocktrans %}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 mt-3 offset-md-2">
+      <form class="login" method="POST" action="{% url 'account_login' %}">
+        {% csrf_token %}
+        {{ form | crispy }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+        <button class="btn btn-primary mt-2" type="submit">{% trans "Log In" %}</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
