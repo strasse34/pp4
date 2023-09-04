@@ -15,7 +15,6 @@ class HomeView(generic.ListView):
     template_name = 'index.html'  
     queryset = FlightDetails.objects.filter(status=1).order_by("-created_on")
     paginate_by = 6
-    
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -27,6 +26,7 @@ class HomeView(generic.ListView):
         current_date = timezone.now().date()
         outdated_flight = FlightDetails.objects.filter(flight_date__lt=current_date, status=1)
         outdated_flight.update(status=0)
+
 
 class AddFlightView(LoginRequiredMixin, CreateView):
     model = FlightDetails
