@@ -20,15 +20,13 @@ class HomeView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['username'] = self.request.user.username  
+        self.status_convertor()
         return context
 
-    def status_changer(self, flight_date):
-        current_date = datetime.now().strftime("%Y-%m-%d")
-        flight_date = flight_date.strftime("%Y-%m-%d")
-        if current_date >= flight_date:
-            status=0
-        return status
-
+    def status_convertor(self):
+        current_date = timezone.now().date()
+        outdated_flight = FlightDetails.objects.filter(flight_date__lt=current_date, status=1)
+        outdated_flight.update(status=0)
 
 class AddFlightView(LoginRequiredMixin, CreateView):
     model = FlightDetails
@@ -40,8 +38,6 @@ class AddFlightView(LoginRequiredMixin, CreateView):
     def form_valid(self, form):
         form.instance.traveler = self.request.user  
         flight_date = form.cleaned_data['flight_date']
-        
-        # Check if flight_date is greater than or equal to the current date
         if flight_date > timezone.now().date():
             return super(AddFlightView, self).form_valid(form)
         else:

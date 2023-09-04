@@ -12,6 +12,8 @@
             {% for flight_details in flightdetails_list %}
             <div class="card text-center m-1 col-lg-3">
                 <div class="card-body">
+                    {% if flight_details.status == 0 %}
+                    <h4 style="color: rgb(57, 145, 22);"">ARCHIVED</h4>
                     <img src="{{ flight_details.traveler_image.url }}" class="rounded-circle"
                         height="50px"
                         width="50px" alt="traveler">
@@ -22,8 +24,10 @@
                     <p>Flight Date: {{ flight_details.flight_date }}</p>
                     <p>Weight Capacity: {{ flight_details.weight_capacity }} kg</p>
                     <p>Posted on: {{ flight_details.created_on }}</p>
+                    {% endif %}
                 </div>
             </div>
+            
             {% if forloop.counter|divisibleby:3 %}
         </div>
         <div class="row">
