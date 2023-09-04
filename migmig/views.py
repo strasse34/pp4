@@ -5,6 +5,8 @@ from django.views import generic, View
 from .forms import AddFlightForm
 from .models import FlightDetails
 from django.urls import reverse_lazy
+from datetime import datetime
+from django.contrib import messages
 
 
 class HomeView(generic.ListView):
@@ -19,16 +21,33 @@ class HomeView(generic.ListView):
         context['username'] = self.request.user.username  
         return context
 
+    def status_changer(self, flight_date):
+        current_date = datetime.now().strftime("%Y-%m-%d")
+        flight_date = flight_date.strftime("%Y-%m-%d")
+        if current_date >= flight_date:
+            status=0
+        return status
+
 
 class AddFlightView(LoginRequiredMixin, CreateView):
+    model = FlightDetails
     template_name = 'add_flight.html'  
     form_class = AddFlightForm
+    queryset = FlightDetails.objects.all()
     success_url = reverse_lazy('home')
 
     def form_valid(self, form):
         form.instance.traveler = self.request.user  
         form.save()
         return super(AddFlightView, self).form_valid(form)
+
+    def invalid_date(self, flight_date):
+        current_date = datetime.now().strftime("%Y-%m-%d")
+        flight_date = flight_date.strftime("%Y-%m-%d")
+        if current_date >= flight_date:
+            msg = "Invalid Flight Date"
+            messages.add_message(self.request, messages.WARNING, msg)
+        return self.template_name
         
 
 class MyFlightsView(generic.ListView):
