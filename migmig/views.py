@@ -7,6 +7,7 @@ from .models import FlightDetails
 from django.urls import reverse_lazy
 from datetime import datetime
 from django.contrib import messages
+from django.utils import timezone
 
 
 class HomeView(generic.ListView):
@@ -38,16 +39,15 @@ class AddFlightView(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.traveler = self.request.user  
-        form.save()
-        return super(AddFlightView, self).form_valid(form)
-
-    def invalid_date(self, flight_date):
-        current_date = datetime.now().strftime("%Y-%m-%d")
-        flight_date = flight_date.strftime("%Y-%m-%d")
-        if current_date >= flight_date:
-            msg = "Invalid Flight Date"
-            messages.add_message(self.request, messages.WARNING, msg)
-        return self.template_name
+        flight_date = form.cleaned_data['flight_date']
+        
+        # Check if flight_date is greater than or equal to the current date
+        if flight_date > timezone.now().date():
+            return super(AddFlightView, self).form_valid(form)
+        else:
+            messages.error(self.request, "Flight date must be in the future.")
+            return self.form_invalid(form)
+    
         
 
 class MyFlightsView(generic.ListView):
