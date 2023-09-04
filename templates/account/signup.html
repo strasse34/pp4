@@ -9,10 +9,10 @@
 <div class="container" style="margin-top: 80px;">
     <div class="row">
         <div class="col-md-6 mt-3 offset-md-2">
-            <h3>{% trans "Sign Up" %}</h3>
+            <h3>{% trans "Register" %}</h3>
 
-            <p>{% blocktrans %}Welcome back to the code|star blog. Do you already have an account? Then please <a
-                    class="link text-decoration-none" href="{{ login_url }}">sign in</a> instead.{% endblocktrans %}</p>
+            <p>{% blocktrans %}Do you already have an account? Then please <a
+                    class="link text-decoration-none" href="{{ login_url }}">log in</a> instead.{% endblocktrans %}</p>
         </div>
     </div>
     <div class="row">
@@ -23,7 +23,7 @@
                 {% if redirect_field_value %}
                 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
-                <button class="btn btn-primary right mt-2" type="submit">{% trans "Sign Up" %} &raquo;</button>
+                <button class="btn btn-primary right mt-2" type="submit">{% trans "Register" %} &raquo;</button>
             </form>
         </div>
     </div>

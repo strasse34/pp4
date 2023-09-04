@@ -23,7 +23,7 @@
                     <p>Weight Capacity: {{ flight_details.weight_capacity }} kg</p>
                     <p>Posted on: {{ flight_details.created_on }}</p>
                     {% if user.is_authenticated %}
-                    <a href="{% url 'traveler_contact' flightinfo.slug %}" 
+                    <a href="{% url 'traveler_contact' flight_details.slug %}" 
                     class="btn btn-primary btn-sm">Contact Traveler</a>
                     {% else %}
                     <a href="{% url 'account_signup' %}" 

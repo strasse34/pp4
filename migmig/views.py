@@ -12,6 +12,7 @@ class HomeView(generic.ListView):
     template_name = 'index.html'  
     queryset = FlightDetails.objects.filter(status=1).order_by("-created_on")
     paginate_by = 6
+    
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -45,7 +46,7 @@ class MyFlightsView(generic.ListView):
 class TravelerContactView(View):
    
     def get(self, request, slug, *arg, **kwargs):
-        queryset = FlightDetails.objects.all(status=1)
+        queryset = FlightDetails.objects.filter(status=1)
         flightinfo = get_object_or_404(queryset, slug=slug)
 
         return render(request, "traveler_contact.html", {"flightinfo": flightinfo})
