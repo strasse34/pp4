@@ -28,11 +28,6 @@ class HomeView(ContextMixin, generic.ListView):
     queryset = FlightDetails.objects.filter(status=1).order_by("-created_on")
     paginate_by = 6
 
-    def status_convertor(self):
-        current_date = timezone.now().date()
-        outdated_flight = FlightDetails.objects.filter(flight_date__lt=current_date, status=1)
-        outdated_flight.update(status=0)
-
 
 class AddFlightView(LoginRequiredMixin, ContextMixin, CreateView):
     model = FlightDetails
@@ -73,26 +68,26 @@ class TravelerContactView(LoginRequiredMixin, ContextMixin, View):
 
 
 class EditFlightView(LoginRequiredMixin, ContextMixin, UpdateView):
-    
     model = FlightDetails
     form_class = AddFlightForm
     template_name = 'edit_flight.html'
     success_url = reverse_lazy('my_flights')
 
     def form_valid(self, form):
-        form.instance.author = self.request.user
-        msg = "Your flight details was updated successfully"
+        form.instance.traveler = self.request.user
+        msg = "Your flight details were updated successfully"
         messages.add_message(self.request, messages.SUCCESS, msg)
-        return super(EditFlightsView, self).form_valid(form)
+        return super(EditFlightView, self).form_valid(form)
+
 
 
 class DeleteFlightView(LoginRequiredMixin, ContextMixin, DeleteView):
-    
     model = FlightDetails
+    
     template_name = 'delete_fight.html'
     success_url = reverse_lazy('my_flights')
 
     def delete(self, request, *args, **kwargs):
         msg = "Your flight has been deleted"
         messages.add_message(self.request, messages.SUCCESS, msg)
-        return super(DeleteFlightsView, self).delete(request, *args, **kwargs)
+        return super(DeleteFlightView, self).delete(request, *args, **kwargs)
