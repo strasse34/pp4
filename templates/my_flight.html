@@ -1,8 +1,5 @@
 {% extends "base.html" %}
 
-
-
-
 {% block content %}
 
 <div class="container-fluid">
@@ -14,6 +11,7 @@
                 <div class="card-body">
                     {% if flight_details.status == 0 %}
                     <h4 style="color: rgb(57, 145, 22);"">ARCHIVED</h4>
+                    {% endif %}
                     <img src="{{ flight_details.traveler_image.url }}" class="rounded-circle"
                         height="50px"
                         width="50px" alt="traveler">
@@ -24,7 +22,14 @@
                     <p>Flight Date: {{ flight_details.flight_date }}</p>
                     <p>Weight Capacity: {{ flight_details.weight_capacity }} kg</p>
                     <p>Posted on: {{ flight_details.created_on }}</p>
-                    {% endif %}
+                    <br>
+                    <h6>You can contact with traveler with below information</h6>
+                    <p>Address: {{ flight_details.address }}</p>
+                    <p>Email Address: {{ flight_details.email }}</p>
+                    <p>Phone No.: {{ flight_details.mobile_number }}</p>
+                    <a href="{% url 'edit_flight' %}">Edit Flight</a>
+                    <a href="{% url 'delete_flight' %}">Delete Flight</a>
+                    <a href="{% url 'archive_flight' %}">Archive Flight</a>
                 </div>
             </div>
             

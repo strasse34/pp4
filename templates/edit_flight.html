@@ -2,23 +2,25 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
-
+{% if user.is_authenticated %}
+{% if user.id == FlightDetails.traveler.id %}
 <div>
     <div class="container" >
         <div class="row">
             <div class="col-md-8 mt-3 offset-md-2">
-                <h3>Add new flight</h3>
-                <form method="POST" class="form text-muted" action="{% url 'add_flight' %}" enctype="multipart/form-data">
+                <h3>Update you flight details:</h3>
+                <form method="POST" class="form text-muted" action="{% url 'edit_flight' flight_details.slug %}" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="update-btn-group">
-                        <button type="submit" class="btn btn-primary mt-2">Submit</button>
+                        <button type="submit" class="btn btn-primary mt-2">Update</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
-
+{% endif %}
+{% endif %}
 
 {%endblock%}
