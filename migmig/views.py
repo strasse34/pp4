@@ -107,22 +107,6 @@ def edit_flight(request, slug):
     
 
 
-def delete_flight(request, slug):
-    flight_details = FlightDetails.objects.all()
-    slug = get_object_or_404(queryset, slug=slug)
-    form = AddFlightForm(request.POST or None, instance=slug)
-        
-    if request.method == 'POST':
-        form.delete()
-        msg = "Your flight details were deleted successfully"
-        messages.success(request, msg)
-        return redirect('my_flights')
-    
-    return render(request, 'delete_flight.html', {'form': form, 'flightinfo': flightinfo})
-    
-    
-
-
 class DeleteFlightView(View):
     def get(self, request, slug):
         flight_details = FlightDetails.objects.get(slug=slug)
@@ -133,3 +117,20 @@ class DeleteFlightView(View):
         flight_details.delete()
         messages.success(request, "Flight details deleted successfully")
         return redirect('my_flights')
+
+
+
+class ArchiveFlightView(View):
+    def get(self, request, slug):
+        flight_details = FlightDetails.objects.get(slug=slug)
+        return render(request, 'archive_flight.html', {'flight_details': flight_details})
+
+    def post(self, request, slug):
+        flight_details = FlightDetails.objects.get(slug=slug)
+        flight_details.status = 0
+        flight_details.save()
+        messages.success(request, "Flight details archived successfully")
+        return redirect('my_flights')
+
+
+ 

@@ -29,7 +29,7 @@
                     <p>Phone No.: {{ flight_details.mobile_number }}</p>
                     {% if flight_details.status == 1 %}
                     <a href="{% url 'edit_flight' flight_details.slug %}">Edit Flight</a>
-                    <a href="/">Archive Flight</a>
+                    <a href="{% url 'archive_flight' flight_details.slug %}">Archive Flight</a>
                     {% endif %}
                     <a href="{% url 'delete_flight' flight_details.slug %}">Delete Flight</a>
                     
