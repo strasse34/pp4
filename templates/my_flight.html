@@ -27,9 +27,12 @@
                     <p>Address: {{ flight_details.address }}</p>
                     <p>Email Address: {{ flight_details.email }}</p>
                     <p>Phone No.: {{ flight_details.mobile_number }}</p>
+                    {% if flight_details.status == 1 %}
                     <a href="{% url 'edit_flight' flight_details.slug %}">Edit Flight</a>
-                    <a href="{% url 'delete_flight' flight_details.slug %}">Delete Flight</a>
                     <a href="/">Archive Flight</a>
+                    {% endif %}
+                    <a href="{% url 'delete_flight' flight_details.slug %}">Delete Flight</a>
+                    
                 </div>
             </div>
             

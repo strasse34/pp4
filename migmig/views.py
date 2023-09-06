@@ -13,13 +13,19 @@ from django.utils import timezone
 class ContextMixin:
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['username'] = self.request.user.username  
+        context['username'] = self.request.user.username
+        context['slug'] = self.kwargs.get('slug')  # Retrieve slug from URL
         return context
 
     def status_convertor(self):
         current_date = timezone.now().date()
         outdated_flight = FlightDetails.objects.filter(flight_date__lt=current_date, status=1)
         outdated_flight.update(status=0)
+
+    def get_flight_object(self):
+        slug = self.kwargs.get('slug')
+        return get_object_or_404(FlightDetails, slug=slug)
+
 
 
 class HomeView(ContextMixin, generic.ListView):
@@ -67,24 +73,44 @@ class TravelerContactView(LoginRequiredMixin, ContextMixin, View):
         return render(request, "traveler_contact.html", {"flightinfo": flightinfo})
 
 
-class EditFlightView(LoginRequiredMixin, ContextMixin, UpdateView):
-    model = FlightDetails
-    form_class = AddFlightForm
-    template_name = 'edit_flight.html'
-    success_url = reverse_lazy('my_flights')
+# class EditFlightView(LoginRequiredMixin, ContextMixin, UpdateView):
+#     model = FlightDetails
+#     form_class = AddFlightForm
+#     template_name = 'edit_flight.html'
+#     success_url = reverse_lazy('my_flights')
 
-    def form_valid(self, form):
-        form.instance.traveler = self.request.user
+#     def get_context_data(self, **kwargs):
+#         context = super(EditFlightView, self).get_context_data(**kwargs)
+#         context['flight_details'] = self.flight_details
+#         return context
+
+#     def form_valid(self, form):
+#         form.instance.traveler = self.request.user
+#         msg = "Your flight details were updated successfully"
+#         messages.add_message(self.request, messages.SUCCESS, msg)
+#         slug = self.kwargs['slug']
+#         self.flight_details = FlightDetails.objects.get(slug=slug)
+#         return super(EditFlightView, self).form_valid(form)
+    
+    
+    
+     
+def edit_flight(request, slug):
+    slug = FlightDetails.objects.get(slug=slug)
+    form = AddFlightForm(request.POST or None, instance=slug)
+    if form.is_valid():
+        form.save()
         msg = "Your flight details were updated successfully"
-        messages.add_message(self.request, messages.SUCCESS, msg)
-        return super(EditFlightView, self).form_valid(form)
-
+        messages.success(request, msg)        
+        return redirect('my_flights')
+    return render(request, 'edit_flight.html', {'form': form, 'slug': slug})
+    
 
 
 class DeleteFlightView(LoginRequiredMixin, ContextMixin, DeleteView):
     model = FlightDetails
     
-    template_name = 'delete_fight.html'
+    template_name = 'delete_flight.html'
     success_url = reverse_lazy('my_flights')
 
     def delete(self, request, *args, **kwargs):
