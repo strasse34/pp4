@@ -107,13 +107,29 @@ def edit_flight(request, slug):
     
 
 
-class DeleteFlightView(LoginRequiredMixin, ContextMixin, DeleteView):
-    model = FlightDetails
+def delete_flight(request, slug):
+    flight_details = FlightDetails.objects.all()
+    slug = get_object_or_404(queryset, slug=slug)
+    form = AddFlightForm(request.POST or None, instance=slug)
+        
+    if request.method == 'POST':
+        form.delete()
+        msg = "Your flight details were deleted successfully"
+        messages.success(request, msg)
+        return redirect('my_flights')
     
-    template_name = 'delete_flight.html'
-    success_url = reverse_lazy('my_flights')
+    return render(request, 'delete_flight.html', {'form': form, 'flightinfo': flightinfo})
+    
+    
 
-    def delete(self, request, *args, **kwargs):
-        msg = "Your flight has been deleted"
-        messages.add_message(self.request, messages.SUCCESS, msg)
-        return super(DeleteFlightView, self).delete(request, *args, **kwargs)
+
+class DeleteFlightView(View):
+    def get(self, request, slug):
+        flight_details = FlightDetails.objects.get(slug=slug)
+        return render(request, 'delete_flight.html', {'flight_details': flight_details})
+
+    def post(self, request, slug):
+        flight_details = FlightDetails.objects.get(slug=slug)
+        flight_details.delete()
+        messages.success(request, "Flight details deleted successfully")
+        return redirect('my_flights')

@@ -1,28 +1,20 @@
 {% extends "base.html" %}
-{% load crispy_forms_tags %}
-
-{% block title %}Delete Flight{% endblock %}
 {% block content %}
 
-{% if user.is_authenticated %}
-{% if user.id == FlightDetails.traveler.id %}
-<div>
-    <div class="container" >
-        <div class="row">
-            <div class="col-md-8 mt-3 offset-md-2">
-                <h3>Delete you flight details</h3>
-                <p>Ard you sure you want delete this card?</p>
-                <form method="POST" class="form text-muted" action="{% url 'delete_flight' flight_details.slug %}" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    <div class="update-btn-group">
-                        <button type="submit" class="btn btn-primary mt-2">Delete</button>
-                    </div>
-                </form>
-            </div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <h3>Delete Flight Details</h3>
+            <p>Are you sure you want to delete the flight details for {{ flight_details.origin }} to {{ flight_details.destination }}?</p>
+            <form method="post" action="{% url 'delete_flight' flight_details.slug %}"
+            enctype="multipart/form-data">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <a href="{% url 'my_flights' %}" class="btn btn-secondary">Cancel</a>
+            </form>
         </div>
     </div>
 </div>
-{% endif %}
-{% endif %}
+    
 
 {%endblock%}
