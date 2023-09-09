@@ -5,8 +5,8 @@
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
             <h3>Archive Flight Details</h3>
-            <p>Are you sure you want to archive the flight details for {{ flight_details.origin }} to {{ flight_details.destination }}?
-                After archiving, other users will not search or see this flight details.
+            <p>"Archiving will hide the flight details from other users. Are you sure you want to archive the flight details 
+                from {{ flight_details.origin }} to {{ flight_details.destination }}?" 
             </p>
             <form method="post" action="{% url 'archive_flight' flight_details.slug %}"
             enctype="multipart/form-data">
@@ -19,4 +19,4 @@
 </div>
     
 
-{%endblock%}
+{% endblock %}

@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
             <h3>Update your flight details:</h3>
-            <form method="POST" class="form text-muted" action="{% url 'edit_flight' slug.slug %}" enctype="multipart/form-data">
+            <form method="POST" class="form text-muted" action="{% url 'edit_flight' flight_details.slug %}" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div class="update-btn-group">
