@@ -8,6 +8,7 @@ from django.urls import reverse_lazy
 from datetime import datetime
 from django.contrib import messages
 from django.utils import timezone
+from django.db.models import Q
 
 
 class ContextMixin:
@@ -23,10 +24,24 @@ class ContextMixin:
 
 
 class HomeView(ContextMixin, generic.ListView):
-    model = FlightDetails  
+    model = FlightDetails
     template_name = 'index.html'  
     queryset = FlightDetails.objects.filter(status=1).order_by("-created_on")
     paginate_by = 6
+
+    def get_queryset(self):
+        queryset = FlightDetails.objects.filter(status=1).order_by("-created_on")
+        airport_list = self.request.GET.get('origin')  # Use airport_list consistently
+
+        if airport_list:
+            queryset = queryset.filter(origin=airport_list)
+        return queryset
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['choices'] = AddFlightForm.CHOICES[1:]  # Exclude the 'Placeholder' choice
+        return context
+
 
 
 class AddFlightView(LoginRequiredMixin, ContextMixin, CreateView):
