@@ -11,10 +11,8 @@
             <form method="POST" class="form text-muted" action="{% url 'edit_flight' flight_details.slug %}" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
-                <div class="update-btn-group">
-                    <button type="submit" class="btn btn-primary mt-2">Update</button>
-                    <a href="{% url 'my_flights' %}" class="btn btn-secondary my-2">Cancel</a>
-                </div>
+                <button type="submit" class="btn btn-primary">Update</button>
+                <a href="{% url 'my_flights' %}" class="btn btn-secondary my-2">Cancel</a>
             </form>
         </div>
     </div>

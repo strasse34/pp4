@@ -36,4 +36,5 @@ class FlightDetails(models.Model):
         self.slug = slugify(slug_source)
         super(FlightDetails, self).save(*args, **kwargs)
 
+    
 
