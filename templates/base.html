@@ -37,30 +37,32 @@
 
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav ml-auto">
-              {% if user.is_authenticated %}
-              <li class="nav-item">
-                  <a class="nav-link">Hello! {{ username }}</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'home' %}">Upcomming Flights</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'add_flight' %}">Add Flight</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'my_flights' %}">My Flights</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-            </li>
-              {% else %}
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="{% url 'account_login' %}">Login</a>
-              </li>
-              {% endif %}
+                {% with url_name=request.resolver_match.url_name %}
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link">Hello! {{ username }}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if url_name == 'home' %}active{% endif %}" href="{% url 'home' %}">Upcomming Flights</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if url_name == 'add_flight' %}active{% endif %}" href="{% url 'add_flight' %}">Add Flight</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if url_name == 'my_flights' %}active{% endif %}" href="{% url 'my_flights' %}">My Flights</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if url_name == 'account_logout' %}active{% endif %}" href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link {% if url_name == 'account_signup' %}active{% endif %}" href="{% url 'account_signup' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if url_name == 'account_signup' %}active{% endif %}" href="{% url 'account_signup' %}">Login</a>
+                </li>
+                {% endif %}
+                {% endwith %}
           </ul>
       </div>
   </nav>

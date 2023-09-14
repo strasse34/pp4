@@ -5,15 +5,20 @@ body {
 /* navbar */
 .navbar a {
     color: rgb(0 0 0 / 91%);
+    text-decoration: none;
 }
 
-.navbar a:hover {
-    color: rgb(0 0 0 / 50%);
+.navbar a:hover, 
+.navbar a:active {
+    color: rgba(240, 15, 15, 0.91);
 }
+
+
 
 .navbar-toggler {
     color: beige;
 }
+
 
 
 
