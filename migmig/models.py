@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.template.defaultfilters import slugify
 import datetime
+from decimal import Decimal
 
 STATUS = ((1, 'Active'), (0, 'Archived'))
 
