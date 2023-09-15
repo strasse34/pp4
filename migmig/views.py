@@ -52,13 +52,33 @@ class AddFlightView(LoginRequiredMixin, ContextMixin, CreateView):
     success_url = reverse_lazy('home')
 
     def form_valid(self, form):
-        form.instance.traveler = self.request.user  
+        # Check if a flight with the same attributes already exists
+        form.instance.traveler = self.request.user
+        existing_flight = FlightDetails.objects.filter(
+            traveler=form.instance.traveler,
+            fname=form.cleaned_data['fname'],
+            lname=form.cleaned_data['lname'],
+            origin=form.cleaned_data['origin'],
+            destination=form.cleaned_data['destination'],
+            flight_date=form.cleaned_data['flight_date'],
+        ).first()
+
+        if existing_flight:
+            messages.error(self.request, "You have already posted this flight.")
+            return self.form_invalid(form)
+
         flight_date = form.cleaned_data['flight_date']
+
         if flight_date > timezone.now().date():
-            return super(AddFlightView, self).form_valid(form)
+            if form.cleaned_data['origin'] != form.cleaned_data['destination']:
+                return super(AddFlightView, self).form_valid(form)
+            else:
+                messages.error(self.request, "Origin airport and destination airport cannot be the same.")
+                return self.form_invalid(form)
         else:
             messages.error(self.request, "Flight date must be in the future.")
             return self.form_invalid(form)
+
         
 
 class MyFlightsView(LoginRequiredMixin, ContextMixin, generic.ListView):

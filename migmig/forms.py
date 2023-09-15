@@ -46,14 +46,14 @@ class AddFlightForm(forms.ModelForm):
             'weight_capacity': '',
         }
         widgets = {
-            'fname': forms.TextInput(attrs={'placeholder': 'First Name'}),
-            'lname': forms.TextInput(attrs={'placeholder': 'Last Name'}),
+            'fname': forms.TextInput(attrs={'placeholder': "First Name"}),
+            'lname': forms.TextInput(attrs={'placeholder': "Last Name"}),
             'address': forms.TextInput(attrs={'placeholder': 'Address'}),
             'mobile_number': forms.TextInput(attrs={'placeholder': 'Mobile Number'}),
             'email': forms.TextInput(attrs={'placeholder': 'Email'}),
             'origin': forms.TextInput(attrs={'placeholder': 'Select Flight Origin'}),
             'destination': forms.TextInput(attrs={'placeholder': 'Select Flight Destination'}),
-            'flight_date': forms.DateInput(attrs={'placeholder': 'Flight Date', 'type': 'date'}),
+            'flight_date': forms.DateInput(attrs={'type': 'date', 'placeholder': 'Flight Date' }),
             'weight_capacity': forms.NumberInput(attrs={'placeholder': 'Weight Capacity (kg)'}),
         }
 

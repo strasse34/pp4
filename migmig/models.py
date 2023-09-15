@@ -32,7 +32,7 @@ class FlightDetails(models.Model):
         return f" from {self.origin} to {self.destination}"
 
     def save(self, *args, **kwargs):
-        slug_source = f"{self.origin}-{self.destination}-{self.traveler}"
+        slug_source = f"{self.traveler}-{self.fname}-{self.lname}-{self.origin}-{self.destination}-{self.flight_date}"
         self.slug = slugify(slug_source)
         super(FlightDetails, self).save(*args, **kwargs)
 
