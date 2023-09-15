@@ -24,59 +24,65 @@
 
 
 
-<div class="container" >
-    <div class="col-12 mb-3 left" >
-        <h4>Upcomming Flights</h4>
-        <form method="GET" class="row">
-            <div class="col-md-6">
-                <select id="origin" name="origin" class="form-control">
-                    <option value="">Select from the list</option>
-                    {% for choice in choices %}
-                    <option value="{{ choice.0 }}">{{ choice.1 }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <div class="col-md-3">
-                <button type="submit" class="btn btn-primary">Find Flights</button>
-            </div>
-        </form>
-        
-        {% if flightdetails_list %}
-        <div class="row">
-            {% for flight_details in flightdetails_list %}
-            <div class="card text-center m-1 col-lg-3">
-                <div class="card-body">
-                    <img src="{{ flight_details.traveler_image.url }}" class="rounded-circle"
-                        height="50px"
-                        width="50px" alt="traveler">
-                    <h5 class="card-title">{{ flight_details.fname | capfirst }} {{ flight_details.lname | capfirst  }}</h5>
-                    <p class="card-text">is going to travel:</p>
-                    <p>From: {{ flight_details.origin }}</p>
-                    <p>To: {{ flight_details.destination }}</p>
-                    <p>Flight Date: {{ flight_details.flight_date }}</p>
-                    <p>Weight Capacity: {{ flight_details.weight_capacity }} kg</p>
-                    <p>Posted on: {{ flight_details.created_on }}</p>
-                    
-                    {% if user.is_authenticated %}
-                    <a href="{% url 'traveler_contact' flight_details.slug %}" 
-                    class="btn btn-primary btn-sm">Contact Traveler</a>
-                    {% else %}
-                    <a href="{% url 'account_signup' %}" 
-                    class="btn btn-primary btn-sm">Contact Traveler</a>
-                    {% endif %}
-                </div>
-            </div>
-            {% if forloop.counter|divisibleby:3 %}
+<div class="container">
+    <div class="row" >
+        <div class="col-12 col-lg-5">
+            <h4>Upcomming Flights</h4>
         </div>
-        <div class="row">
-            {% endif %}
-            {% endfor %}
-        <div/>
-        {% else %}
-        <p>No flights matching your search.</p>
-        {% endif %}
+        <div class="col-12 col-lg-7 ">
+            <form method="GET" class="row justify-content-end">
+                <div class="col-mss-12 p-ms-0 mb-ms-2 col-lg-8">
+                    <select id="origin" name="origin" class="form-control">
+                        <option value="">Select from the list</option>
+                        {% for choice in choices %}
+                        <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary col-ms-12 p-ms-0 col-lg-3">Find Flights</button>
+            </form>
+        </div>
     </div>
 </div>
+        
+        
+<div class="container">   
+    {% if flightdetails_list %}
+    <div class="row">
+        {% for flight_details in flightdetails_list %}
+        <div class="card text-center m-1 col-lg-3">
+            <div class="card-body">
+                <img src="{{ flight_details.traveler_image.url }}" class="rounded-circle"
+                    height="50px"
+                    width="50px" alt="traveler">
+                <h5 class="card-title">{{ flight_details.fname | capfirst }} {{ flight_details.lname | capfirst  }}</h5>
+                <p class="card-text">is going to travel:</p>
+                <p>From: {{ flight_details.origin }}</p>
+                <p>To: {{ flight_details.destination }}</p>
+                <p>Flight Date: {{ flight_details.flight_date }}</p>
+                <p>Weight Capacity: {{ flight_details.weight_capacity }} kg</p>
+                <p>Posted on: {{ flight_details.created_on }}</p>
+                
+                {% if user.is_authenticated %}
+                <a href="{% url 'traveler_contact' flight_details.slug %}" 
+                class="btn btn-primary btn-sm">Contact Traveler</a>
+                {% else %}
+                <a href="{% url 'account_signup' %}" 
+                class="btn btn-primary btn-sm">Contact Traveler</a>
+                {% endif %}
+            </div>
+        </div>
+        {% if forloop.counter|divisibleby:3 %}
+    </div>
+    <div class="row">
+        {% endif %}
+        {% endfor %}
+    <div/>
+    {% else %}
+    <p>No flights matching your search.</p>
+    {% endif %}
+</div>
+
     
     
     
