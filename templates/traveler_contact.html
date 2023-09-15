@@ -11,7 +11,7 @@
                     <img src="{{ flightinfo.traveler_image.url }}" class="rounded-circle"
                         height="50px"
                         width="50px" alt="traveler">
-                    <h5 class="card-title">{{ flightinfo.fname }} {{ flightinfo.lname }}</h5>
+                    <h5 class="card-title">{{ flightinfo.fname | capfirst }} {{ flightinfo.lname | capfirst }}</h5>
                     
                     <p>From: {{ flightinfo.origin }}</p>
                     <p>To: {{ flightinfo.destination }}</p>

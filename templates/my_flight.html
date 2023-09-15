@@ -15,7 +15,7 @@
                     <img src="{{ flight_details.traveler_image.url }}" class="rounded-circle"
                         height="50px"
                         width="50px" alt="traveler">
-                    <h5 class="card-title">{{ flight_details.fname }} {{ flight_details.lname }}</h5>
+                    <h5 class="card-title">{{ flight_details.fname | capfirst }} {{ flight_details.lname | capfirst }}</h5>
                     <p class="card-text">is going to travel:</p>
                     <p>From: {{ flight_details.origin }}</p>
                     <p>To: {{ flight_details.destination }}</p>
