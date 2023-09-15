@@ -26,17 +26,17 @@
 <body class="d-flex flex-column h-100 main-bg">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-sm bg-light fixed-top">
-      <img src="{% static 'images/migmig.png' %}" alt="migmig" class="migmig mr-2" style="height: 50px;"/>
-      <a class="navbar-brand" href="/">MigMigShipment</a>
+        <img src="{% static 'images/migmig.png' %}" alt="migmig" class="migmig mr-2" style="height: 50px;"/>
+        <a class="navbar-brand" href="/">MigMigShipment</a>
 
-      <button class="navbar-toggler navbar-light ml-auto" type="button" data-toggle="collapse"
-        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <button class="navbar-toggler navbar-light ml-auto" type="button" data-toggle="collapse"
+            data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto ">
                 {% with url_name=request.resolver_match.url_name %}
                 {% if user.is_authenticated %}
                 <li class="nav-item">
@@ -63,7 +63,7 @@
                 </li>
                 {% endif %}
                 {% endwith %}
-          </ul>
+            </ul>
       </div>
   </nav>
   
