@@ -6,7 +6,7 @@
 <div class="container ">
     <div class="row gy-2 index-title-search" >
         <div class="title col-12 col-lg-5 ">
-            <h4>Upcomming Flights</h4>
+            <h4><strong>Upcomming Flights</strong></h4>
         </div>
         <div class="col-12 col-lg-7 ">
             <form method="GET" class="row gy-2 gy-lg-0 justify-content-end">
@@ -18,7 +18,7 @@
                         {% endfor %}
                     </select>
                 </div>
-                <div class="col-12 col-lg-3  search-btn">
+                <div class="col-12 col-lg-3 search-btn">
                     <button type="submit" class="btn btn-primary col-12 ">Find Flights</button>
                 </div>
                 
@@ -34,21 +34,21 @@
         {% for flight_details in flightdetails_list %}
         <div class="card text-left">
             <div class="card-body">
-                <div class="row">
-                    <div class="col-3">
+                <div class="row pic-name-date">
+                    <div class="col-12 col-sm-3">
                         <img src="{{ flight_details.traveler_image.url }}" class="rounded-circle"
                     height="50px"
                     width="50px" alt="traveler">
                     </div>
-                    <div class="row col-9">
-                       <h5 class="card-title">{{ flight_details.fname | capfirst }} {{ flight_details.lname | capfirst  }}</h5>
-                       <p style="font-size: 0.7rem;"> <strong>Posted on: </strong>{{ flight_details.created_on }}</p>
+                    <div class="name-postdate col-12 col-sm-9">
+                       <h5>{{ flight_details.fname | capfirst }} {{ flight_details.lname | capfirst  }}</h5>
+                       <p style="font-size: 0.7rem;">Posted on: {{ flight_details.created_on }}</p>
                     </div>
                 </div>
                 <hr>
 
                 <div class="flight-details">
-                    <h6>Flight Details</h6>
+                    <h6>Flight Details:</h6>
                     <p><strong>From: </strong>{{ flight_details.origin }}</p>
                     <p><strong>To: </strong>{{ flight_details.destination }}</p>
                     <p><strong>Flight Date: </strong>{{ flight_details.flight_date }}</p>
@@ -65,7 +65,7 @@
                 {% endif %}
             </div>
         </div>
-        {% if forloop.counter|divisibleby:4 %}
+        {% if forloop.counter|divisibleby:12 %}
     </div>
     <div class="row">
         {% endif %}
