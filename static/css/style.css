@@ -18,6 +18,28 @@ body {
     color: beige;
 }
 
+.user-name {
+    display: flex;
+    border-radius: 5px;
+    padding: 3px;
+    color: rgb(235, 227, 226);
+    background-color: rgb(43, 40, 40);
+    font-weight: 600;
+}
+
+.user-name h6 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.user-name a {
+    color: rgb(235, 227, 226);
+
+    
+}
+
 /* style for base template---------------------------------------------- */
 .alarm {
     margin-top: 70px;
@@ -54,8 +76,21 @@ body {
 
 .index-card-space {
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
+.card {
+    background-color: rgb(176, 229, 250);
+    border-radius: 10px;
+    border-color: rgb(118, 211, 248);
+    margin: 5px 5px;
+    width: 26.3rem;
+
+}
+
+.card-body {
+    
+}
 
 /* style for footer ----------------------------------------------------------- */
 .footer {
