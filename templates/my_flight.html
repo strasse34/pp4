@@ -2,41 +2,52 @@
 {% block title %}My Flights{% endblock %}
 {% block content %}
 
-<div class="container">
-    <div class="col-12 mb-3 left" >
+<div class="container card-space">
+    <div class="row" >
         <h4>My Flights</h4>
         <div class="row">
             {% for flight_details in flightdetails_list %}
-            <div class="card text-center m-1 col-lg-3">
+            <div class="card text-left">
                 <div class="card-body">
                     {% if flight_details.status == 0 %}
                     <h4 style="color: rgb(57, 145, 22);"">ARCHIVED</h4>
                     {% endif %}
-                    <img src="{{ flight_details.traveler_image.url }}" class="rounded-circle"
+                    <div class="row pic-name-date">
+                        <div class="col-12 col-sm-3">
+                            <img src="{{ flight_details.traveler_image.url }}" class="rounded-circle"
                         height="50px"
                         width="50px" alt="traveler">
-                    <h5 class="card-title">{{ flight_details.fname | capfirst }} {{ flight_details.lname | capfirst }}</h5>
-                    <p class="card-text">is going to travel:</p>
-                    <p>From: {{ flight_details.origin }}</p>
-                    <p>To: {{ flight_details.destination }}</p>
-                    <p>Flight Date: {{ flight_details.flight_date }}</p>
-                    <p>Weight Capacity: {{ flight_details.weight_capacity }} kg</p>
-                    <p>Posted on: {{ flight_details.created_on }}</p>
-                    <br>
-                    <h6>You can contact with traveler with below information</h6>
-                    <p>Address: {{ flight_details.address }}</p>
-                    <p>Email Address: {{ flight_details.email }}</p>
-                    <p>Phone No.: {{ flight_details.mobile_number }}</p>
+                        </div>
+                        <div class="name-postdate col-12 col-sm-9">
+                           <h5>{{ flight_details.fname | capfirst }} {{ flight_details.lname | capfirst  }}</h5>
+                           <p style="font-size: 0.7rem;">Posted on: {{ flight_details.created_on }}</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="flight-details">
+                        <h6>Flight Details:</h6>
+                        <p><strong>From: </strong>{{ flight_details.origin }}</p>
+                        <p><strong>To: </strong>{{ flight_details.destination }}</p>
+                        <p><strong>Flight Date: </strong>{{ flight_details.flight_date }}</p>
+                        <p><strong>Weight Capacity: </strong>{{ flight_details.weight_capacity }} kg</p>
+                    </div>
+                    <div class="flight-details">
+                        <h6>Contact Details:</h6>
+                        <p><strong>Address: </strong>{{ flight_details.address }}</p>
+                        <p><strong>Email Address: </strong>{{ flight_details.email }}</p>
+                        <p><strong>Phone No.: </strong>{{ flight_details.mobile_number }}</p>
+                    </div>
+                    
                     {% if flight_details.status == 1 %}
-                    <a href="{% url 'edit_flight' flight_details.slug %}">Edit Flight</a>
-                    <a href="{% url 'archive_flight' flight_details.slug %}">Archive Flight</a>
+                    <a href="{% url 'edit_flight' flight_details.slug %}" class="btn btn-primary btn-sm">Edit Flight</a>
+                    <a href="{% url 'archive_flight' flight_details.slug %}" class="btn btn-success btn-sm">Archive Flight</a>
                     {% endif %}
-                    <a href="{% url 'delete_flight' flight_details.slug %}">Delete Flight</a>
+                    <a href="{% url 'delete_flight' flight_details.slug %}" class="btn btn-danger btn-sm">Delete Flight</a>
                     
                 </div>
             </div>
             
-            {% if forloop.counter|divisibleby:3 %}
+            {% if forloop.counter|divisibleby:12 %}
         </div>
         <div class="row">
             {% endif %}
