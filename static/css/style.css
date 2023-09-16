@@ -1,5 +1,5 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family:'Roboto', sans-serif;
 
 }
 
@@ -50,6 +50,11 @@ body {
     
 }
 
+.navbar-brand {
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+}
+
 /* style for base template---------------------------------------------- */
 .alarm {
     margin-top: 70px;
@@ -95,10 +100,49 @@ body {
     background-color: #7fb0b8;
     border-radius: 10px;
     margin: 5px 5px;
-    width: 49%;
-
+    width: 24%;
+    
+}    
+.card h5 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
 }
 
+.card h6 {
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+.flight-details {
+    
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.card p {
+    font-family: 'Rubik', sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.card .col-9 {
+    display: flex;
+    align-items: center;
+}
+
+.card .btn-sm {
+    font-size: 0.7rem;
+}
 
 /* style for footer ----------------------------------------------------------- */
 .footer {
@@ -117,8 +161,17 @@ body {
 
 
 
-/* style for media less than 1200 */
+/* style for media less than 1200------------------------------------------------------ */
 @media screen and (max-width: 1200px) {
+    .card {
+        width: 48.5%;
+    
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
     .card {
         width: 99%;
     

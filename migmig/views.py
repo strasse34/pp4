@@ -27,7 +27,7 @@ class HomeView(ContextMixin, generic.ListView):
     model = FlightDetails
     template_name = 'index.html'  
     queryset = FlightDetails.objects.filter(status=1).order_by("-created_on")
-    paginate_by = 6
+    paginate_by = 8
 
     def get_queryset(self):
         queryset = FlightDetails.objects.filter(status=1).order_by("-created_on")

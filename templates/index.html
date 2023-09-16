@@ -9,7 +9,7 @@
             <h4>Upcomming Flights</h4>
         </div>
         <div class="col-12 col-lg-7 ">
-            <form method="GET" class="row gy-2 justify-content-end">
+            <form method="GET" class="row gy-2 gy-lg-0 justify-content-end">
                 <div class="col-12 col-lg-7 px-lg-1 search-bar">
                     <select id="origin" name="origin" class="form-control">
                         <option value="">Select from the list</option>
@@ -32,18 +32,29 @@
     {% if flightdetails_list %}
     <div class="row">
         {% for flight_details in flightdetails_list %}
-        <div class="card text-center">
+        <div class="card text-left">
             <div class="card-body">
-                <img src="{{ flight_details.traveler_image.url }}" class="rounded-circle"
+                <div class="row">
+                    <div class="col-3">
+                        <img src="{{ flight_details.traveler_image.url }}" class="rounded-circle"
                     height="50px"
                     width="50px" alt="traveler">
-                <h5 class="card-title">{{ flight_details.fname | capfirst }} {{ flight_details.lname | capfirst  }}</h5>
-                <p class="card-text">is going to travel:</p>
-                <p>From: {{ flight_details.origin }}</p>
-                <p>To: {{ flight_details.destination }}</p>
-                <p>Flight Date: {{ flight_details.flight_date }}</p>
-                <p>Weight Capacity: {{ flight_details.weight_capacity }} kg</p>
-                <p>Posted on: {{ flight_details.created_on }}</p>
+                    </div>
+                    <div class="row col-9">
+                       <h5 class="card-title">{{ flight_details.fname | capfirst }} {{ flight_details.lname | capfirst  }}</h5>
+                       <p style="font-size: 0.7rem;"> <strong>Posted on: </strong>{{ flight_details.created_on }}</p>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="flight-details">
+                    <h6>Flight Details</h6>
+                    <p><strong>From: </strong>{{ flight_details.origin }}</p>
+                    <p><strong>To: </strong>{{ flight_details.destination }}</p>
+                    <p><strong>Flight Date: </strong>{{ flight_details.flight_date }}</p>
+                    <p><strong>Weight Capacity: </strong>{{ flight_details.weight_capacity }} kg</p>
+                </div>
+                
                 
                 {% if user.is_authenticated %}
                 <a href="{% url 'traveler_contact' flight_details.slug %}" 
@@ -54,7 +65,7 @@
                 {% endif %}
             </div>
         </div>
-        {% if forloop.counter|divisibleby:2 %}
+        {% if forloop.counter|divisibleby:4 %}
     </div>
     <div class="row">
         {% endif %}
