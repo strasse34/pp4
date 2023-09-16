@@ -19,6 +19,7 @@ class FlightDetails(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)
+    is_updated = models.BooleanField(default=False)
     status = models.IntegerField(choices=STATUS, default=1)
     fname = models.CharField(max_length=50, blank=None)
     lname = models.CharField(max_length=50, blank=None)

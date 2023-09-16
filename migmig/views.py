@@ -114,6 +114,9 @@ class EditFlightView(LoginRequiredMixin, ContextMixin, UpdateView):
 
     def form_valid(self, form):
         form.instance.traveler = self.request.user
+        flight_details = self.object 
+        flight_details.is_updated = True
+        flight_details.save()
         form.save()
         messages.success(self.request, "Your flight details were updated successfully")
         return super().form_valid(form)

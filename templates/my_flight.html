@@ -20,7 +20,11 @@
                         </div>
                         <div class="name-postdate col-12 col-sm-9">
                            <h5>{{ flight_details.fname | capfirst }} {{ flight_details.lname | capfirst  }}</h5>
-                           <p style="font-size: 0.7rem;">Posted on: {{ flight_details.created_on }}</p>
+                           {% if flight_details.is_updated %}
+                            <p style="font-size: 0.7rem;">Updated on: {{ flight_details.updated_on }}</p>
+                           {% else %}
+                            <p style="font-size: 0.7rem;">Posted on: {{ flight_details.created_on }}</p>
+                           {% endif %}
                         </div>
                     </div>
                     <hr>
