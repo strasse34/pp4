@@ -4,6 +4,6 @@ from .models import FlightDetails
 @admin.register(FlightDetails)
 class FlightCardAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('traveler', 'origin', 'destination')}
-    list_display = ('traveler', 'origin', 'destination', 'created_on', 'updated_on')
+    list_display = ('traveler', 'origin', 'destination', 'created_on', 'status', 'flight_date')
     search_fields = ['origin', 'destination']
     list_filter = ('origin', 'destination')

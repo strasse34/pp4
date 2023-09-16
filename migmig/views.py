@@ -19,8 +19,16 @@ class ContextMixin:
 
     def status_convertor(self):
         current_date = timezone.now().date()
-        outdated_flight = FlightDetails.objects.filter(flight_date__lt=current_date, status=1)
-        outdated_flight.update(status=0)
+        outdated_flight = FlightDetails.objects.filter(status=1)
+        
+        for flight in outdated_flight:
+            formatted_flight_date = flight.flight_date.strftime('%d-%m-%Y')
+            
+            if formatted_flight_date == current_date.strftime('%d-%m-%Y'):
+                flight.status = 0
+                flight.save()
+                
+                
 
 
 class HomeView(ContextMixin, generic.ListView):
@@ -31,7 +39,7 @@ class HomeView(ContextMixin, generic.ListView):
 
     def get_queryset(self):
         queryset = FlightDetails.objects.filter(status=1).order_by("-created_on")
-        airport_list = self.request.GET.get('origin')  # Use airport_list consistently
+        airport_list = self.request.GET.get('origin')  
 
         if airport_list:
             queryset = queryset.filter(origin=airport_list)
@@ -39,7 +47,7 @@ class HomeView(ContextMixin, generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['choices'] = AddFlightForm.CHOICES[1:]  # Exclude the 'Placeholder' choice
+        context['choices'] = AddFlightForm.CHOICES[1:]  
         return context
 
 
