@@ -2,36 +2,15 @@
 {% block title %}Upcomming Flights{% endblock %}
 {% block content %}
 
-<!-- <div class="container">
-    <form class="row">
-        <div class="col-md-3">
-            <select class="form-select form-select-sm" aria-label="Select airport">
-                <option value="all_flights">All</option>
-                
-            </select>
-        </div>
-        <div class="col-md-3">
-            <select class="form-select form-select-sm " aria-label="Select airport">
-                <option value="all_flights">All</option>
-                
-            </select>
-        </div>
-        <div class="col-md-3">
-            <button class="btn btn-primary btn-sm">Find</button>
-        </div>
-    </form>
-</div> -->
 
-
-
-<div class="container">
-    <div class="row" >
-        <div class="col-12 col-lg-5">
+<div class="container ">
+    <div class="row gy-2 index-title-search" >
+        <div class="title col-12 col-lg-5 ">
             <h4>Upcomming Flights</h4>
         </div>
         <div class="col-12 col-lg-7 ">
-            <form method="GET" class="row justify-content-end">
-                <div class="col-mss-12 p-ms-0 mb-ms-2 col-lg-8">
+            <form method="GET" class="row gy-2 justify-content-end">
+                <div class="col-12 col-lg-7 px-lg-1 search-bar">
                     <select id="origin" name="origin" class="form-control">
                         <option value="">Select from the list</option>
                         {% for choice in choices %}
@@ -39,14 +18,17 @@
                         {% endfor %}
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary col-ms-12 p-ms-0 col-lg-3">Find Flights</button>
+                <div class="col-12 col-lg-3  search-btn">
+                    <button type="submit" class="btn btn-primary col-12 ">Find Flights</button>
+                </div>
+                
             </form>
         </div>
     </div>
 </div>
         
         
-<div class="container">   
+<div class="container index-card-space">   
     {% if flightdetails_list %}
     <div class="row">
         {% for flight_details in flightdetails_list %}

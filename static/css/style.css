@@ -1,8 +1,9 @@
 body {
     font-family: 'Poppins', sans-serif;
+
 }
 
-/* navbar */
+/* style for navbar-------------------------------------------- */
 .navbar a {
     color: rgb(0 0 0 / 91%);
     text-decoration: none;
@@ -13,15 +14,50 @@ body {
     color: rgba(240, 15, 15, 0.91);
 }
 
-
-
 .navbar-toggler {
     color: beige;
 }
 
+/* style for base template---------------------------------------------- */
+.alarm {
+    margin-top: 70px;
+}
+
+.main-content {
+    margin-top: 20px;
+}
+
+/* style for index template ------------------------------------------------ */
+.title {
+    padding: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.title h4{
+    margin-bottom: 0;
+}
+
+.index-title-search {
+    background-color: antiquewhite;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.search-bar {
+    padding: 0;
+}
+
+.search-btn {
+    padding: 0;
+}
+
+.index-card-space {
+    margin-top: 20px;
+}
 
 
-
+/* style for footer ----------------------------------------------------------- */
 .footer {
     background-color: bisque;
     color: #c40404;
