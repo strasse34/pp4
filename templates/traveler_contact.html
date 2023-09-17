@@ -2,31 +2,43 @@
 {% block title %}Traveler's Contact Details{% endblock %}
 {% block content %}
 
-<div class="container">
-    <div class="col-12 mb-3 left" >
-        <h4>Traveler's Contact Details</h4>
+
+
+
+
+
+<div class="container card-space">
+    <h4><strong>Traveler's Contact Details</strong></h4>
+    <div class="traveler-contact">
         <div class="row">
-            <div class="card text-center m-1 col-lg-3">
-                <div class="card-body">
-                    <img src="{{ flightinfo.traveler_image.url }}" class="rounded-circle"
-                        height="50px"
-                        width="50px" alt="traveler">
-                    <h5 class="card-title">{{ flightinfo.fname | capfirst }} {{ flightinfo.lname | capfirst }}</h5>
-                    
-                    <p>From: {{ flightinfo.origin }}</p>
-                    <p>To: {{ flightinfo.destination }}</p>
-                    <p>Flight Date: {{ flightinfo.flight_date }}</p>
-                    <p>Weight Capacity: {{ flightinfo.weight_capacity }} kg</p>
-                    <p>Posted on: {{ flightinfo.created_on }}</p>
-                    <br>
-                    <h6>You can contact with traveler with below information</h6>
-                    <p>Address: {{ flightinfo.address }}</p>
-                    <p>Email Address: {{ flightinfo.email }}</p>
-                    <p>Phone No.: {{ flightinfo.mobile_number }}</p>
-                    
-                </div>
+            <p style="font-size: small; margin: 0;">Posted on {{ flightinfo.created_on }}  By {{ flightinfo.traveler }}</p>
+        </div>
+        <hr>
+        <div class="row gx-lg-2">
+            <div class="col-12 col-lg-3">
+                <img src="{{ flightinfo.traveler_image.url }}" class="traveler-contact-img"
+                             alt="traveler">
+                
+            </div>
+            <div class="col-12 col-lg-4">
+                <h4>Traveler's Contact Details:</h4>
+                <p><strong>Traveler Name: </strong>{{ flightinfo.fname | capfirst }} {{ flightinfo.lname | capfirst }}</p>
+                <p><strong>Address: </strong>{{ flightinfo.address }}</p>
+                <p><strong>Email Address: </strong>{{ flightinfo.email }}</p>
+                <p><strong>Phone No.: </strong>{{ flightinfo.mobile_number }}</p>
+                
+            </div>
+            <div class="col-12 col-lg-5 ">
+                <h4>Flight Details:</h4>
+                <p><strong>From: </strong>{{ flightinfo.origin }}</p>
+                <p><strong>To: </strong>{{ flightinfo.destination }}</p>
+                <p><strong>Flight Date: </strong>{{ flightinfo.flight_date }}</p>
+                <p><strong>Weight Capacity: </strong>{{ flightinfo.weight_capacity }} kg</p>
             </div>
     </div>
+    </div>
+    
+    
 </div>
     
 
