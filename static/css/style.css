@@ -226,6 +226,31 @@ body {
 
 
 @media screen and (max-width: 768px) {
+    .user-name {
+        display: flex;
+        border-radius: 15px;
+        padding-right: 8px;
+        padding-left: 8px;
+        justify-content: center;
+        color: #e27e21;
+        background-color: #504783;
+        font-weight: 600;
+    }
+    
+    .user-name h6 {
+        margin-right: 10px;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+    }
+    
+    .user-name a {
+        color: rgb(235, 227, 226);
+    
+        
+    }
+    
+    
     .card {
         width: 99%;
     }
@@ -236,6 +261,7 @@ body {
         line-height: 1;
         margin-bottom: 5px;
         margin-left: 10px;
+    }
 
     .traveler-contact h4 {
         font-size: medium;

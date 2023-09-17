@@ -8,11 +8,11 @@
 <div>
     <div class="container" >
         <div class="row">
-            <div class="col-md-8 mt-3 offset-md-2">
+            <div class="col-12 col-md-6 offset-2">
                 <h3><strong>Add new flight</strong></h3>
                 <p>Please furnish traveler information and flight details using the form below.<br> 
                     All fields are required. Please make sure to fill in each one.</p>
-                <form method="POST" class="form text-muted" action="{% url 'add_flight' %}" enctype="multipart/form-data">
+                <form method="POST" action="{% url 'add_flight' %}" class="form text-muted" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="update-btn-group">
