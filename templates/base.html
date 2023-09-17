@@ -28,6 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" href="{% static 'images/migmig.ico' %}" type=" image/x-icon" />
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    
 </head>
 
 <body class="d-flex flex-column h-100 main-bg">
@@ -76,21 +77,20 @@
         </div>
     </nav>
     
-  
     
-        <div class="container alarm">
-            <div>
-                {% for message in messages %}
-                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-                    {{ message | safe }}
-                </div>
-                {% endfor %}
+    <div class="container alarm">
+        <div>
+            {% for message in messages %}
+            <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                {{ message | safe }}
             </div>
+            {% endfor %}
         </div>
+    </div>
    
     
 
-    <main class="container main-content flex-shrink-0 main-bg h-80">
+    <main class="container-fluid main-content flex-shrink-0 main-bg">
         {% block content %}
         <!-- Content Goes here -->
         {% endblock content %}
