@@ -17,21 +17,23 @@ class AddFlightForm(forms.ModelForm):
 
     origin = forms.ChoiceField(choices=CHOICES, label='', widget=forms.Select(attrs={'class': 'form-control'}))
     destination = forms.ChoiceField(choices=CHOICES, label='', widget=forms.Select(attrs={'class': 'form-control'}))
+    
 
 
     class Meta:
         model = FlightDetails
         fields = [
+            'origin',
+            'destination',
+            'flight_date',
+            'weight_capacity',
             'fname',
             'lname',
             'address',
             'mobile_number',
             'email',
             'traveler_image',
-            'origin',
-            'destination',
-            'flight_date',
-            'weight_capacity',
+            
         ]
         labels = {
             'fname': '',  
@@ -46,8 +48,8 @@ class AddFlightForm(forms.ModelForm):
             'weight_capacity': '',
         }
         widgets = {
-            'fname': forms.TextInput(attrs={'placeholder': "First Name"}),
-            'lname': forms.TextInput(attrs={'placeholder': "Last Name"}),
+            'fname': forms.TextInput(attrs={'placeholder': "Traveler First Name"}),
+            'lname': forms.TextInput(attrs={'placeholder': "Traveler Last Name"}),
             'address': forms.TextInput(attrs={'placeholder': 'Address'}),
             'mobile_number': forms.TextInput(attrs={'placeholder': 'Mobile Number'}),
             'email': forms.TextInput(attrs={'placeholder': 'Email'}),

@@ -6,13 +6,13 @@
     <div class="row">
         <div class="col-md-8 mt-3 offset-md-2">
             <h3><strong>Archive Flight Details</strong></h3>
-            <p>"Archiving will hide the flight details from other users. Are you sure you want to archive the flight details 
-                from {{ flight_details.origin }} to {{ flight_details.destination }}?" 
+            <p>Archiving will hide the flight details from other users. Are you sure you want to archive the flight details 
+                from <strong>{{ flight_details.origin }}</strong> to <strong>{{ flight_details.destination }}</strong>? 
             </p>
             <form method="post" action="{% url 'archive_flight' flight_details.slug %}"
             enctype="multipart/form-data">
                 {% csrf_token %}
-                <button type="submit" class="btn btn-danger">Archive</button>
+                <button type="submit" class="btn btn-success">Archive</button>
                 <a href="{% url 'my_flights' %}" class="btn btn-secondary">Cancel</a>
             </form>
         </div>
