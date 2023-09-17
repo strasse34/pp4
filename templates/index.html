@@ -2,7 +2,7 @@
 {% block title %}Upcomming Flights{% endblock %}
 {% block content %}
 
-
+{% if not user.is_authenticated %}
 <div class="container-fluid">
     <section class="banner-container">
         <div class="opaque-overlay">&nbsp;</div>
@@ -23,6 +23,7 @@
         </div>
       </section>
 </div>
+{% endif %}
 
 <div class="container ">
     <div class="row gy-2 index-title-search" >
@@ -47,6 +48,7 @@
         </div>
     </div>
 </div>
+
         
         
 <div class="container card-space">   
