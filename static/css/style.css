@@ -32,6 +32,7 @@ body {
     border-radius: 15px;
     padding-right: 8px;
     padding-left: 8px;
+    margin-left: 10px;
     color: #e27e21;
     background-color: #504783;
     font-weight: 600;
@@ -140,7 +141,6 @@ body {
     
 }
 
-
 .card .btn-sm {
     font-size: 0.7rem;
 }
@@ -243,7 +243,6 @@ body {
         
     }
 
-    
 }
 
 
@@ -261,3 +260,4 @@ body {
 
     }
 }
+

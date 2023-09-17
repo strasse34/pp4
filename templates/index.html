@@ -41,7 +41,7 @@
                     width="50px" alt="traveler">
                     </div>
                     <div class="name-postdate col-12 col-sm-9">
-                        <h5>{{ flight_details.fname | capfirst }} {{ flight_details.lname | capfirst  }}</h5>
+                        <h5>{{ flight_details.traveler }}</h5>
                         {% if flight_details.is_updated %}
                         <p style="font-size: 0.7rem;">Updated on: {{ flight_details.updated_on }}</p>
                         {% else %}
