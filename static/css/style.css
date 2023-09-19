@@ -57,8 +57,11 @@ body {
 }
 
 /* style for base template---------------------------------------------- */
-.alarm {
+.alarm-container-fluid {
     margin-top: 60px;
+    border: none;
+    text-align: center;
+    
 }
 
 

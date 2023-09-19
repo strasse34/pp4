@@ -6,6 +6,7 @@
     <div class="row" >
         <h4><strong>My Flights</strong></h4>
         <div class="row">
+            {% if flightdetails_list %}
             {% for flight_details in flightdetails_list %}
             <div class="card text-left">
                 <div class="card-body">
@@ -60,8 +61,11 @@
         <div class="row">
             {% endif %}
             {% endfor %}
-
+            {% else %}
+            <p>You have not posted any flight yet!</p>
+            {% endif %}
         <div/>
+       
     </div>
 </div>
     

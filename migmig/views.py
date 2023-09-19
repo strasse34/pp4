@@ -37,17 +37,6 @@ class HomeView(ContextMixin, generic.ListView):
     queryset = FlightDetails.objects.filter(status=1).order_by("-created_on")
     paginate_by = 6
 
-    def status_convertor(self):
-            current_date = timezone.now().date()
-            outdated_flight = FlightDetails.objects.filter(status=1)
-            
-            for flight in outdated_flight:
-                formatted_flight_date = flight.flight_date.strftime('%d-%m-%Y')
-                
-                if formatted_flight_date == current_date.strftime('%d-%m-%Y'):
-                    flight.status = 0
-                    flight.save()
-
     def get_queryset(self):
         queryset = FlightDetails.objects.filter(status=1).order_by("-created_on")
         airport_list = self.request.GET.get('origin')  
