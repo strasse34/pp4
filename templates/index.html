@@ -1,4 +1,6 @@
+
 {% extends "base.html" %}
+{% load static %}
 {% block title %}Upcomming Flights{% endblock %}
 {% block content %}
 
@@ -6,21 +8,21 @@
 <div class="container-fluid">
     <section class="banner-container">
         <div class="opaque-overlay">&nbsp;</div>
-        <div class="row">
+        
           <div class="jumbotron m-4">
             <h1 class="text-uppercase">
-              <strong>the fastest way to ship your parcel</strong>
+              <strong>the fastest way to ship your small parcel</strong>
             </h1>
             <p>
               <strong
                 >We Connect those who have urgent parcel with travelers.</strong
               >
             </p>
-            <button class="btn btn-lg btn-success" href="{% url 'account_login' %}">
-              <strong>Log In</strong>
-            </button>
+            <a class="btn btn-lg btn-success" href="{% url 'account_signup' %}">
+              <strong>Join Us!</strong>
+            </a>
           </div>
-        </div>
+        
       </section>
 </div>
 {% endif %}
@@ -119,6 +121,7 @@
     </ul>
 </nav>
 {% endif %}
+
 
 
 {%endblock%}

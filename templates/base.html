@@ -37,7 +37,7 @@
     <nav class="navbar navbar-expand-md bg-light fixed-top p-3">
         
             <img src="{% static 'images/migmig.png' %}" alt="migmig" class="migmig mr-2" style="height: 50px;"/>
-            <a class="navbar-brand" href="/">MigMigShipment</a>
+            <a class="navbar-brand" href="/"><strong>MigMigShipment</strong></a>
 
             <button class="navbar-toggler navbar-light justify-content-end" type="button" data-toggle="collapse"
                 data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -69,7 +69,7 @@
                     <a class="nav-link {% if url_name == 'account_signup' %}active{% endif %}" href="{% url 'account_signup' %}">Register</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if url_name == 'account_signup' %}active{% endif %}" href="{% url 'account_login' %}">Login</a>
+                    <a class="nav-link {% if url_name == 'account_login' %}active{% endif %}" href="{% url 'account_login' %}">Login</a>
                 </li>
                 {% endif %}
                 {% endwith %}
@@ -96,8 +96,70 @@
         {% endblock content %}
     </main>
 
-    
+
+    {% with url_name=request.resolver_match.url_name %}
+    {% if url_name == 'home' %}
+    {% if not user.is_authenticated %}
+    <!-- Quote -->
+    <section class="container-quote">
+        <div class="text-center m-5">
+            <h2 class="col-12 text-uppercase">users' experiences</h2>
+        </div>
+        <div class="row text-center m-4">
+            <blockquote class="col-sm-12 col-md-6 col-lg-4">
+            <div class="media d-inline">
+                <img
+                src="{% static 'images/woman.png' %}"
+                alt="image"
+                class="rounded-circle mb-2"
+                height="100px"
+                width="100px"
+                />
+                <p>
+                "This app revolutionized the way I connect with people and get
+                things done. It's a game-changer!"
+                </p>
+                <p><cite>- Maryam Tehrani</cite></p>
+            </div>
+            </blockquote>
+            <blockquote class="col-sm-12 col-md-6 col-lg-4">
+            <div class="media d-inline">
+                <img
+                src="{% static 'images/man.png' %}"
+                alt="image"
+                class="rounded-circle mb-2"
+                height="100px"
+                width="100px"
+                />
         
+                <p>
+                "I never knew finding someone to deliver my packages could be so
+                easy. This app made it simple and fast"
+                </p>
+                <p><cite>- Rechard Bose</cite></p>
+            </div>
+            </blockquote>
+            <blockquote class="d-block d-md-none d-none d-lg-block col-lg-4">
+            <div class="media d-inline">
+                <img
+                src="{% static 'images/girl.png' %}"
+                alt="image"
+                class="rounded-circle mb-2"
+                height="100px"
+                width="100px"
+                />
+                <p>
+                "Finally, an app that bridges the gap between travelers and those
+                in need. It's like a matchmaking service for delivery requests!"
+                </p>
+                <p><cite>- Fatima Al-Saud</cite></p>
+            </div>
+            </blockquote>
+        </div>
+    </section>
+    {% endif %}  
+    {% endif %} 
+    {% endwith %}
     
     <!-- Footer -->
     <footer class="footer mt-auto text-center">
