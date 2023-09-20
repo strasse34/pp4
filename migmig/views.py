@@ -47,7 +47,7 @@ class HomeView(ContextMixin, generic.ListView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['choices'] = AddFlightForm.CHOICES[1:]  
+        context['choices'] = AddFlightForm.CHOICES_ORIGIN[1:]  
         return context
 
 

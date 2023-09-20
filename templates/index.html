@@ -28,7 +28,7 @@
 
 <!-- Title and search bar -->
 <div class="container ">
-    <div class="row mt-4 gutter=none">
+    <div class="row mt-4">
         <!-- title -->
         <div class="title col-12 col-lg-4 ">
             <h4><strong>Upcomming Flights</strong></h4>
@@ -37,7 +37,7 @@
         <form method="GET" class="row gy-2 gy-lg-0 col-12 col-lg-8 index-title-search">
             <div class="col-12 col-lg-8 px-lg-1 search-bar">
                 <select id="origin" name="origin" class="form-control">
-                    <option value="">Select from the list</option>
+                    <option value="">Select an airport</option>
                     {% for choice in choices %}
                     <option value="{{ choice.0 }}">{{ choice.1 }}</option>
                     {% endfor %}

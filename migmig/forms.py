@@ -66,8 +66,8 @@ class AddFlightForm(forms.ModelForm):
             'address': forms.TextInput(attrs={'placeholder': 'Address'}),
             'mobile_number': forms.TextInput(attrs={'placeholder': 'Mobile Number'}),
             'email': forms.TextInput(attrs={'placeholder': 'Email'}),
-            'origin': forms.TextInput(attrs={'placeholder': 'Select Flight Origin'}),
-            'destination': forms.TextInput(attrs={'placeholder': 'Select Flight Destination'}),
+            'origin': forms.TextInput(),
+            'destination': forms.TextInput(),
             'flight_date': forms.DateInput(attrs={'type': 'date', 'placeholder': 'Flight Date' }),
             'weight_capacity': forms.NumberInput(attrs={'placeholder': 'Weight Capacity (kg)'}),
         }
