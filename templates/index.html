@@ -9,7 +9,6 @@
 <div class="container-fluid">
     <section class="banner-container">
         <div class="opaque-overlay">&nbsp;</div>
-        
           <div class="jumbotron m-4">
             <h1 class="text-uppercase">
               <strong>the fastest way to ship your small parcel</strong>
@@ -23,7 +22,6 @@
               <strong>Join Us!</strong>
             </a>
           </div>
-        
       </section>
 </div>
 {% endif %}
@@ -55,12 +53,13 @@
 </div>
 
         
-        
+<!-- Card Sapce -->
 <div class="container card-space">   
     {% if flightdetails_list %}
     <div class="row">
         {% for flight_details in flightdetails_list %}
         <div class="card text-left">
+            <!-- Card Body -->
             <div class="card-body">
                 <div class="row pic-name-date">
                     <div class="col-12 col-sm-3">
@@ -78,7 +77,6 @@
                     </div>
                 </div>
                 <hr>
-
                 <div class="flight-details">
                     <h6>Flight Details:</h6>
                     <p><strong>From: </strong>{{ flight_details.origin }}</p>
@@ -86,7 +84,6 @@
                     <p><strong>Flight Date: </strong>{{ flight_details.flight_date }}</p>
                     <p><strong>Weight Capacity: </strong>{{ flight_details.weight_capacity }} kg</p>
                 </div>
-
                 {% if user.is_authenticated %}
                 <a href="{% url 'traveler_contact' flight_details.slug %}" 
                 class="btn btn-primary btn-sm">Contact Traveler</a>
@@ -103,6 +100,7 @@
         {% endfor %}
     <div/>
     {% else %}
+    <!-- When no flights match user search -->
     <div>
         <p>No flights matching your search.</p>
     </div>
@@ -110,7 +108,7 @@
     {% endif %}
 </div>
 
-
+<!-- Pagination -->
 {% if is_paginated %}
 <nav aria-label="Page navigation">
     <ul class="pagination mt-3 justify-content-center">

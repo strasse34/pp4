@@ -32,7 +32,6 @@
 
 <body class="d-flex flex-column h-100 main-bg">
     <!-- Navigation -->
-    
     <nav class="navbar navbar-expand-md bg-light fixed-top p-3">
             <img src="{% static 'images/migmig.png' %}" alt="migmig" class="migmig mr-2" style="height: 50px;"/>
             <a class="navbar-brand" href="/"><strong>MigMigShipment</strong></a>
@@ -75,7 +74,7 @@
         </div>
     </nav>
     
-    
+    <!-- Alarm Space -->
     <div class="alarm-container-fluid alarm">
         <div>
             {% for message in messages %}
@@ -87,7 +86,7 @@
     </div>
    
     
-
+    <!-- Main Space for other templates -->
     <main class="container-fluid main-content flex-shrink-0 main-bg">
         {% block content %}
         <!-- Content Goes here -->
@@ -98,7 +97,7 @@
     {% with url_name=request.resolver_match.url_name %}
     {% if url_name == 'home' %}
     {% if not user.is_authenticated %}
-    <!-- Quote -->
+    <!-- Quote which is shown for users who are not logged in -->
     <section class="container-quote">
         <div class="text-center m-5">
             <h2 class="col-12 text-uppercase">users' experiences</h2>
@@ -177,6 +176,8 @@
                 <a target="_blank" href="/"><i aria-hidden="true" class="fa-brands fa-youtube ms-3"></i></a>
             </p>
     </footer>
+
+    <!-- Scripts -->
     <script>
         setTimeout(function () {
             let messages = document.getElementById('msg');
