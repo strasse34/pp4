@@ -127,6 +127,7 @@ div.container-fluid {
 }
 
 /* End of banner style */
+/* Style for page title and search bar */
 
 .title {
     padding: 0px;
@@ -136,13 +137,16 @@ div.container-fluid {
 
 .title h4{
     margin-bottom: 0;
+    
 }
 
 .index-title-search {
+    display: flex;
+    justify-content: space-evenly;
     background-color: antiquewhite;
     padding: 10px;
     border-radius: 5px;
-    margin-top: 20px;
+    
 }
 
 .search-bar {
@@ -152,7 +156,7 @@ div.container-fluid {
 .search-btn {
     padding: 0;
 }
-
+/* end of page title and search bar style */
 
 .card-space {
     margin-top: 20px;

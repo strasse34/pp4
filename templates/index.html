@@ -4,6 +4,7 @@
 {% block title %}Upcomming Flights{% endblock %}
 {% block content %}
 
+<!-- Banner which is shown for users who are not logged in -->
 {% if not user.is_authenticated %}
 <div class="container-fluid">
     <section class="banner-container">
@@ -27,28 +28,30 @@
 </div>
 {% endif %}
 
+<!--  -->
 <div class="container ">
-    <div class="row gy-2 index-title-search" >
-        <div class="title col-12 col-lg-5 ">
+    <div class="row mt-4 d-flex justify-content-between">
+        <div class="title col-12 col-lg-3 ">
             <h4><strong>Upcomming Flights</strong></h4>
         </div>
-        <div class="col-12 col-lg-7 ">
-            <form method="GET" class="row gy-2 gy-lg-0 justify-content-end">
-                <div class="col-12 col-lg-7 px-lg-1 search-bar">
-                    <select id="origin" name="origin" class="form-control">
-                        <option value="">Select from the list</option>
-                        {% for choice in choices %}
-                        <option value="{{ choice.0 }}">{{ choice.1 }}</option>
-                        {% endfor %}
-                    </select>
-                </div>
-                <div class="col-12 col-lg-3 search-btn">
-                    <button type="submit" class="btn btn-primary col-12 ">Find Flights</button>
-                </div>
-                
-            </form>
+        <div class="row col-12 col-lg-7 gy-2 index-title-search">
+                <form method="GET" class="row gy-2 gy-lg-0">
+                    <div class="col-12 col-lg-8 px-lg-1 search-bar">
+                        <select id="origin" name="origin" class="form-control">
+                            <option value="">Select from the list</option>
+                            {% for choice in choices %}
+                            <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="col-12 col-lg-4 search-btn">
+                        <button type="submit" class="btn btn-primary col-12 ">Find Flights</button>
+                    </div>
+                </form>
+            
         </div>
     </div>
+    
 </div>
 
         
