@@ -28,28 +28,28 @@
 </div>
 {% endif %}
 
-<!--  -->
+<!-- Title and search bar -->
 <div class="container ">
-    <div class="row mt-4 d-flex justify-content-between">
-        <div class="title col-12 col-lg-3 ">
+    <div class="row mt-4 gutter=none">
+        <!-- title -->
+        <div class="title col-12 col-lg-4 ">
             <h4><strong>Upcomming Flights</strong></h4>
         </div>
-        <div class="row col-12 col-lg-7 gy-2 index-title-search">
-                <form method="GET" class="row gy-2 gy-lg-0">
-                    <div class="col-12 col-lg-8 px-lg-1 search-bar">
-                        <select id="origin" name="origin" class="form-control">
-                            <option value="">Select from the list</option>
-                            {% for choice in choices %}
-                            <option value="{{ choice.0 }}">{{ choice.1 }}</option>
-                            {% endfor %}
-                        </select>
-                    </div>
-                    <div class="col-12 col-lg-4 search-btn">
-                        <button type="submit" class="btn btn-primary col-12 ">Find Flights</button>
-                    </div>
-                </form>
-            
-        </div>
+        <!-- search bar -->
+        <form method="GET" class="row gy-2 gy-lg-0 col-12 col-lg-8 index-title-search">
+            <div class="col-12 col-lg-8 px-lg-1 search-bar">
+                <select id="origin" name="origin" class="form-control">
+                    <option value="">Select from the list</option>
+                    {% for choice in choices %}
+                    <option value="{{ choice.0 }}">{{ choice.1 }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-12 col-lg-4 search-btn">
+                <button type="submit" class="btn btn-primary col-12 ">Find Flights</button>
+            </div>
+        </form>
+        
     </div>
     
 </div>
@@ -64,7 +64,7 @@
             <div class="card-body">
                 <div class="row pic-name-date">
                     <div class="col-12 col-sm-3">
-                        <img src="{{ flight_details.traveler_image.url }}" class="rounded-circle"
+                        <img src="{% static 'images/default-profile-pic.jpeg' %}" class="rounded-circle"
                     height="50px"
                     width="50px" alt="traveler">
                     </div>

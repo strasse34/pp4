@@ -68,7 +68,9 @@ body {
     
 }
 
-
+.row {
+    --bs-gutter-x: 0;
+}
 
 main.container-fluid {
     margin: 0;
@@ -127,6 +129,7 @@ div.container-fluid {
 }
 
 /* End of banner style */
+
 /* Style for page title and search bar */
 
 .title {
@@ -142,7 +145,7 @@ div.container-fluid {
 
 .index-title-search {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     background-color: antiquewhite;
     padding: 10px;
     border-radius: 5px;
@@ -158,6 +161,8 @@ div.container-fluid {
 }
 /* end of page title and search bar style */
 
+/* Style for card space */
+
 .card-space {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -169,8 +174,7 @@ div.container-fluid {
     margin: 5px 5px;
     width: 32.4%;
     
-}  
-
+}
 
 .card h5 {
     font-family: 'Rubik', sans-serif;
@@ -216,6 +220,7 @@ div.container-fluid {
     background-color: #504783;
     border-color:#504783;
 }
+
 .btn-primary:hover {
     background-color: #8c80d3;
     
@@ -325,8 +330,7 @@ input {
     }
 
     .traveler-contact p {
-        margin-left: 10px;
-        line-height: 0.8;
+        line-height: 1rem;
     }
 
     .traveler-contact h4 {
@@ -372,9 +376,9 @@ input {
     .traveler-contact p {
         font-weight: 400;
         font-size: 0.8rem;
-        line-height: 1;
+        line-height: 1rem;
         margin-bottom: 5px;
-        margin-left: 10px;
+        
     }
 
     .traveler-contact h4 {
