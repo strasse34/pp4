@@ -1,17 +1,14 @@
 {% extends "base.html" %}
 {% load crispy_forms_tags %}
-
 {% load i18n %}
-
-
 {% block head_title %}{% trans "Log in" %}{% endblock %}
 
 {% block content %}
-
+<!-- Log in form -->
 <div class="container" style="margin-top: 80px;">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
-      <h3>{% trans "Log In" %}</h3>
+      <h3><strong>{% trans "Log In" %}</strong></h3>
       <p>{% blocktrans %}If you have not created an account yet, 
         then <a class="link text-decoration-none" href="{{ signup_url }}">Register</a>
         first.{% endblocktrans %}</p>
@@ -30,4 +27,5 @@
     </div>
   </div>
 </div>
+
 {% endblock %}
