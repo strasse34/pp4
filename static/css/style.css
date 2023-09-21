@@ -89,7 +89,7 @@ div.container-fluid {
     height: 70vh;
     width: 100vw;
 
-    background: url("{% static 'images/airplaine.jpg' %}") no-repeat top right fixed;
+    background: url(https://res-console.cloudinary.com/dn2dfatdi/thumbnails/transform/v1/image/upload/Y19saW1pdCxoXzE2MDAsd18xNjAwLGZfanBnLGZsX2xvc3N5LmFueV9mb3JtYXQucHJlc2VydmVfdHJhbnNwYXJlbmN5LnByb2dyZXNzaXZl/v1/eWRpeXd2Z3ZrdnExZm11cmFuZ3c=/template_primary) no-repeat top right fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
