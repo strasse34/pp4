@@ -4,28 +4,28 @@
 {% block title %}Upcomming Flights{% endblock %}
 {% block content %}
 
-    <!-- Banner which is shown for users who are not logged in -->
-    {% if not user.is_authenticated %}
-    <div class="container-fluid">
-        <section class="banner-container">
-            <div class="opaque-overlay">&nbsp;</div>
-                <div class="jumbotron m-4">
-                    <h1 class="text-uppercase">
-                    <strong>the fastest way to ship your small parcel</strong>
-                    </h1>
-                    <p>
-                    <strong
-                        >We Connect those who have urgent parcel with travelers.</strong
-                    >
-                    </p>
-                    <a class="btn btn-lg btn-success" href="{% url 'account_signup' %}">
-                    <strong>Join Us!</strong>
-                    </a>
-                </div>
+<!-- Banner which is shown for users who are not logged in -->
+{% if not user.is_authenticated %}
+<div class="container-fluid">
+    <section class="banner-container">
+        <div class="opaque-overlay">&nbsp;</div>
+            <div class="jumbotron m-4">
+                <h1 class="text-uppercase">
+                <strong>the fastest way to ship your small parcel</strong>
+                </h1>
+                <p>
+                <strong
+                    >We Connect those who have urgent parcel with travelers.</strong
+                >
+                </p>
+                <a class="btn btn-lg btn-success" href="{% url 'account_signup' %}">
+                <strong>Join Us!</strong>
+                </a>
             </div>
-        </section>
-    </div>
-    {% endif %}
+        </div>
+    </section>
+</div>
+{% endif %}
 
 <!-- Title and search bar -->
 <div class="container ">
