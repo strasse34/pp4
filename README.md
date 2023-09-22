@@ -25,7 +25,6 @@ The Entity Relationship Diagram (ERD) illustrates the structure of the database 
 
 ![ERD](/static/docs/db-structure.png)
 
-**Database Design**
 
 In the database design for my application, **User** is implemented using Django Allauth, simplifying user authentication and management. The **User** table contains fields for *username*, *password*, and *email*, with the *username* serving as the primary key.
 
@@ -43,3 +42,35 @@ As part of the ongoing development of my application, I envision an additional m
 The **ContactRequest** model will enabling users to send and receive contact requests. When a traveler posts a flight, he/she can receive requests from other users interested in the posted flight details. The traveler will have the option to selectively reveal the contact details to specific users, fostering trust and privacy.
 
 This addition will enhance the user experience, allowing for seamless communication and negotiation between travelers and potential partners. As my application continues to evolve, these future models will play a pivotal role in expanding its functionality and user engagement.
+
+## User Experience - UX
+
+The application was developed considering the four planes of User Experience:
+
+### EPICS and User Stories
+
+#### EPIC-1: User registration
+- As a user, I can make an account, so that I can use web app services.
+- As a user, I can use my username and password, so that I can log in to my account.
+- As a user, after authentication, I can see my username on the website after login, so that I can be sure that I am logged in.
+#### EPIC-2: Add flight details cards
+- As a user, After authentication, I can add a new flight card, so that other users can see my flight card.
+- As a logged in user, while filling out the form, I can select the airport from the dropdown list. so that I can find the origin and destination airports easily.
+- As a logged in user, I can click on flight cards, so that I can see the complete flight details and traveler's contact details.
+#### EPIC-3: Manage cards
+- As a user, after authentication, I can edit my posted cards. so that I can change the card information and repost it.
+- As a user, after authentication, I can archive my posted cards. so that I can move those cards from the public page to my flight page.
+- As a user, after authentication, I can delete my posted cards. so that I can remove card information from the database.
+- As a user, I want to see the updated date after I or other users edit a card, So that I and other users will understand that the card has been modified.
+- As a user, I want flight cards to be archived when they cross the flight date. so that other users will not misunderstand outdated flight cards.
+#### EPIC-4: Landing page
+- As a guest visitor user, I can see all the flight cards and other information on the first page, so that I can get familiar with the app and view the basic flight information.
+- As a guest visitor user, I can search among available cards, so that I can find proper flight cards quickly and easily.
+
+
+
+
+
+
+
+#### Target Audience
