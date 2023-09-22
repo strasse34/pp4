@@ -9,7 +9,7 @@ STATUS = ((1, 'Active'), (0, 'Archived'))
 
 class FlightDetails(models.Model):
     """
-    Class for recording flight details in data base
+    Class for recording flight details in database
     """
     traveler = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="traveler"

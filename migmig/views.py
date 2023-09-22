@@ -66,7 +66,7 @@ class HomeView(ContextMixin, generic.ListView):
 
 class AddFlightView(LoginRequiredMixin, ContextMixin, CreateView):
     """
-    Class for posting travelers infor and flight details to the data base
+    Class for posting travelers infor and flight details to the database
     """
     model = FlightDetails
     template_name = 'add_flight.html'  
@@ -108,7 +108,7 @@ class AddFlightView(LoginRequiredMixin, ContextMixin, CreateView):
 
 class MyFlightsView(LoginRequiredMixin, ContextMixin, generic.ListView):
     """
-    Class to retrive all the user's flight details which have been already recorded in the data base
+    Class to retrive all the user's flight details which have been already recorded in the database
     including active and archived cards
     """
     model = FlightDetails  
@@ -135,7 +135,7 @@ class TravelerContactView(LoginRequiredMixin, ContextMixin, View):
 
 class EditFlightView(LoginRequiredMixin, ContextMixin, UpdateView):
     """
-    Class to edit traveler info and flight details and save them to data base
+    Class to edit traveler info and flight details and save them to database
     """
     model = FlightDetails
     form_class = AddFlightForm
@@ -159,7 +159,7 @@ class EditFlightView(LoginRequiredMixin, ContextMixin, UpdateView):
 
 class DeleteFlightView(LoginRequiredMixin, ContextMixin, View):
     """
-    Class to delete traveler info and flight details from data base
+    Class to delete traveler info and flight details from database
     """
     def get(self, request, slug):
         flight_details = FlightDetails.objects.get(slug=slug)
