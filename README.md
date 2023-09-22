@@ -4,11 +4,7 @@
 
 ![Mockup image]()
 
-**Live Site:**
-
 [Live webpage](https://migmig-bcca17837059.herokuapp.com/)
-
-**Link to Repository:**
 
 [Repository](https://github.com/strasse34/pp4-migmig)
 
@@ -27,7 +23,7 @@ The primary goal of this project is to provide a significant solution for indivi
 
 The Entity Relationship Diagram (ERD) illustrates the structure of the database which lies at the core of the functionality of the site:
 
-![ERD](/static/docs/model-diagram.png)
+![ERD](/static/docs/db-structure.png)
 
 A `User` Model is provided by Django, and a custom model, `FlightDeails Model` stores the details of traveler info and flight details (card) that a user adds, a user can add, edit, archive and delete many cards. 
 
