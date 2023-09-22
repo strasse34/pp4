@@ -28,7 +28,7 @@ The Entity Relationship Diagram (ERD) illustrates the structure of the database 
 
 In the database design for my application, **User** is implemented using Django Allauth, simplifying user authentication and management. The **User** table contains fields for *username*, *password*, and *email*, with the *username* serving as the primary key.
 
-The core data of the application is stored in the **FlightDetails** table. This table captures essential information about flights and travelers, such as *origin*, *destination*, *flight_date*, *weight_capacity*, *slug*, and more. The *traveler* field establishes a relationship with the **User** table, allowing each flight to be associated with a specific user.
+The core data of the application is stored in the **FlightDetails** table. This table captures essential information about flights and travelers, such as *origin*, *destination*, *flight_date*, *weight_capacity*, *slug*, and personal traveler information. The *traveler* field establishes a relationship with the **User** table, allowing each flight to be associated with a specific user.
 
 To manage the status of flights, the **Status** table has been introduced. It includes a *slug* field as the primary key, along with *active* and *archived* fields to track the status of each flight.
 
@@ -68,9 +68,55 @@ The application was developed considering the four planes of User Experience:
 - As a guest visitor user, I can search among available cards, so that I can find proper flight cards quickly and easily.
 
 
-
-
-
-
-
 #### Target Audience
+
+The MigMigShipment application is designed to cater to a diverse audience with varying needs and preferences. Our primary target audience includes individuals and businesses seeking a reliable and efficient solution for the urgent delivery of parcels over long distances. Travelers who are frequently on the move and willing to carry parcels can also benefit from our platform by earning extra income while traveling.
+
+### Scope
+#### Core Website Functionality
+- Implement a registration/login/log out features for access to core site functionality.
+- Implement a form to add new flight details and traveler's contact details (flight card) to the site.
+- Implement a feature to edit the filght cards.
+- Implement a feature to  archive  the filght cards.
+- Implement a feature to delete the filght cards.
+
+#### Responsiveness
+- Implement responsive design for smooth desktop, tablet, and mobile device access.
+
+### Structure
+The website has 10 pages for the users who get registerred.
+#### Current Pages
+- **Home Page** includes signup/login links in navigation bar, a banner to catch eyes, all the active flight cards which have posted with all users with ability of search, and quote sections to share user's experiences. Banner and quote space are hided after user authentication.
+- **Register Page** allows the user to create an account to access the core functionality of the site.
+- **Login/Logout Pages**  allow the registerred user to authenticate or log out of their account.
+- **Add Flight Page**  allow the authenticated user to recorde new flight card to data base.
+- **My Flight Page**  allow the authenticated user to see all the flight cards which have posted by that user.
+- **Contact Traveler Page**  allow the authenticated user to see traveler's contact details.
+- **Edit Flight Page**  allow the authenticated user to edit their recorded cards.
+- **Archived Flight Page**  get confirmation from an authenticated user for archiving a specific cards.
+- **Archived Flight Page**  get confirmation from an authenticated user for deleting a specific cards.
+
+### Colors and Fonts used
+#### Color
+#### Font
+#### Wireframes
+
+### Agile Development
+#### Iteration 1:
+#### Iteration 1:
+#### Iteration 1:
+#### Iteration 1:
+
+### Existing Features
+#### Header and Navigation
+**For Authenticated Users**
+**For Unauthenticated Users**
+#### Banner
+#### Cards View
+#### Quote 
+#### My Fligt
+#### Contact Traveler
+#### Add Flight
+#### Edit Flight
+#### Register
+#### Log in
