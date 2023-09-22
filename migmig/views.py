@@ -12,12 +12,18 @@ from django.db.models import Q
 
 
 class ContextMixin:
+    """
+    Class for retrieving username and converting status
+    """
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['username'] = self.request.user.username
         return context
 
     def status_convertor(self):
+        """
+        Converting status of the cards from 1 to 0
+        """
         current_date = timezone.now().date()
         outdated_flight = FlightDetails.objects.filter(status=1)
         
@@ -32,6 +38,9 @@ class ContextMixin:
 
 
 class HomeView(ContextMixin, generic.ListView):
+    """
+    Class for displaying flight information to the public site visitor
+    """
     model = FlightDetails
     template_name = 'index.html'  
     queryset = FlightDetails.objects.filter(status=1).order_by("-created_on")
@@ -46,6 +55,9 @@ class HomeView(ContextMixin, generic.ListView):
         return queryset
 
     def get_context_data(self, **kwargs):
+        """
+        Retrieving airports' choices from form for displaying in the search bar dropdown list 
+        """
         context = super().get_context_data(**kwargs)
         context['choices'] = AddFlightForm.CHOICES_ORIGIN[1:]  
         return context
@@ -53,6 +65,9 @@ class HomeView(ContextMixin, generic.ListView):
 
 
 class AddFlightView(LoginRequiredMixin, ContextMixin, CreateView):
+    """
+    Class for posting travelers infor and flight details to the data base
+    """
     model = FlightDetails
     template_name = 'add_flight.html'  
     form_class = AddFlightForm
@@ -60,7 +75,9 @@ class AddFlightView(LoginRequiredMixin, ContextMixin, CreateView):
     success_url = reverse_lazy('home')
 
     def form_valid(self, form):
-        # Check if a flight with the same attributes already exists
+        """
+        Check if a flight with the same attributes already exists
+        """
         form.instance.traveler = self.request.user
         existing_flight = FlightDetails.objects.filter(
             traveler=form.instance.traveler,
@@ -90,6 +107,10 @@ class AddFlightView(LoginRequiredMixin, ContextMixin, CreateView):
         
 
 class MyFlightsView(LoginRequiredMixin, ContextMixin, generic.ListView):
+    """
+    Class to retrive all the user's flight details which have been already recorded in the data base
+    including active and archived cards
+    """
     model = FlightDetails  
     template_name = 'my_flight.html'  
     queryset = FlightDetails.objects.all().order_by("-created_on")
@@ -103,14 +124,19 @@ class MyFlightsView(LoginRequiredMixin, ContextMixin, generic.ListView):
 
 
 class TravelerContactView(LoginRequiredMixin, ContextMixin, View):
+    """
+    Class to show all traveler info and flight details to requesters
+    """
     def get(self, request, slug, *arg, **kwargs):
         queryset = FlightDetails.objects.filter(status=1)
         flightinfo = get_object_or_404(queryset, slug=slug)
-
         return render(request, "traveler_contact.html", {"flightinfo": flightinfo})
 
 
 class EditFlightView(LoginRequiredMixin, ContextMixin, UpdateView):
+    """
+    Class to edit traveler info and flight details and save them to data base
+    """
     model = FlightDetails
     form_class = AddFlightForm
     success_url = reverse_lazy('my_flights')
@@ -132,6 +158,9 @@ class EditFlightView(LoginRequiredMixin, ContextMixin, UpdateView):
 
 
 class DeleteFlightView(LoginRequiredMixin, ContextMixin, View):
+    """
+    Class to delete traveler info and flight details from data base
+    """
     def get(self, request, slug):
         flight_details = FlightDetails.objects.get(slug=slug)
         return render(request, 'delete_flight.html', {'flight_details': flight_details})
@@ -145,6 +174,9 @@ class DeleteFlightView(LoginRequiredMixin, ContextMixin, View):
 
 
 class ArchiveFlightView(LoginRequiredMixin, ContextMixin, View):
+    """
+    Class to archive traveler info and flight details
+    """
     def get(self, request, slug):
         flight_details = FlightDetails.objects.get(slug=slug)
         return render(request, 'archive_flight.html', {'flight_details': flight_details})

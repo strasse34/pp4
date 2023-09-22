@@ -396,8 +396,6 @@ input {
 
 }
 
-
-
 @media screen and (max-width: 576px){ 
     .card .name-postdate {
         margin-left: 4px;
@@ -422,13 +420,10 @@ input {
     
 }
 
+/* to prevent navbar borken in sumsung fold screen */
 @media screen and (max-width: 300px){
     .navbar-brand {
         font-family: 'Caveat', cursive;
         font-size: medium;
     }
-
-  
-
-    
 }

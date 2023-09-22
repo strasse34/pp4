@@ -8,6 +8,9 @@ from decimal import Decimal
 STATUS = ((1, 'Active'), (0, 'Archived'))
 
 class FlightDetails(models.Model):
+    """
+    Class for recording flight details in data base
+    """
     traveler = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="traveler"
     )
@@ -33,6 +36,7 @@ class FlightDetails(models.Model):
     def __str__(self):
         return f" from {self.origin} to {self.destination}"
 
+    # Source: https://studygyaan.com/django/how-to-create-a-unique-slug-in-django
     def save(self, *args, **kwargs):
         slug_source = f"{self.traveler}-{self.fname}-{self.lname}-{self.origin}-{self.destination}-{self.flight_date}"
         self.slug = slugify(slug_source)

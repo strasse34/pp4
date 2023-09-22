@@ -2,6 +2,12 @@ from django import forms
 from .models import FlightDetails
 
 class AddFlightForm(forms.ModelForm):
+    """
+    Class for posting traveler and flight details 
+    """
+    # source for adding dropdown list to the form: \
+    # http://www.learningaboutelectronics.com/Articles/\
+    # How-to-create-a-drop-down-list-in-a-Django-form.php
     CHOICES_ORIGIN = [
         ('', 'Select origin airport'),
         ('Germany International Airport 1', 'Germany International Airport 1'),
@@ -28,8 +34,15 @@ class AddFlightForm(forms.ModelForm):
         ('Nigeria International Airport 3', 'Nigeria International Airport 3'),
     ]
 
-    origin = forms.ChoiceField(choices=CHOICES_ORIGIN, label='', widget=forms.Select(attrs={'class': 'form-control'}))
-    destination = forms.ChoiceField(choices=CHOICES_DESTINATION, label='', widget=forms.Select(attrs={'class': 'form-control'}))
+
+    origin = forms.ChoiceField(
+        choices=CHOICES_ORIGIN, label='', 
+        widget=forms.Select(attrs={'class': 'form-control'})
+        )
+    destination = forms.ChoiceField(
+        choices=CHOICES_DESTINATION, 
+        label='', widget=forms.Select(attrs={'class': 'form-control'})
+        )
     
 
 

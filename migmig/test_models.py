@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 from .models import FlightDetails
 
 class FlightDetailsModelTestCase(TestCase):
+    """
+    Class for testing FlightDetailModel to get flight and travelers' details
+    """
     def setUp(self):
         # Create a user for testing
         self.user = User.objects.create_user(
