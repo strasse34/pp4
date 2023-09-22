@@ -10,10 +10,7 @@ body {
     color: rgb(0 0 0 / 91%);
     text-decoration: none;
 }
-.navbar a {
-    color: rgb(0 0 0 / 91%);
-    text-decoration: none;
-}
+
 
 .navbar a:hover {
     font-weight: bold;
@@ -67,7 +64,8 @@ body {
     margin-top: 60px;
     border: none;
     text-align: center;
-    
+    margin-bottom: 0;
+    padding: 0;
 }
 
 .row {
@@ -328,11 +326,7 @@ input {
 
 /* style for media------------------------------------------------------ */
 @media screen and (max-width: 1200px) {
-    .card-space {
-        display: flex;
-        justify-content: center;
-    }
-    
+     
     
     .card {
         width: 48.5%;
@@ -428,3 +422,13 @@ input {
     
 }
 
+@media screen and (max-width: 300px){
+    .navbar-brand {
+        font-family: 'Caveat', cursive;
+        font-size: medium;
+    }
+
+  
+
+    
+}
