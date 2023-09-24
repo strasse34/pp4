@@ -22,22 +22,21 @@ class ContextMixin:
 
     def status_convertor(self):
         """
-        Converting status of the cards from 1 to 0
+        Converting status of the cards from 1 to 0 for outdated flights
         """
         current_date = timezone.now().date()
-        outdated_flight = FlightDetails.objects.filter(status=1)
+        outdated_flights = FlightDetails.objects.filter(status=1)
         print(current_date)
-        
-        
-        for flight in outdated_flight:
-            formatted_flight_date = flight.flight_date.strftime('%Y-%m-%d')
-            current_date = current_date.strftime('%d-%m-%Y')
+
+        for flight in outdated_flights:
+            formatted_flight_date = flight.flight_date.strftime('%d-%m-%Y')
             print(formatted_flight_date)
-            
-            if formatted_flight_date < current_date:
+
+            if formatted_flight_date < current_date.strftime('%d-%m-%Y'):
                 flight.status = 0
                 flight.save()
                 
+                    
                 
 
 
@@ -64,7 +63,7 @@ class HomeView(ContextMixin, generic.ListView):
         """
         context = super().get_context_data(**kwargs)
         context['choices'] = AddFlightForm.CHOICES_ORIGIN[1:]
-         
+        self.status_convertor()
         return context
 
     
