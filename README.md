@@ -103,9 +103,9 @@ The website has 10 pages for the users who get registerred.
 
 ### Agile Development
 #### Iteration 1:
-#### Iteration 1:
-#### Iteration 1:
-#### Iteration 1:
+#### Iteration 2:
+#### Iteration 3:
+#### Iteration 4:
 
 ### Existing Features
 #### Header and Navigation

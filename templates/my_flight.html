@@ -46,10 +46,10 @@
                     <br>
                     <div class="row d-flex justify-content-evenly gy-1">
                         {% if flight_details.status == 1 %}
-                        <a href="{% url 'edit_flight' flight_details.slug %}" class="col-12 col-md-3 btn btn-primary btn-sm">Edit Flight</a>
-                        <a href="{% url 'archive_flight' flight_details.slug %}" class="col-12 col-md-3 btn btn-success btn-sm">Archive Flight</a>
+                        <a href="{% url 'edit_flight' flight_details.slug %}" class="col-12  btn btn-primary btn-sm">Edit Flight</a>
+                        <a href="{% url 'archive_flight' flight_details.slug %}" class="col-12  btn btn-success btn-sm">Archive Flight</a>
                         {% endif %}
-                        <a href="{% url 'delete_flight' flight_details.slug %}" class="col-12 col-md-3 btn btn-danger btn-sm">Delete Flight</a>
+                        <a href="{% url 'delete_flight' flight_details.slug %}" class="col-12  btn btn-danger btn-sm">Delete Flight</a>
                     </div>
                 </div>
             </div>
