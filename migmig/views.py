@@ -30,10 +30,11 @@ class ContextMixin:
         
         
         for flight in outdated_flight:
-            formatted_flight_date = flight.flight_date.strftime('%d-%m-%Y')
+            formatted_flight_date = flight.flight_date.strftime('%Y-%m-%d')
+            current_date = current_date.strftime('%d-%m-%Y')
             print(formatted_flight_date)
             
-            if formatted_flight_date == current_date.strftime('%d-%m-%Y'):
+            if formatted_flight_date < current_date:
                 flight.status = 0
                 flight.save()
                 
@@ -62,10 +63,11 @@ class HomeView(ContextMixin, generic.ListView):
         Retrieving airports' choices from form for displaying in the search bar dropdown list 
         """
         context = super().get_context_data(**kwargs)
-        context['choices'] = AddFlightForm.CHOICES_ORIGIN[1:]  
+        context['choices'] = AddFlightForm.CHOICES_ORIGIN[1:]
+         
         return context
 
-
+    
 
 class AddFlightView(LoginRequiredMixin, ContextMixin, CreateView):
     """
