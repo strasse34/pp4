@@ -45,12 +45,18 @@
                         <p><strong>Phone No.: </strong>{{ flight_details.mobile_number }}</p>
                     </div>
                     <br>
-                    <div class="row d-flex justify-content-evenly gy-1">
+                    <div class="my-flight-card-buttons">
                         {% if flight_details.status == 1 %}
-                        <a href="{% url 'edit_flight' flight_details.slug %}" class="col-12  btn btn-primary btn-sm">Edit Flight</a>
-                        <a href="{% url 'archive_flight' flight_details.slug %}" class="col-12  btn btn-success btn-sm">Archive Flight</a>
+                        <div>
+                            <a href="{% url 'edit_flight' flight_details.slug %}" class="mb-1 col-12  btn btn-primary btn-sm">Edit Flight</a>
+                        </div>
+                        <div>
+                            <a href="{% url 'archive_flight' flight_details.slug %}" class="mb-1 col-12  btn btn-success btn-sm">Archive Flight</a>
+                        </div>
                         {% endif %}
-                        <a href="{% url 'delete_flight' flight_details.slug %}" class="col-12  btn btn-danger btn-sm">Delete Flight</a>
+                        <div>
+                            <a href="{% url 'delete_flight' flight_details.slug %}" class="col-12  btn btn-danger btn-sm">Delete Flight</a>
+                        </div>
                     </div>
                 </div>
             </div>
