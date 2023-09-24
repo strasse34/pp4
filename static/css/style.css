@@ -245,8 +245,13 @@ div.container-fluid {
     margin-top: 0;
 }
 
-
-
+/* style for page pagination */
+.page-pagination {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
 /* style for traveler's contact template ------------------------------------ */
 
 .traveler-contact {

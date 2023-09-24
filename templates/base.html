@@ -93,6 +93,20 @@
     </main>
 
 
+    <!-- Pagination -->
+    {% if is_paginated %}
+    <nav aria-label="Page navigation" class="page-pagination">
+        <ul class="pagination justify-content-center">
+            {% if page_obj.has_previous %}
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV </a></li>
+            {% endif %}
+            {% if page_obj.has_next %}
+            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> NEXT &raquo;</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+
     {% with url_name=request.resolver_match.url_name %}
     {% if url_name == 'home' %}
     {% if not user.is_authenticated %}
@@ -156,6 +170,7 @@
     {% endif %}  
     {% endif %} 
     {% endwith %}
+    
     
     <!-- Footer -->
     <footer class="footer mt-auto text-center">

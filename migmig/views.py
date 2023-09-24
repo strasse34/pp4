@@ -99,6 +99,7 @@ class AddFlightView(LoginRequiredMixin, ContextMixin, CreateView):
 
         if flight_date > timezone.now().date():
             if form.cleaned_data['origin'] != form.cleaned_data['destination']:
+                messages.success(self.request, "Flight details added successfully!")
                 return super(AddFlightView, self).form_valid(form)
             else:
                 messages.error(self.request, "Origin airport and destination airport cannot be the same.")
