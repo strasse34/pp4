@@ -100,6 +100,11 @@ The website has 10 pages for the users who get registerred.
 #### Color
 #### Font
 #### Wireframes
+- ![Home (Not authenticated)](static/docs/images/wireframes/home-not-login.png)
+- ![Home (Authenticated)](static/docs/images/wireframes/home-loggedin.png)
+- ![Add Flight](static/docs/images/wireframes/add-flight.png)
+- ![My Flight](static/docs/images/wireframes/my-flight.png)
+- ![Contact Traveler](static/docs/images/wireframes/contact-traveler.png)
 
 ### Agile Development
 #### Iteration 1:
