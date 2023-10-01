@@ -102,8 +102,8 @@ I've based my website's color scheme on the lively Migmig cartoon character, whi
 ![palette](static/docs/images/palette.png)
 #### Font
 II've used two distinct fonts in my website design:
-- Caveat: This font is applied to the website's name to create a harmonious connection with the logo, adding a touch of personalization and uniqueness.
-- Roboto: For the main body text, I've chosen the 'Roboto' font. It's a popular and easy-to-read typeface that ensures a comfortable reading experience for visitors.
+- **Caveat:** This font is applied to the website's name to create a harmonious connection with the logo, adding a touch of personalization and uniqueness.
+- **Roboto:** For the main body text, I've chosen the 'Roboto' font. It's a popular and easy-to-read typeface that ensures a comfortable reading experience for visitors.
 #### Wireframes
 - [Home (Not authenticated)](static/docs/images/wireframes/home-not-login.png)
 - [Home (Authenticated)](static/docs/images/wireframes/home-loggedin.png)
@@ -112,21 +112,28 @@ II've used two distinct fonts in my website design:
 - [Contact Traveler](static/docs/images/wireframes/contact-traveler.png)
 
 ### Agile Development
-#### Iteration 1:
-#### Iteration 2:
-#### Iteration 3:
-#### Iteration 4:
+Githup was used to complete this project. The project was completed in 5 iterations.
+- **Iteration 1**: I started by defining the user profile.
+- **Iteration 2**: In the second phase, I focused on creating the database, designing forms, and developing the relevant pages.
+- **Iteration 3**: Styling and visual enhancements were completed during the third iteration.
+- **Iteration 4**: The fourth phase addressed any remaining "would-have" features and resolved any lingering uncertainties or issues. 
+- **Iteration 5**: In the fifth and final iteration, I conducted testing, deployed the project, and documented the entire process.
 
 ### Existing Features
+
 #### Header and Navigation
 **For Authenticated Users**
 **For Unauthenticated Users**
 #### Banner
+#### Search bar
 #### Cards View
 #### Quote 
-#### My Fligt
+#### Footer 
+#### My Fligts
 #### Contact Traveler
 #### Add Flight
 #### Edit Flight
 #### Register
 #### Log in
+#### Log out
+

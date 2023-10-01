@@ -26,11 +26,9 @@ class ContextMixin:
         """
         current_date = timezone.now().date()
         outdated_flights = FlightDetails.objects.filter(status=1)
-        print(current_date)
 
         for flight in outdated_flights:
             formatted_flight_date = flight.flight_date.strftime('%d-%m-%Y')
-            print(formatted_flight_date)
 
             if formatted_flight_date < current_date.strftime('%d-%m-%Y'):
                 flight.status = 0
