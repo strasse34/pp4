@@ -99,7 +99,7 @@ The website has 10 pages for the users who get registerred.
 ### Colors and Fonts used
 #### Color
 Inspired by the lively character in Migmig cartoons, I've chosen its vibrant color palette for my website, giving it a consistent and engaging design. Using [Coolors.co](https://coolors.co/), I extracted colors directly from the character, resulting in a visually captivating and instantly recognizable website that infuses the character's charm into every aspect of the design. Explore the website to immerse yourself in the world of Migmig with this carefully selected color palette.
-[palette](static/docs/images/palette.png)
+![palette](static/docs/images/palette.png)
 #### Font
 #### Wireframes
 - [Home (Not authenticated)](static/docs/images/wireframes/home-not-login.png)
