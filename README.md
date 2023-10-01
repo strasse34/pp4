@@ -123,8 +123,15 @@ Githup was used to complete this project. The project was completed in 5 iterati
 
 #### Header and Navigation
 **For Authenticated Users**
+![navbar-not-auth](static/docs/images/screenshots/navbar-not-auth.png)
 **For Unauthenticated Users**
+- Desktop
+- Tablet
+- Mobil
 #### Banner
+- Desktop
+- Tablet
+- Mobil
 #### Search bar
 #### Cards View
 #### Quote 
