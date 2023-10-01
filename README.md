@@ -98,9 +98,12 @@ The website has 10 pages for the users who get registerred.
 
 ### Colors and Fonts used
 #### Color
-Inspired by the lively character in Migmig cartoons, I've chosen its vibrant color palette for my website, giving it a consistent and engaging design. Using [Coolors.co](https://coolors.co/), I extracted colors directly from the character, resulting in a visually captivating and instantly recognizable website that infuses the character's charm into every aspect of the design. Explore the website to immerse yourself in the world of Migmig with this carefully selected color palette.
+I've based my website's color scheme on the lively Migmig cartoon character, which serves as the app's logo. By using [Coolors.co](https://coolors.co/) to extract colors from the character, I've created a cohesive and engaging design.
 ![palette](static/docs/images/palette.png)
 #### Font
+II've used two distinct fonts in my website design:
+- Caveat: This font is applied to the website's name to create a harmonious connection with the logo, adding a touch of personalization and uniqueness.
+- Roboto: For the main body text, I've chosen the 'Roboto' font. It's a popular and easy-to-read typeface that ensures a comfortable reading experience for visitors.
 #### Wireframes
 - [Home (Not authenticated)](static/docs/images/wireframes/home-not-login.png)
 - [Home (Authenticated)](static/docs/images/wireframes/home-loggedin.png)
