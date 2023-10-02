@@ -125,9 +125,8 @@ Githup was used to complete this project. The project was completed in 5 iterati
 **For Authenticated Users**
 ![navbar-not-auth](static/docs/images/screenshots/navbar-not-auth.png)
 **For Unauthenticated Users**
-- Desktop
-- Tablet
-- Mobil
+![navbar-auth](static/docs/images/screenshots/navbar-auth.png)
+#### Alarm
 #### Banner
 - Desktop
 - Tablet
