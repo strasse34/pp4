@@ -99,7 +99,7 @@ The website has 10 pages for the users who get registerred.
 ### Colors and Fonts used
 #### Color
 I've based my website's color scheme on the lively Migmig cartoon character, which serves as the app's logo. By using [Coolors.co](https://coolors.co/) to extract colors from the character, I've created a cohesive and engaging design.
-![palette](static/docs/images/palette.png)
+![Palette](static/docs/images/palette.png)
 #### Font
 II've used two distinct fonts in my website design:
 - **Caveat:** This font is applied to the website's name to create a harmonious connection with the logo, adding a touch of personalization and uniqueness.
@@ -123,10 +123,14 @@ Githup was used to complete this project. The project was completed in 5 iterati
 
 #### Header and Navigation
 **For Authenticated Users**
-![navbar-not-auth](static/docs/images/screenshots/navbar-not-auth.png)
+![Navbar and  header when user is not authenticated](static/docs/images/screenshots/navbar-not-auth.png)
 **For Unauthenticated Users**
-![navbar-auth](static/docs/images/screenshots/navbar-auth.png)
+![Navbar and  header when user is authenticated](static/docs/images/screenshots/navbar-auth.png)
 #### Alarm
+**Successful Message**
+![Messages for successful operation](static/docs/images/screenshots/alarm-success.png)
+**dismissed Message**
+![Messages for unsuccessful operation](static/docs/images/screenshots/alarm-error.png)
 #### Banner
 - Desktop
 - Tablet

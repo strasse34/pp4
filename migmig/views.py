@@ -9,6 +9,7 @@ from datetime import datetime
 from django.contrib import messages
 from django.utils import timezone
 from django.db.models import Q
+from django.template.defaultfilters import slugify
 
 
 class ContextMixin:
@@ -81,14 +82,13 @@ class AddFlightView(LoginRequiredMixin, ContextMixin, CreateView):
         Check if a flight with the same attributes already exists
         """
         form.instance.traveler = self.request.user
-        existing_flight = FlightDetails.objects.filter(
-            traveler=form.instance.traveler,
-            fname=form.cleaned_data['fname'],
-            lname=form.cleaned_data['lname'],
-            origin=form.cleaned_data['origin'],
-            destination=form.cleaned_data['destination'],
-            flight_date=form.cleaned_data['flight_date'],
-        ).first()
+
+        # Generate the slug for the current form being submitted
+        current_slug_source = f"{form.instance.traveler}-{form.cleaned_data['fname']}-{form.cleaned_data['lname']}-{form.cleaned_data['origin']}-{form.cleaned_data['destination']}-{form.cleaned_data['flight_date']}"
+        current_slug = slugify(current_slug_source)
+
+        # Query the database to check for an existing flight with the same slug
+        existing_flight = FlightDetails.objects.filter(slug=current_slug, status=1).first()
 
         if existing_flight:
             messages.error(self.request, "You have already posted this flight.")
