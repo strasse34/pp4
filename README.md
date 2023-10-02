@@ -98,7 +98,7 @@ The website has 10 pages for the users who get registerred.
 
 ### Colors and Fonts used
 #### Color
-I've based my website's color scheme on the lively Migmig cartoon character, which serves as the app's logo. By using [Coolors.co](https://coolors.co/) to extract colors from the character, I've created a cohesive and engaging design.
+I've based my website's color scheme on the lively Migmig cartoon character, which serves as the app's logo. I opted for the Migmig character because of its inherent speediness, which aligns perfectly with the core emphasis on speed within my app. The character's swift nature serves as a fitting representation for the importance I place on speed in my application. By using [Coolors.co](https://coolors.co/) to extract colors from the character, I've created a cohesive and engaging design.
 ![Palette](static/docs/images/palette.png)
 #### Font
 II've used two distinct fonts in my website design:
@@ -131,12 +131,14 @@ Githup was used to complete this project. The project was completed in 5 iterati
 ![Messages for successful operation](static/docs/images/screenshots/alarm-success.png)
 **dismissed Message**
 ![Messages for unsuccessful operation](static/docs/images/screenshots/alarm-error.png)
-#### Banner
-- Desktop
-- Tablet
-- Mobil
-#### Search bar
-#### Cards View
+#### Hero Image
+![Hero image](static/docs/images/screenshots/banner.png)
+#### Page Title and Search bar
+The search bar is available on both authenticated and unauthenticated home pages. Users can select an airport from the list to find relevant flights. 
+![Page Title and Search bar](static/docs/images/screenshots/page-title-searchbar.png)
+#### Upcomming Flights (home)
+The upcoming flight list is identical for both authenticated and unauthenticated users. Each page displays six cards, and users can navigate between pages using a button at the bottom of the card space.
+![Upcomming Flights page (home)](static/docs/images/screenshots/page-title-searchbar.png)
 #### Quote 
 #### Footer 
 #### My Fligts
