@@ -23,7 +23,7 @@ The primary goal of this project is to provide a significant solution for indivi
 
 The Entity Relationship Diagram (ERD) illustrates the structure of the database which lies at the core of the functionality of the site:
 
-![ERD](/static/docs/db-structure.png)
+![ERD](static/docs/images/db-structure.png)
 
 
 In the database design for my application, **User** is implemented using Django Allauth, simplifying user authentication and management. The **User** table contains fields for *username*, *password*, and *email*, with the *username* serving as the primary key.
@@ -136,12 +136,17 @@ Githup was used to complete this project. The project was completed in 5 iterati
 #### Page Title and Search bar
 The search bar is available on both authenticated and unauthenticated home pages. Users can select an airport from the list to find relevant flights. 
 ![Page Title and Search bar](static/docs/images/screenshots/page-title-searchbar.png)
-#### Upcomming Flights (home)
+#### Upcomming Flights (Home page)
 The upcoming flight list is identical for both authenticated and unauthenticated users. Each page displays six cards, and users can navigate between pages using a button at the bottom of the card space.
 ![Upcomming Flights page (home)](static/docs/images/screenshots/hompage.png)
+#### Flight Card in home page
+The flight cards in home page includes username of the poster and the general flight details. It does not include traveler contact details. Users can access the full information by clicking on 'Contact Traveler' button.
+![Flight Card in home page](static/docs/images/screenshots/card-home.png)
 #### Quote 
+![Quote section](static/docs/images/screenshots/quote.png)
 #### Footer 
-#### My Fligts
+![Footer](static/docs/images/screenshots/footer.png)
+#### My Fligts page
 #### Contact Traveler
 #### Add Flight
 #### Edit Flight
