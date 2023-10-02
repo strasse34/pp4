@@ -138,7 +138,7 @@ The search bar is available on both authenticated and unauthenticated home pages
 ![Page Title and Search bar](static/docs/images/screenshots/page-title-searchbar.png)
 #### Upcomming Flights (home)
 The upcoming flight list is identical for both authenticated and unauthenticated users. Each page displays six cards, and users can navigate between pages using a button at the bottom of the card space.
-![Upcomming Flights page (home)](static/docs/images/screenshots/page-title-searchbar.png)
+![Upcomming Flights page (home)](static/docs/images/screenshots/hompage.png)
 #### Quote 
 #### Footer 
 #### My Fligts
