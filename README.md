@@ -147,20 +147,19 @@ The flight cards on the home page feature the poster's username, the card's crea
 ![Quote section](static/docs/images/screenshots/quote.png)
 #### Footer 
 ![Footer](static/docs/images/screenshots/footer.png)
-#### My Fligts page
+#### My Flights page
 This page showcases all the cards created by the logged-in user. It comprises both active cards (status=1, indicating flights with future dates still visible on the homepage) and archived cards (status=0, which can either be manually archived by the user or automatically when the flight date becomes outdated). Active cards offer three options for editing, archiving, and deleting, while archived cards have a single option for deletion.
 ![My flighs page](static/docs/images/screenshots/my-flights.png)
 #### Flight Card in my flights page
 Each card displays the traveler's photo, name, and contact information. Account holders can also post on behalf of travelers who are not registered on the website. When a user archives a card, effectively removing it from the homepage, the card is visually marked with the word 'Archived' at the top, and the 'edit' and 'archive' buttons are no longer displayed.
 ![Cards in my flights page](static/docs/images/screenshots/card-my-flights.png)
-#### Edit Flight
-#### Archive Flight
-#### Delete Flight
+#### Edit, archive and delete pages
+
 #### Contact Traveler page
-![Contact Traveler page](static/docs/images/screenshots/contact-traveler.png)
-#### Add Flight
-#### Edit Flight
-#### Register
-#### Log in
-#### Log out
+On the Traveler's Contact Details page, you will find a single card. This card shares many similarities with the cards on the 'My Flights' page, featuring both flight details and traveler contact information. However, it is presented in a distinct style.
+![Edit, archive and delete pages](static/docs/images/screenshots/edit-archive-delete.png)
+#### All_Aut pages
+![All-auth pages](static/docs/images/screenshots/all-auth.png)
+#### Buttons
+
 
