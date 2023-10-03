@@ -158,8 +158,38 @@ Each card displays the traveler's photo, name, and contact information. Account 
 #### Contact Traveler page
 On the Traveler's Contact Details page, you will find a single card. This card shares many similarities with the cards on the 'My Flights' page, featuring both flight details and traveler contact information. However, it is presented in a distinct style.
 ![Edit, archive and delete pages](static/docs/images/screenshots/edit-archive-delete.png)
-#### All_Aut pages
+#### All_Auth pages
 ![All-auth pages](static/docs/images/screenshots/all-auth.png)
-#### Buttons
+## Future development
+- **Request Feature:** Travelers will receive requests from parcel holders, and only after a traveler's confirmation, will the parcel holder gain access to the traveler's contact information. Parcel holders can provide additional details about their parcels when sending a request to a traveler.
+- **Accept Request Feature:** Travelers have the option to accept or reject a request from a parcel holder.
+- **Payment Feature:** Adding a payment feature, ensuring payment before revealing the traveler's contact information to the parcel holder.
+- **More Details in Flight Cards:** Travelers can specify a fee for parcel delivery when posting their flight details. Flight cards will display not only the traveler's rating but also the number of total requests, rejected requests, and confirmed requests. It will also indicate the total confirmed weight capacity and the remaining available capacity.
 
+- **Rating Feature:** Parcel holders will have the ability to rate the traveler's service.
+- **Reliability Check:** Implementation of a trustworthiness mechanism for evaluating the reliability of travelers.
 
+## Technologies Used
+### Languages
+- HTML: used as the main language to set up the structure of the website.
+- CSS: used to style the website.
+- JavaScript: used to set time out for the messages.
+- Python: used as the main language of the application. 
+
+### Frameworks & Tools
+- Django: Employed for establishing the website's backend logic and user model.
+- GitHub: Utilized as the hosting platform for the website's source code. Additionally, it serves as the record-keeping system for implementing the Agile development framework, involving the use of GitHub's features like issues, milestones, and projects.
+- gitpod: Employed for code writing, development, as well as code commit and push operations to GitHub.
+- Heroku: Utilized for the live deployment of the website.
+- Cloudinary: Serves as the cloud storage solution for website media and static files. It also offers functionality for media manipulation and optimization during delivery.
+- Bootstrap: Applied extensively throughout the site to ensure responsiveness, manage layouts, and employ predefined style elements.
+- Balsamiq: Utilized in creating wireframes for the project.
+- dbdiagram.io: Employed for designing the Entity-Relationship Diagram (ERD).
+- Google Fonts: Imported to incorporate custom fonts into the website.
+- Font Awesome: Used to integrate icon features into the site.
+- coolors.co: Utilized for generating the website's color scheme.
+- Paint: Employed for creating feature images for readme file.
+
+## Testing and Validation
+
+The testing documentation can be found at [TESTING.md](TESTING.md)
