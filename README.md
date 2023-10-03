@@ -148,6 +148,11 @@ The flight cards on the home page feature the poster's username, the card's crea
 #### Footer 
 ![Footer](static/docs/images/screenshots/footer.png)
 #### My Fligts page
+This page showcases all the cards created by the logged-in user. It comprises both active cards (status=1, indicating flights with future dates still visible on the homepage) and archived cards (status=0, which can either be manually archived by the user or automatically when the flight date becomes outdated). Active cards offer three options for editing, archiving, and deleting, while archived cards have a single option for deletion.
+![My flighs page](static/docs/images/screenshots/my-flights.png)
+#### Flight Card in my flights page
+Each card displays the traveler's photo, name, and contact information. Account holders can also post on behalf of travelers who are not registered on the website. When a user archives a card, effectively removing it from the homepage, the card is visually marked with the word 'Archived' at the top, and the 'edit' and 'archive' buttons are no longer displayed.
+![Cards in my flights page](static/docs/images/screenshots/card-my-flights.png)
 #### Contact Traveler
 #### Add Flight
 #### Edit Flight
