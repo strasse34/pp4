@@ -214,4 +214,3 @@ class ArchiveFlightView(LoginRequiredMixin, ContextMixin, View):
         return redirect('my_flights')
 
 
- 

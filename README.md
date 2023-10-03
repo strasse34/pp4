@@ -207,6 +207,90 @@ On the Traveler's Contact Details page, you will find a single card. This card s
 
 The testing documentation can be found at [TESTING.md](TESTING.md)
 
+## Heroku Deployment
+
+### Requirements and Procfile
+
+Before deploying your application on Heroku, ensure that two files are created and up to date: a `requirements.txt` file and a `Procfile`.
+
+- To create the `requirements.txt` file, execute the following command in your terminal: `pip3 freeze --local > requirements.txt`. This will generate a file containing all the necessary requirements.
+- Next, create a file named `Procfile` and add the following code to it: `web: gunicorn migmig.wsgi`, without any empty lines following it.
+- Make sure to push these files to your repository.
+
+
+
+### Setting Up a Database
+
+- Log in to ElephantSQL.com and access your dashboard.
+- Select "Create New Instance."
+- Choose a plan, provide a name for your plan, select the "Tiny Turtle (Free)" plan, and leave the "Tags" field empty.
+- Pick a data center location near you under "Select Region."
+- Click "Review."
+- Confirm your details and click "Create instance."
+- Return to the ElephantSQL dashboard and click on the database instance name for your project.
+- In the URL section, click the copy icon to copy the database URL.
+- Ensure that Django and Gunicorn are installed in your workspace by running `pip3 install 'django<4' gunicorn`.
+- Similarly, ensure that the infrastructure for the database is installed by running `pip3 install dj_database_url===0.5.0 psycopg2`.
+- Update the `requirements.txt` file if necessary.
+
+### The env.py File
+
+- If you don't have an `env.py` file in your workspace, create one and make sure it's included in the `.gitignore` file.
+- At the top of the `env.py` file, add the line: `import os`.
+- Below that, add the following two lines:
+  `os.environ["DATABASE_URL"] = "<copied URL from SQL database>"`<br>
+  `os.environ["SECRET_KEY"] = "<create a secret key of your own>"`<br>
+- If you're using Cloudinary storage, also add the following line:
+`os.environ["CLOUDINARY_URL"] = "<copied URL from Cloudinary account>"`<br>
+- Ensure that the environment variables are correctly imported into the settings.py file.
+
+- Run python manage.py migrate in the terminal window to migrate the data structure to the database instance.
+
+### Heroku
+#### Creating a Heroku App
+
+- Log in to Heroku and navigate to the Dashboard.
+- Click "New" and then select "Create new app."
+- Give your app a name and choose the region closest to you.
+- Confirm by clicking "Create app."
+
+#### Setting Environment Variables
+- On the Heroku Dashboard, select the app you just created, and then go to the "Settings" tab.
+
+- Click "Reveal Config Vars."
+
+- Add the following config vars:
+
+`DATABASE_URL`: Copy the database URL from ElephantSQL here; it should also be in the env.py file.<br>
+`SECRET_KEY`: Copy your secret key here.<br>
+- If you're using Cloudinary storage, include your personal CLOUDINARY_URL in these fields.
+- Additionally, you may need the key PORT with the value 8000.
+
+#### Connecting to GitHub and Deployment
+
+- On the Heroku Dashboard, select the app you just created, and then go to the "Deploy" tab.
+- Choose GitHub as the deployment method.
+- Search for the name of the project repository and click "Connect."
+- If desired, enable automatic deploys.
+- Finally, select "Deploy Branch" and observe the app being built.
+
+### Forking the Repository
+- Log in to GitHub and find the GitHub repository you want to fork.
+- Above the "Settings" tab in the Repository, click the "Fork" button.
+- You will now have a copy of the original repository in your GitHub account, allowing you to make changes to the new version while keeping the original safe.
+
+### Making a Local Clone
+- Log in to GitHub and locate the repository you want to clone.
+- Click the 'Code' dropdown above the file list.
+- Copy the URL for the repository.
+- Open Git Bash in your IDE.
+- Change the current working directory to where you want the cloned directory.
+- In the CLI, type git clone and paste the URL you copied earlier. It should look like this:
+`$ git clone https://github.com/`
+- Press Enter to create your local clone.
+To install all the packages listed in the requirements file, you can use the following terminal command: `pip install -r requirements.txt`
+
+
 ## Credits
 ### Media
 - I used [Pexels](https://www.pexels.com), a license-free website, for all the images on my website.

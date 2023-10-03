@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Error 404{% endblock %}
+
+{% block content %}
+<!-- Error 404 -->
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <h3><strong>Page Not Fount!</strong></h3>
+            <p>Due to a technical reason, we are not able to proceed to the requested page.</p> 
+            
+            <a href="{% url 'home' %}" class="btn btn-primary">Back Home</a>
+            </form>
+        </div>
+    </div>
+</div>
+    
+{% endblock %}
