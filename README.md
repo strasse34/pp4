@@ -53,13 +53,13 @@
 9. [Acknowledgements](#acknowledgements)
 
 
-## 1- Introduction
+## Introduction
 
 Welcome to MigMigShipment, a solution for efficient parcel shipping! MigMigShipment connects individuals in need of swift parcel delivery with travelers heading in the same direction. The platform streamlines the process of sending parcels, providing a reliable and cost-effective alternative to traditional shipping services. Whether you're a traveler willing to help others while earning extra income or someone looking to ship a package swiftly and securely, MigMigShipment is here to make the process seamless. 
 
 This project is part of the Code Institute's Full Stack Diploma Program. I used technologies of Django, Python, JavaScript, CSS, and HTML to build it. Data is stored in a PostgreSQL database.
 
-## 2- Design
+## Design
 ### Project Goals
 
 The primary goal of this project is to provide a significant solution for individuals in urgent need of parcel delivery. It aims to bridge the gap for fast and reliable delivery services, especially for long-distance shipments. With this app, a traveler and a parcel holder can seamlessly connect and negotiate the delivery cost, making it a convenient and efficient way to get parcels to their destinations quickly. This project envisions making the process of urgent parcel delivery smoother and more accessible for everyone involved.
@@ -164,7 +164,7 @@ I have used two distinct fonts in my website design:
 - [Contact Traveler](static/docs/images/wireframes/contact-traveler.png)
 
 
-## 3- Agile Development
+## Agile Development
 ### Iterations
 Githup was used to complete this project. The project was completed in 5 iterations.
 - **Iteration 1**: I started by defining the user profile.
@@ -215,7 +215,7 @@ On the Traveler's Contact Details page, you will find a single card. This card s
 #### All_Auth pages
 ![All-auth pages](static/docs/images/screenshots/all-auth.png)
 
-## 4- Future Development
+## Future Development
 
 - **Request Feature:** Travelers will receive requests from parcel holders, and only after a traveler's confirmation, will the parcel holder gain access to the traveler's contact information. Parcel holders can provide additional details about their parcels when sending a request to a traveler.
 - **Accept Request Feature:** Travelers have the option to accept or reject a request from a parcel holder.
@@ -225,7 +225,7 @@ On the Traveler's Contact Details page, you will find a single card. This card s
 - **Rating Feature:** Parcel holders will have the ability to rate the traveler's service.
 - **Reliability Check:** Implementation of a trustworthiness mechanism for evaluating the reliability of travelers.
 
-## 5- Technologies Used
+## Technologies Used
 ### Languages
 - HTML: used as the main language to set up the structure of the website.
 - CSS: used to style the website and ensure responsiveness.
@@ -248,11 +248,11 @@ On the Traveler's Contact Details page, you will find a single card. This card s
 - [removal](https://removal.ai/): Used to remove background of logo image and make it transparent.
 - Paint: Employed for creating feature images for readme file.
 
-## 6- Testing and Validation
+## Testing and Validation
 
 The testing documentation can be found at [TESTING.md](TESTING.md)
 
-## 7- Heroku Deployment
+## Heroku Deployment
 
 ### Requirements and Procfile
 
@@ -336,7 +336,7 @@ Before deploying your application on Heroku, ensure that two files are created a
 To install all the packages listed in the requirements file, you can use the following terminal command: `pip install -r requirements.txt`
 
 
-## 8- Credits
+## Credits
 ### Media
 - I used [Pexels](https://www.pexels.com), a license-free website, for all the images on my website.
 - The logo picture is widely available and easily found through a quick search. I downloaded it from [Pinterest](https://www.pinterest.de/monociclos/).
@@ -354,7 +354,7 @@ To install all the packages listed in the requirements file, you can use the fol
   - [Django Documentation](https://docs.djangoproject.com/en/4.2/)
   - [Bootstrap 4 Documentation](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 
-## 9- Acknowledgements
+## Acknowledgements
 - I extend my heartfelt gratitude to my mentor, David Bowers, for his invaluable feedback, advice, guidance, and unwavering support throughout this project.
 - Special thanks to Kay Welfare, one of our cohort facilitators, for her valuable insights on course management, her direction towards a wealth of resources for project assistance, and her consistent presence in our informative Wednesday morning cohort discussions.
 - I am immensely thankful to the supportive Slack community, which has repeatedly stepped in to assist in resolving issues and overcoming challenges during implementation.
