@@ -1,20 +1,65 @@
 # MigMigShipment
 
-(Developed by Reza Mirzaie)
-
 ![Mockup image](static/docs/images/screenshots/responsive.png)
 
 [Live webpage](https://migmig-bcca17837059.herokuapp.com/)
 
 [Repository](https://github.com/strasse34/pp4-migmig)
 
+# Table of Contents
+1. [Introduction](#1-introduction)
+2. [Design](#2-design)
+   - [Project Goals](#project-goals)
+   - [Database Design](#data-base-design)
+   - [User Experience - UX](#user-experience---ux)
+   - [Scope](#scope)
+   - [Structure](#structure)
+   - [Colors and Fonts Used](#colors-and-fonts-used)
+   - [Wireframes](#wireframes)
+3. [Agile Development](#3-agile-development)
+   - [Iterations](#iterations)
+   - [Developed Features](#developed-features)
+      - [Header and Navigation](#header-and-navigation)
+      - [Alarm](#alarm)
+      - [Hero Image](#hero-image)
+      - [Page Title and Search Bar](#page-title-and-search-bar)
+      - [Upcoming Flights (Home Page)](#upcoming-flights-home-page)
+      - [Flight Card in Home Page](#flight-card-in-home-page)
+      - [Quote](#quote)
+      - [Footer](#footer)
+      - [My Flights Page](#my-flights-page)
+      - [Flight Card in My Flights Page](#flight-card-in-my-flights-page)
+      - [Edit, Archive, and Delete Pages](#edit-archive-and-delete-pages)
+      - [Contact Traveler Page](#contact-traveler-page)
+      - [All_Auth Pages](#all_auth-pages)
+4. [Future Development](#4-future-development)
+5. [Technologies Used](#5-technologies-used)
+   - [Languages](#languages)
+   - [Frameworks & Tools](#frameworks--tools)
+6. [Testing and Validation](#6-testing-and-validation)
+7. [Heroku Deployment](#7-heroku-deployment)
+   - [Requirements and Procfile](#requirements-and-procfile)
+   - [Setting Up a Database](#setting-up-a-database)
+   - [The env.py File](#the-envpy-file)
+   - [Heroku](#heroku)
+      - [Creating a Heroku App](#creating-a-heroku-app)
+      - [Setting Environment Variables](#setting-environment-variables)
+      - [Connecting to GitHub and Deployment](#connecting-to-github-and-deployment)
+      - [Forking the Repository](#forking-the-repository)
+      - [Making a Local Clone](#making-a-local-clone)
+8. [Credits](#8-credits)
+    - [Media](#media)
+    - [Code](#code)
+9. [Acknowledgements](#9-acknowledgements)
 
-## Introduction
+
+## 1- Introduction
 
 Welcome to MigMigShipment, a solution for efficient parcel shipping! MigMigShipment connects individuals in need of swift parcel delivery with travelers heading in the same direction. The platform streamlines the process of sending parcels, providing a reliable and cost-effective alternative to traditional shipping services. Whether you're a traveler willing to help others while earning extra income or someone looking to ship a package swiftly and securely, MigMigShipment is here to make the process seamless. 
 
 This project is part of the Code Institute's Full Stack Diploma Program. I used technologies of Django, Python, JavaScript, CSS, and HTML to build it. Data is stored in a PostgreSQL database.
 
+## 2- Design
 ### Project Goals
 
 The primary goal of this project is to provide a significant solution for individuals in urgent need of parcel delivery. It aims to bridge the gap for fast and reliable delivery services, especially for long-distance shipments. With this app, a traveler and a parcel holder can seamlessly connect and negotiate the delivery cost, making it a convenient and efficient way to get parcels to their destinations quickly. This project envisions making the process of urgent parcel delivery smoother and more accessible for everyone involved.
@@ -37,36 +82,36 @@ This database structure efficiently organizes and manages data for my applicatio
 
 **Future Models**
 
-As part of the ongoing development of my application, I envision an additional models to enhance user interaction and flexibility. One such model is the **ContactRequest** model, designed to facilitate secure communication between travelers and other users.
+As part of the ongoing development of my application, I envision an additional model to enhance user interaction and flexibility. One such model is the **ContactRequest** model, designed to facilitate secure communication between travelers and other users.
 
-The **ContactRequest** model will enabling users to send and receive contact requests. When a traveler posts a flight, he/she can receive requests from other users interested in the posted flight details. The traveler will have the option to selectively reveal the contact details to specific users, fostering trust and privacy.
+The **ContactRequest** model will enable users to send and receive contact requests. When a traveler posts a flight, he/she can receive requests from other users interested in the posted flight details. The traveler will have the option to selectively reveal the contact details to specific users, fostering trust and privacy.
 
 This addition will enhance the user experience, allowing for seamless communication and negotiation between travelers and potential partners. As my application continues to evolve, these future models will play a pivotal role in expanding its functionality and user engagement.
 
-## User Experience - UX
+### User Experience - UX
 
 The application was developed considering the four planes of User Experience:
 
-### EPICS and User Stories
+#### EPICS and User Stories
 
-#### EPIC-1: User registration
+**EPIC-1: User registration**
 - As a user, I can make an account, so that I can use web app services.
 - As a user, I can use my username and password, so that I can log in to my account.
 - As a user, after authentication, I can see my username on the website after login, so that I can be sure that I am logged in.
 
-#### EPIC-2: Add flight details cards
+**EPIC-2: Add flight details cards**
 - As a user, After authentication, I can add a new flight card, so that other users can see my flight card.
-- As a logged in user, while filling out the form, I can select the airport from the dropdown list. so that I can find the origin and destination airports easily.
-- As a logged in user, I can click on flight cards, so that I can see the complete flight details and traveler's contact details.
+- As a logged-in user, while filling out the form, I can select the airport from the dropdown list. so that I can find the origin and destination airports easily.
+- As a logged-in user, I can click on flight cards, so that I can see the complete flight details and traveler's contact details.
 
-#### EPIC-3: Manage cards
+**EPIC-3: Manage cards**
 - As a user, after authentication, I can edit my posted cards. so that I can change the card information and repost it.
 - As a user, after authentication, I can archive my posted cards. so that I can move those cards from the public page to my flight page.
 - As a user, after authentication, I can delete my posted cards. so that I can remove card information from the database.
 - As a user, I want to see the updated date after I or other users edit a card, So that I and other users will understand that the card has been modified.
 - As a user, I want flight cards to be archived when they cross the flight date. so that other users will not misunderstand outdated flight cards.
 
-#### EPIC-4: Landing page
+**EPIC-4: Landing page**
 - As a guest visitor user, I can see all the flight cards and other information on the first page, so that I can get familiar with the app and view the basic flight information.
 - As a guest visitor user, I can search among available cards, so that I can find proper flight cards quickly and easily.
 
@@ -77,28 +122,28 @@ The MigMigShipment application is designed to cater to a diverse audience with v
 
 ### Scope
 #### Core Website Functionality
-- Implement a registration/login/log out features for access to core site functionality.
+- Implement registration/login/log out features for access to core site functionality.
 - Implement a form to add new flight details and traveler's contact details (flight card) to the site.
-- Implement a feature to edit the filght cards.
-- Implement a feature to  archive  the filght cards.
-- Implement a feature to delete the filght cards.
+- Implement a feature to edit the flight cards.
+- Implement a feature to  archive the filght cards.
+- Implement a feature to delete the flight cards.
 
 #### Responsiveness
 - Implement responsive design for smooth desktop, tablet, and mobile device access.
 
 ### Structure
-The website has 10 pages for the users who get registerred.
+The website has 10 pages for the users who get registered.
 
-#### Current Pages
-- **Home Page** includes signup/login links in navigation bar, a banner to catch eyes, all the active flight cards which have posted with all users with ability of search, and quote sections to share user's experiences. Banner and quote space are hided after user authentication.
+#### Pages
+- **Home Page** includes signup/login links in the navigation bar, a banner to catch eye, all the active flight cards which have been posted with all users with the ability of search, and quote sections to share user's experiences. Banner and quote space are hiden after user authentication.
 - **Register Page** allows the user to create an account to access the core functionality of the site.
-- **Login/Logout Pages**  allow the registerred user to authenticate or log out of their account.
-- **Add Flight Page**  allow the authenticated user to recorde new flight card to data base.
-- **My Flight Page**  allow the authenticated user to see all the flight cards which have posted by that user.
-- **Contact Traveler Page**  allow the authenticated user to see traveler's contact details.
-- **Edit Flight Page**  allow the authenticated user to edit their recorded cards.
-- **Archived Flight Page**  get confirmation from an authenticated user for archiving a specific cards.
-- **Archived Flight Page**  get confirmation from an authenticated user for deleting a specific cards.
+- **Login/Logout Pages**  allows the registered user to authenticate or log out of their account.
+- **Add Flight Page**  allows the authenticated user to record a new flight card to database.
+- **My Flight Page**  allows the authenticated user to see all the flight cards that have been posted by that user.
+- **Contact Traveler Page**  allows the authenticated user to see traveler's contact details.
+- **Edit Flight Page**  allows the authenticated user to edit their recorded cards.
+- **Archived Flight Page**  gets confirmation from an authenticated user for archiving a specific card.
+- **Delete Flight Page**  gets confirmation from an authenticated user for deleting a specific card.
 
 ### Colors and Fonts used
 
@@ -107,7 +152,7 @@ I've based my website's color scheme on the lively Migmig cartoon character, whi
 ![Palette](static/docs/images/palette.png)
 
 #### Font
-II've used two distinct fonts in my website design:
+I have used two distinct fonts in my website design:
 - **Caveat:** This font is applied to the website's name to create a harmonious connection with the logo, adding a touch of personalization and uniqueness.
 - **Roboto:** For the main body text, I've chosen the 'Roboto' font. It's a popular and easy-to-read typeface that ensures a comfortable reading experience for visitors.
 
@@ -118,7 +163,9 @@ II've used two distinct fonts in my website design:
 - [My Flight](static/docs/images/wireframes/my-flight.png)
 - [Contact Traveler](static/docs/images/wireframes/contact-traveler.png)
 
-### Agile Development
+
+## 3- Agile Development
+### Iterations
 Githup was used to complete this project. The project was completed in 5 iterations.
 - **Iteration 1**: I started by defining the user profile.
 - **Iteration 2**: In the second phase, I focused on creating the database, designing forms, and developing the relevant pages.
@@ -126,8 +173,7 @@ Githup was used to complete this project. The project was completed in 5 iterati
 - **Iteration 4**: The fourth phase addressed any remaining "would-have" features and resolved any lingering uncertainties or issues. 
 - **Iteration 5**: In the fifth and final iteration, I conducted testing, deployed the project, and documented the entire process.
 
-### Existing Features
-
+### Developed Features
 #### Header and Navigation
 **For authenticated users**
 ![Navbar and  header when user is not authenticated](static/docs/images/screenshots/navbar-not-auth.png)
@@ -136,8 +182,7 @@ Githup was used to complete this project. The project was completed in 5 iterati
 
 #### Alarm
 **Successful Message**
-![Messages for successful operation](static/docs/images/screenshots/alarm-success.png)
-<br>
+![Messages for successful operation](static/docs/images/screenshots/alarm-success.png)<br>
 **dismissed Message**
 ![Messages for unsuccessful operation](static/docs/images/screenshots/alarm-error.png)
 #### Hero Image
@@ -145,10 +190,10 @@ Githup was used to complete this project. The project was completed in 5 iterati
 #### Page Title and Search bar
 The search bar is available on both authenticated and unauthenticated home pages. Users can select an airport from the list to find relevant flights. 
 ![Page Title and Search bar](static/docs/images/screenshots/page-title-searchbar.png)
-#### Upcomming Flights (Home page)
+#### Upcoming Flights (Home page)
 The upcoming flight list is identical for both authenticated and unauthenticated users. Each page displays six cards, and users can navigate between pages using a button at the bottom of the card space.
 ![Upcomming Flights page (home)](static/docs/images/screenshots/hompage.png)
-#### Flight Card in home page
+#### Flight Card on home page
 The flight cards on the home page feature the poster's username, the card's creation or update date, and essential flight details. Notably, traveler contact details are intentionally omitted. To access complete information, only registered users can click the 'Contact Traveler' button.<br>
 ![Flight Card in home page](static/docs/images/screenshots/card-home.png)
 #### Quote 
@@ -158,19 +203,19 @@ The flight cards on the home page feature the poster's username, the card's crea
 #### My Flights page
 This page showcases all the cards created by the logged-in user. It comprises both active cards (status=1, indicating flights with future dates still visible on the homepage) and archived cards (status=0, which can either be manually archived by the user or automatically when the flight date becomes outdated). Active cards offer three options for editing, archiving, and deleting, while archived cards have a single option for deletion.
 ![My flighs page](static/docs/images/screenshots/my-flights.png)
-#### Flight Card in my flights page
+#### Flight Card on my flights page
 Each card displays the traveler's photo, name, and contact information. Account holders can also post on behalf of travelers who are not registered on the website. When a user archives a card, effectively removing it from the homepage, the card is visually marked with the word 'Archived' at the top, and the 'edit' and 'archive' buttons are no longer displayed.
 ![Cards in my flights page](static/docs/images/screenshots/card-my-flights.png)
 #### Edit, archive and delete pages
-
+![Edit, archive and delete pages](static/docs/images/screenshots/edit-archive-delete.png)
 #### Contact Traveler page
 On the Traveler's Contact Details page, you will find a single card. This card shares many similarities with the cards on the 'My Flights' page, featuring both flight details and traveler contact information. However, it is presented in a distinct style.
-![Edit, archive and delete pages](static/docs/images/screenshots/edit-archive-delete.png)
+![Contact traveler page](static/docs/images/screenshots/contact-traveler.png)
 
 #### All_Auth pages
 ![All-auth pages](static/docs/images/screenshots/all-auth.png)
 
-## Future Development
+## 4- Future Development
 
 - **Request Feature:** Travelers will receive requests from parcel holders, and only after a traveler's confirmation, will the parcel holder gain access to the traveler's contact information. Parcel holders can provide additional details about their parcels when sending a request to a traveler.
 - **Accept Request Feature:** Travelers have the option to accept or reject a request from a parcel holder.
@@ -180,7 +225,7 @@ On the Traveler's Contact Details page, you will find a single card. This card s
 - **Rating Feature:** Parcel holders will have the ability to rate the traveler's service.
 - **Reliability Check:** Implementation of a trustworthiness mechanism for evaluating the reliability of travelers.
 
-## Technologies Used
+## 5- Technologies Used
 ### Languages
 - HTML: used as the main language to set up the structure of the website.
 - CSS: used to style the website and ensure responsiveness.
@@ -203,11 +248,11 @@ On the Traveler's Contact Details page, you will find a single card. This card s
 - [removal](https://removal.ai/): Used to remove background of logo image and make it transparent.
 - Paint: Employed for creating feature images for readme file.
 
-## Testing and Validation
+## 6- Testing and Validation
 
 The testing documentation can be found at [TESTING.md](TESTING.md)
 
-## Heroku Deployment
+## 7- Heroku Deployment
 
 ### Requirements and Procfile
 
@@ -261,8 +306,8 @@ Before deploying your application on Heroku, ensure that two files are created a
 
 - Add the following config vars:
 
-`DATABASE_URL`: Copy the database URL from ElephantSQL here; it should also be in the env.py file.<br>
-`SECRET_KEY`: Copy your secret key here.<br>
+  - `DATABASE_URL`: Copy the database URL from ElephantSQL here; it should also be in the env.py file.<br>
+  - `SECRET_KEY`: Copy your secret key here.<br>
 - If you're using Cloudinary storage, include your personal CLOUDINARY_URL in these fields.
 - Additionally, you may need the key PORT with the value 8000.
 
@@ -291,7 +336,7 @@ Before deploying your application on Heroku, ensure that two files are created a
 To install all the packages listed in the requirements file, you can use the following terminal command: `pip install -r requirements.txt`
 
 
-## Credits
+## 8- Credits
 ### Media
 - I used [Pexels](https://www.pexels.com), a license-free website, for all the images on my website.
 - The logo picture is widely available and easily found through a quick search. I downloaded it from [Pinterest](https://www.pinterest.de/monociclos/).
@@ -309,7 +354,7 @@ To install all the packages listed in the requirements file, you can use the fol
   - [Django Documentation](https://docs.djangoproject.com/en/4.2/)
   - [Bootstrap 4 Documentation](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 
-## Acknowledgements
+## 9- Acknowledgements
 - I extend my heartfelt gratitude to my mentor, David Bowers, for his invaluable feedback, advice, guidance, and unwavering support throughout this project.
 - Special thanks to Kay Welfare, one of our cohort facilitators, for her valuable insights on course management, her direction towards a wealth of resources for project assistance, and her consistent presence in our informative Wednesday morning cohort discussions.
 - I am immensely thankful to the supportive Slack community, which has repeatedly stepped in to assist in resolving issues and overcoming challenges during implementation.
