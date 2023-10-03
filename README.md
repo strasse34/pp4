@@ -2,7 +2,7 @@
 
 (Developed by Reza Mirzaie)
 
-![Mockup image]()
+![Mockup image](static/docs/images/screenshots/responsive.png)
 
 [Live webpage](https://migmig-bcca17837059.herokuapp.com/)
 
@@ -53,16 +53,19 @@ The application was developed considering the four planes of User Experience:
 - As a user, I can make an account, so that I can use web app services.
 - As a user, I can use my username and password, so that I can log in to my account.
 - As a user, after authentication, I can see my username on the website after login, so that I can be sure that I am logged in.
+
 #### EPIC-2: Add flight details cards
 - As a user, After authentication, I can add a new flight card, so that other users can see my flight card.
 - As a logged in user, while filling out the form, I can select the airport from the dropdown list. so that I can find the origin and destination airports easily.
 - As a logged in user, I can click on flight cards, so that I can see the complete flight details and traveler's contact details.
+
 #### EPIC-3: Manage cards
 - As a user, after authentication, I can edit my posted cards. so that I can change the card information and repost it.
 - As a user, after authentication, I can archive my posted cards. so that I can move those cards from the public page to my flight page.
 - As a user, after authentication, I can delete my posted cards. so that I can remove card information from the database.
 - As a user, I want to see the updated date after I or other users edit a card, So that I and other users will understand that the card has been modified.
 - As a user, I want flight cards to be archived when they cross the flight date. so that other users will not misunderstand outdated flight cards.
+
 #### EPIC-4: Landing page
 - As a guest visitor user, I can see all the flight cards and other information on the first page, so that I can get familiar with the app and view the basic flight information.
 - As a guest visitor user, I can search among available cards, so that I can find proper flight cards quickly and easily.
@@ -85,6 +88,7 @@ The MigMigShipment application is designed to cater to a diverse audience with v
 
 ### Structure
 The website has 10 pages for the users who get registerred.
+
 #### Current Pages
 - **Home Page** includes signup/login links in navigation bar, a banner to catch eyes, all the active flight cards which have posted with all users with ability of search, and quote sections to share user's experiences. Banner and quote space are hided after user authentication.
 - **Register Page** allows the user to create an account to access the core functionality of the site.
@@ -97,13 +101,16 @@ The website has 10 pages for the users who get registerred.
 - **Archived Flight Page**  get confirmation from an authenticated user for deleting a specific cards.
 
 ### Colors and Fonts used
+
 #### Color
 I've based my website's color scheme on the lively Migmig cartoon character, which serves as the app's logo. I opted for the Migmig character because of its inherent speediness, which aligns perfectly with the core emphasis on speed within my app. The character's swift nature serves as a fitting representation for the importance I place on speed in my application. By using [Coolors.co](https://coolors.co/) to extract colors from the character, I've created a cohesive and engaging design.
 ![Palette](static/docs/images/palette.png)
+
 #### Font
 II've used two distinct fonts in my website design:
 - **Caveat:** This font is applied to the website's name to create a harmonious connection with the logo, adding a touch of personalization and uniqueness.
 - **Roboto:** For the main body text, I've chosen the 'Roboto' font. It's a popular and easy-to-read typeface that ensures a comfortable reading experience for visitors.
+
 #### Wireframes
 - [Home (Not authenticated)](static/docs/images/wireframes/home-not-login.png)
 - [Home (Authenticated)](static/docs/images/wireframes/home-loggedin.png)
@@ -126,6 +133,7 @@ Githup was used to complete this project. The project was completed in 5 iterati
 ![Navbar and  header when user is not authenticated](static/docs/images/screenshots/navbar-not-auth.png)
 **For unauthenticated users**
 ![Navbar and  header when user is authenticated](static/docs/images/screenshots/navbar-auth.png)
+
 #### Alarm
 **Successful Message**
 ![Messages for successful operation](static/docs/images/screenshots/alarm-success.png)
@@ -158,9 +166,12 @@ Each card displays the traveler's photo, name, and contact information. Account 
 #### Contact Traveler page
 On the Traveler's Contact Details page, you will find a single card. This card shares many similarities with the cards on the 'My Flights' page, featuring both flight details and traveler contact information. However, it is presented in a distinct style.
 ![Edit, archive and delete pages](static/docs/images/screenshots/edit-archive-delete.png)
+
 #### All_Auth pages
 ![All-auth pages](static/docs/images/screenshots/all-auth.png)
-## Future development
+
+## Future Development
+
 - **Request Feature:** Travelers will receive requests from parcel holders, and only after a traveler's confirmation, will the parcel holder gain access to the traveler's contact information. Parcel holders can provide additional details about their parcels when sending a request to a traveler.
 - **Accept Request Feature:** Travelers have the option to accept or reject a request from a parcel holder.
 - **Payment Feature:** Adding a payment feature, ensuring payment before revealing the traveler's contact information to the parcel holder.
@@ -172,7 +183,7 @@ On the Traveler's Contact Details page, you will find a single card. This card s
 ## Technologies Used
 ### Languages
 - HTML: used as the main language to set up the structure of the website.
-- CSS: used to style the website.
+- CSS: used to style the website and ensure responsiveness.
 - JavaScript: used to set time out for the messages.
 - Python: used as the main language of the application. 
 
@@ -181,15 +192,43 @@ On the Traveler's Contact Details page, you will find a single card. This card s
 - GitHub: Utilized as the hosting platform for the website's source code. Additionally, it serves as the record-keeping system for implementing the Agile development framework, involving the use of GitHub's features like issues, milestones, and projects.
 - gitpod: Employed for code writing, development, as well as code commit and push operations to GitHub.
 - Heroku: Utilized for the live deployment of the website.
-- Cloudinary: Serves as the cloud storage solution for website media and static files. It also offers functionality for media manipulation and optimization during delivery.
+- Cloudinary: Serves as the cloud storage solution for website media and static files. 
 - Bootstrap: Applied extensively throughout the site to ensure responsiveness, manage layouts, and employ predefined style elements.
 - Balsamiq: Utilized in creating wireframes for the project.
 - dbdiagram.io: Employed for designing the Entity-Relationship Diagram (ERD).
 - Google Fonts: Imported to incorporate custom fonts into the website.
 - Font Awesome: Used to integrate icon features into the site.
 - coolors.co: Utilized for generating the website's color scheme.
+- amiresponsive: Used to generate responsive screens of my website in different devices.
 - Paint: Employed for creating feature images for readme file.
 
 ## Testing and Validation
 
 The testing documentation can be found at [TESTING.md](TESTING.md)
+
+## Credits
+### Media
+I used [Pexel](www.pexels.com) which is a license free website, for all of the images in my website. 
+Logo picture is a pupular image and everybody can find it easily from the quike search. I downloaded it from [IMGBIN](https://imgbin.com/png/dpd4TYeZ/daffy-duck-bugs-bunny-porky-pig-wile-e-coyote-and-the-road-runner-looney-tunes-png)
+
+### Code
+I inspired from below resources:
+- I Think Therefore I Blog
+- The WorldTravel Log by [Ulrike Riemenschneider](https://github.com/URiem)
+- Jobs-A-Gooden by [David Bowers](https://github.com/dnlbowers)
+
+I used following resources repeatidly during my pp4:
+- stackoverflow.com
+- YouTube page: Programming with Mosh
+- YouTube page: Vision Academy
+- [Django Documentation] (https://docs.djangoproject.com/en/4.2/)
+- [Bootstrap4 Documentation] (getbootstrap.com/docs/4.6/getting-started/introduction/)
+
+## Acknowledgements
+I would like to thank:
+
+- I want to express my gratitude to my mentor, David Bowers, for his invaluable feedback, advice, guidance, and unwavering support throughout this project.
+- Special thanks to Kay Welfare, one of our cohort facilitators, for her valuable insights on course management, her direction towards a wealth of resources for project assistance, and her consistent presence in our informative Wednesday morning cohort discussions.
+- I am immensely thankful to the supportive Slack community, which has repeatedly stepped in to assist in resolving issues and overcoming challenges during implementation.
+- A heartfelt appreciation to the dedicated tutors at tutor support.
+- Lastly, I extend my thanks to my spouse for their encouragement and unwavering support throughout this journey.
