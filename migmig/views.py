@@ -152,12 +152,34 @@ class EditFlightView(LoginRequiredMixin, ContextMixin, UpdateView):
     def form_valid(self, form):
         form.instance.traveler = self.request.user
         flight_details = self.object 
-        flight_details.is_updated = True
-        flight_details.save()
-        form.save()
-        messages.success(self.request, "Your flight details were updated successfully")
-        return super().form_valid(form)
 
+        # Generate the slug for the current form being submitted
+        current_slug_source = f"{form.instance.traveler}-{form.cleaned_data['fname']}-{form.cleaned_data['lname']}-{form.cleaned_data['origin']}-{form.cleaned_data['destination']}-{form.cleaned_data['flight_date']}"
+        current_slug = slugify(current_slug_source)
+
+        # Query the database to check for an existing flight with the same slug
+        existing_flight = FlightDetails.objects.filter(slug=current_slug, status=1).first()
+
+        if existing_flight:
+            messages.error(self.request, "You have already posted this flight.")
+            return render(self.request, 'edit_flight.html', {'flight_details': flight_details, 'form': form})
+
+        flight_date = form.cleaned_data['flight_date']
+
+        if flight_date > timezone.now().date():
+            if form.cleaned_data['origin'] != form.cleaned_data['destination']:
+                
+                flight_details.is_updated = True
+                flight_details.save()
+                form.save()
+                messages.success(self.request, "Your flight details were updated successfully")
+                return super().form_valid(form)
+            else:
+                messages.error(self.request, "Origin airport and destination airport cannot be the same.")
+                return render(self.request, 'edit_flight.html', {'flight_details': flight_details, 'form': form})
+        else:
+            messages.error(self.request, "Flight date must be in the future.")
+            return render(self.request, 'edit_flight.html', {'flight_details': flight_details, 'form': form})
 
 
 class DeleteFlightView(LoginRequiredMixin, ContextMixin, View):
