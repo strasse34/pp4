@@ -195,12 +195,12 @@ On the Traveler's Contact Details page, you will find a single card. This card s
 - Cloudinary: Serves as the cloud storage solution for website media and static files. 
 - Bootstrap: Applied extensively throughout the site to ensure responsiveness, manage layouts, and employ predefined style elements.
 - Balsamiq: Utilized in creating wireframes for the project.
-- [dbdiagram](dbdiagram.io): Employed for designing the Entity-Relationship Diagram (ERD).
+- [dbdiagram](https://dbdiagram.io/home): Employed for designing the Entity-Relationship Diagram (ERD).
 - [Google Fonts](https://fonts.google.com/): Imported to incorporate custom fonts into the website.
 - [Font Awesome](https://fontawesome.com/): Used to integrate icon features into the site.
-- [coolors](coolors.co): Utilized for generating the website's color scheme.
-- [amiresponsive](amiresponsive.com): Used to generate responsive screens of my website in different devices.
-- [removal](removal.ai): Used to remove background of logo image and make it transparent.
+- [coolors](https://coolors.co/): Utilized for generating the website's color scheme.
+- [amiresponsive](https://ui.dev/amiresponsive): Used to generate responsive screens of my website in different devices.
+- [removal](https://removal.ai/): Used to remove background of logo image and make it transparent.
 - Paint: Employed for creating feature images for readme file.
 
 ## Testing and Validation
