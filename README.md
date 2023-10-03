@@ -195,11 +195,12 @@ On the Traveler's Contact Details page, you will find a single card. This card s
 - Cloudinary: Serves as the cloud storage solution for website media and static files. 
 - Bootstrap: Applied extensively throughout the site to ensure responsiveness, manage layouts, and employ predefined style elements.
 - Balsamiq: Utilized in creating wireframes for the project.
-- dbdiagram.io: Employed for designing the Entity-Relationship Diagram (ERD).
-- Google Fonts: Imported to incorporate custom fonts into the website.
-- Font Awesome: Used to integrate icon features into the site.
-- coolors.co: Utilized for generating the website's color scheme.
-- amiresponsive: Used to generate responsive screens of my website in different devices.
+- [dbdiagram](dbdiagram.io): Employed for designing the Entity-Relationship Diagram (ERD).
+- [Google Fonts](https://fonts.google.com/): Imported to incorporate custom fonts into the website.
+- [Font Awesome](https://fontawesome.com/): Used to integrate icon features into the site.
+- [coolors](coolors.co): Utilized for generating the website's color scheme.
+- [amiresponsive](amiresponsive.com): Used to generate responsive screens of my website in different devices.
+- [removal](removal.ai): Used to remove background of logo image and make it transparent.
 - Paint: Employed for creating feature images for readme file.
 
 ## Testing and Validation
@@ -208,27 +209,25 @@ The testing documentation can be found at [TESTING.md](TESTING.md)
 
 ## Credits
 ### Media
-I used [Pexel](www.pexels.com) which is a license free website, for all of the images in my website. 
-Logo picture is a pupular image and everybody can find it easily from the quike search. I downloaded it from [IMGBIN](https://imgbin.com/png/dpd4TYeZ/daffy-duck-bugs-bunny-porky-pig-wile-e-coyote-and-the-road-runner-looney-tunes-png)
+- I used [Pexels](https://www.pexels.com), a license-free website, for all the images on my website.
+- The logo picture is widely available and easily found through a quick search. I downloaded it from [Pinterest](https://www.pinterest.de/monociclos/).
 
 ### Code
-I inspired from below resources:
-- I Think Therefore I Blog
-- The WorldTravel Log by [Ulrike Riemenschneider](https://github.com/URiem)
-- Jobs-A-Gooden by [David Bowers](https://github.com/dnlbowers)
+- I drew inspiration from the following resources:
+  - "I Think Therefore I Blog" (Please provide full name or source if available).
+  - "The WorldTravel Log" by [Ulrike Riemenschneider](https://github.com/URiem).
+  - "Jobs-A-Gooden" by [David Bowers](https://github.com/dnlbowers).
 
-I used following resources repeatidly during my pp4:
-- stackoverflow.com
-- YouTube page: Programming with Mosh
-- YouTube page: Vision Academy
-- [Django Documentation] (https://docs.djangoproject.com/en/4.2/)
-- [Bootstrap4 Documentation] (getbootstrap.com/docs/4.6/getting-started/introduction/)
+- I frequently consulted the following resources during my project:
+  - [Stack Overflow](https://stackoverflow.com)
+  - YouTube channel: [Programming with Mosh](https://www.youtube.com/user/programmingwithmosh)
+  - YouTube channel: [Vision Academy](https://www.youtube.com/user/visionacademy)
+  - [Django Documentation](https://docs.djangoproject.com/en/4.2/)
+  - [Bootstrap 4 Documentation](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 
 ## Acknowledgements
-I would like to thank:
-
-- I want to express my gratitude to my mentor, David Bowers, for his invaluable feedback, advice, guidance, and unwavering support throughout this project.
+- I extend my heartfelt gratitude to my mentor, David Bowers, for his invaluable feedback, advice, guidance, and unwavering support throughout this project.
 - Special thanks to Kay Welfare, one of our cohort facilitators, for her valuable insights on course management, her direction towards a wealth of resources for project assistance, and her consistent presence in our informative Wednesday morning cohort discussions.
 - I am immensely thankful to the supportive Slack community, which has repeatedly stepped in to assist in resolving issues and overcoming challenges during implementation.
 - A heartfelt appreciation to the dedicated tutors at tutor support.
-- Lastly, I extend my thanks to my spouse for their encouragement and unwavering support throughout this journey.
+- Lastly, I want to express my thanks to my spouse, Saliha, for her encouragement and unwavering support throughout this journey.
