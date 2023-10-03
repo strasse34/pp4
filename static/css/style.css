@@ -303,12 +303,24 @@ div.container-fluid {
     line-height: 1;
 }
 
-.traveler-contact-img {
-    border-radius: 20px;
-    height:200px;
-    width:200px;
+.image-container {
+    text-align: center;
 }
 
+.traveler-contact-img {
+    border-radius: 20px;
+    height:160px;
+    width:160px;
+}
+
+.contact-container {
+    padding-left: 20px;
+
+}
+
+.flight-container {
+    padding-left: 20px;
+}
 /* style for add flight template ----------------------------------------------- */
 
 .form-control {
@@ -373,7 +385,18 @@ input {
     }
 }
 
+@media screen and (max-width: 992px) {
+    .contact-container {
+        padding-left: 0;
+        text-align: center;
 
+    }
+
+    .flight-container {
+        padding-left: 0;
+        text-align: center;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .user-name {

@@ -141,7 +141,7 @@ The search bar is available on both authenticated and unauthenticated home pages
 The upcoming flight list is identical for both authenticated and unauthenticated users. Each page displays six cards, and users can navigate between pages using a button at the bottom of the card space.
 ![Upcomming Flights page (home)](static/docs/images/screenshots/hompage.png)
 #### Flight Card in home page
-The flight cards on the home page feature the poster's username, the card's creation or update date, and essential flight details. Notably, traveler contact details are intentionally omitted. To access complete information, only registered users can click the 'Contact Traveler' button.
+The flight cards on the home page feature the poster's username, the card's creation or update date, and essential flight details. Notably, traveler contact details are intentionally omitted. To access complete information, only registered users can click the 'Contact Traveler' button.<br>
 ![Flight Card in home page](static/docs/images/screenshots/card-home.png)
 #### Quote 
 ![Quote section](static/docs/images/screenshots/quote.png)
@@ -153,7 +153,11 @@ This page showcases all the cards created by the logged-in user. It comprises bo
 #### Flight Card in my flights page
 Each card displays the traveler's photo, name, and contact information. Account holders can also post on behalf of travelers who are not registered on the website. When a user archives a card, effectively removing it from the homepage, the card is visually marked with the word 'Archived' at the top, and the 'edit' and 'archive' buttons are no longer displayed.
 ![Cards in my flights page](static/docs/images/screenshots/card-my-flights.png)
-#### Contact Traveler
+#### Edit Flight
+#### Archive Flight
+#### Delete Flight
+#### Contact Traveler page
+![Contact Traveler page](static/docs/images/screenshots/contact-traveler.png)
 #### Add Flight
 #### Edit Flight
 #### Register

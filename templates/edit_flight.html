@@ -8,12 +8,15 @@
 <div class="container">
     <div class="row mt-5">
         <div class="col-12 col-sm-8 col-lg-6 offset-md-2">
-            <h3><strong>Update flight details</strong></h3>
+            <h3><strong>Edit flight details</strong></h3>
             <form method="POST" class="form text-muted" action="{% url 'edit_flight' flight_details.slug %}" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
-                <button type="submit" class="btn btn-primary">Update</button>
-                <a href="{% url 'my_flights' %}" class="btn btn-secondary my-2">Cancel</a>
+                <div class="mb-4">
+                    <button type="submit" class="btn btn-primary">Update</button>
+                    <a href="{% url 'my_flights' %}" class="btn btn-secondary my-2">Cancel</a>
+                </div>
+                
             </form>
         </div>
     </div>
