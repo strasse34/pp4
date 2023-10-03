@@ -122,13 +122,14 @@ Githup was used to complete this project. The project was completed in 5 iterati
 ### Existing Features
 
 #### Header and Navigation
-**For Authenticated Users**
+**For authenticated users**
 ![Navbar and  header when user is not authenticated](static/docs/images/screenshots/navbar-not-auth.png)
-**For Unauthenticated Users**
+**For unauthenticated users**
 ![Navbar and  header when user is authenticated](static/docs/images/screenshots/navbar-auth.png)
 #### Alarm
 **Successful Message**
 ![Messages for successful operation](static/docs/images/screenshots/alarm-success.png)
+<br>
 **dismissed Message**
 ![Messages for unsuccessful operation](static/docs/images/screenshots/alarm-error.png)
 #### Hero Image
@@ -140,7 +141,7 @@ The search bar is available on both authenticated and unauthenticated home pages
 The upcoming flight list is identical for both authenticated and unauthenticated users. Each page displays six cards, and users can navigate between pages using a button at the bottom of the card space.
 ![Upcomming Flights page (home)](static/docs/images/screenshots/hompage.png)
 #### Flight Card in home page
-The flight cards in home page includes username of the poster and the general flight details. It does not include traveler contact details. Users can access the full information by clicking on 'Contact Traveler' button.
+The flight cards on the home page feature the poster's username, the card's creation or update date, and essential flight details. Notably, traveler contact details are intentionally omitted. To access complete information, only registered users can click the 'Contact Traveler' button.
 ![Flight Card in home page](static/docs/images/screenshots/card-home.png)
 #### Quote 
 ![Quote section](static/docs/images/screenshots/quote.png)

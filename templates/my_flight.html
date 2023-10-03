@@ -45,18 +45,26 @@
                         <p><strong>Phone No.: </strong>{{ flight_details.mobile_number }}</p>
                     </div>
                     <br>
-                    <div class="my-flight-card-buttons">
-                        {% if flight_details.status == 1 %}
-                        <div>
-                            <a href="{% url 'edit_flight' flight_details.slug %}" class="mb-1 col-12  btn btn-primary btn-sm">Edit Flight</a>
+                    <div class="container">
+                        <div class="row">
+                            {% if flight_details.status == 0 %}
+                            <div>
+                                <a href="{% url 'delete_flight' flight_details.slug %}" class="delet-button col-12 btn btn-danger btn-sm">Delete Flight</a>
+                            </div>
+                            {% else %}
+                            <div>
+                                <a href="{% url 'edit_flight' flight_details.slug %}" class="mb-1 col-12  btn btn-primary btn-sm">Edit Flight</a>
+                            </div >
+                            <div>
+                                <a href="{% url 'archive_flight' flight_details.slug %}" class="mb-1 col-12  btn btn-success btn-sm">Archive Flight</a>
+                            </div>
+                            
+                            <div>
+                                <a href="{% url 'delete_flight' flight_details.slug %}" class="col-12  btn btn-danger btn-sm">Delete Flight</a>
+                            </div>
+                            {% endif %}
                         </div>
-                        <div>
-                            <a href="{% url 'archive_flight' flight_details.slug %}" class="mb-1 col-12  btn btn-success btn-sm">Archive Flight</a>
-                        </div>
-                        {% endif %}
-                        <div>
-                            <a href="{% url 'delete_flight' flight_details.slug %}" class="col-12  btn btn-danger btn-sm">Delete Flight</a>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

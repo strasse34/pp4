@@ -275,10 +275,8 @@ div.container-fluid {
 
 /* style for my flights template---------------------------------------------- */
 
-.my-flight-card-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.delet-button {
+    margin-top: 26px;
 }
 
 
@@ -436,7 +434,9 @@ input {
         font-size: 1.5rem;
     }
 
-    
+    .delet-button {
+        margin-top: 0;
+    }
 }
 
 /* to prevent navbar borken in sumsung fold screen */
