@@ -12,7 +12,7 @@
             enctype="multipart/form-data">
                 {% csrf_token %}
                 <button type="submit" class="btn btn-danger">Delete</button>
-                <a href="{% url 'my_flights' %}" class="btn btn-secondary">Cancel</a>
+                <a href="{% url 'my_flights' %}" class="btn btn-secondary" aria-label="Button cancel">Cancel</a>
             </form>
         </div>
     </div>

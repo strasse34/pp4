@@ -49,18 +49,18 @@
                         <div class="row">
                             {% if flight_details.status == 0 %}
                             <div>
-                                <a href="{% url 'delete_flight' flight_details.slug %}" class="delet-button col-12 btn btn-danger btn-sm">Delete Flight</a>
+                                <a href="{% url 'delete_flight' flight_details.slug %}" class="delet-button col-12 btn btn-danger btn-sm" aria-label="Button delete flight">Delete Flight</a>
                             </div>
                             {% else %}
                             <div>
-                                <a href="{% url 'edit_flight' flight_details.slug %}" class="mb-1 col-12  btn btn-primary btn-sm">Edit Flight</a>
+                                <a href="{% url 'edit_flight' flight_details.slug %}" class="mb-1 col-12  btn btn-primary btn-sm" aria-label="Button edit flight">Edit Flight</a>
                             </div >
                             <div>
-                                <a href="{% url 'archive_flight' flight_details.slug %}" class="mb-1 col-12  btn btn-success btn-sm">Archive Flight</a>
+                                <a href="{% url 'archive_flight' flight_details.slug %}" class="mb-1 col-12  btn btn-success btn-sm" aria-label="Button archive flight">Archive Flight</a>
                             </div>
                             
                             <div>
-                                <a href="{% url 'delete_flight' flight_details.slug %}" class="col-12  btn btn-danger btn-sm">Delete Flight</a>
+                                <a href="{% url 'delete_flight' flight_details.slug %}" class="col-12  btn btn-danger btn-sm" aria-label="Button delete flight">Delete Flight</a>
                             </div>
                             {% endif %}
                         </div>

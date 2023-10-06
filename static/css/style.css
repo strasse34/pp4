@@ -1,6 +1,4 @@
-html {
-    height: 100%;
-}
+
 
 body {
     font-family:'Roboto', sans-serif;
@@ -75,7 +73,7 @@ body {
 
 /* style for base template---------------------------------------------- */
 .alarm-container-fluid {
-    margin-top: 58px;
+    margin-top: 82px;
 }
 
 .alert {
@@ -141,7 +139,7 @@ div.container-fluid {
     height: 70vh;
     width: 100%;
 
-    background: url(https://res.cloudinary.com/dn2dfatdi/image/upload/v1695113180/static/images/airplane.c444fb22c182.jpg) no-repeat top right fixed;
+    background: url(https://res.cloudinary.com/dn2dfatdi/image/upload/v1696617740/c6tdfjunpg5viia0rx9h.webp) no-repeat top right fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
