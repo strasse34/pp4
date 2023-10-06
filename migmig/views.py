@@ -153,17 +153,6 @@ class EditFlightView(LoginRequiredMixin, ContextMixin, UpdateView):
         form.instance.traveler = self.request.user
         flight_details = self.object 
 
-        # Generate the slug for the current form being submitted
-        current_slug_source = f"{form.instance.traveler}-{form.cleaned_data['fname']}-{form.cleaned_data['lname']}-{form.cleaned_data['origin']}-{form.cleaned_data['destination']}-{form.cleaned_data['flight_date']}"
-        current_slug = slugify(current_slug_source)
-
-        # Query the database to check for an existing flight with the same slug
-        existing_flight = FlightDetails.objects.filter(slug=current_slug, status=1).first()
-
-        if existing_flight:
-            messages.error(self.request, "You have already posted this flight.")
-            return render(self.request, 'edit_flight.html', {'flight_details': flight_details, 'form': form})
-
         flight_date = form.cleaned_data['flight_date']
 
         if flight_date > timezone.now().date():
