@@ -1,9 +1,14 @@
+html {
+    height: 100%;
+}
+
 body {
     font-family:'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     border: none;
 }
+
 
 /* style for navbar-------------------------------------------- */
 
@@ -136,7 +141,7 @@ div.container-fluid {
     height: 70vh;
     width: 100%;
 
-    /* background: url(https://res.cloudinary.com/dn2dfatdi/image/upload/v1695113180/static/images/c_limit,w_800/airplane.c444fb22c182.jpg) no-repeat top right fixed; */
+    background: url(https://res.cloudinary.com/dn2dfatdi/image/upload/v1695113180/static/images/airplane.c444fb22c182.jpg) no-repeat top right fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -348,7 +353,7 @@ input {
 /* style for footer ----------------------------------------------------------- */
 .footer {
     background-color: #f09d46;
-    color: #8d330f;
+    color: #682a11;
     padding: 10px;
 }
 
