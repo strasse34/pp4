@@ -7,7 +7,6 @@
 ## Performance and Accessibility
 
 For testing site performance and Accessibility, I used [google lighthouse.](https://developer.chrome.com/docs/lighthouse/overview/) In my initial test, I received a lower score due to several identified issues.
-
 **Desktop: Home Page**
 ![First lighthouse score: desktop](static/docs/images/testing/lighthouse-desktop-homepage-1.png)
 **Mobile: Home Page**
@@ -29,7 +28,6 @@ I identified and resolved the issue of duplicating Bootstrap CDNs in the HTML he
 
 In the quote section, I standardized the aspect ratios of images to maintain consistency. This not only improved visual appeal but also eliminated layout reflows, contributing to better performance. <Br>
 Below are the final results of google lighthouse score:
-
 **Desktop: Home Page**
 ![Final lighthouse score: descktop, home page](static/docs/images/testing/lighthouse-desktop-homepage-2.png)
 **Mobile: Home Page**
