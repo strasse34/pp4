@@ -6,24 +6,22 @@
 
 <!-- Banner which is shown for users who are not logged in -->
 {% if not user.is_authenticated %}
-<div class="container-fluid">
-    <section class="banner-container">
-        <div class="opaque-overlay">&nbsp;</div>
-            <div class="jumbotron m-4">
-                <h1 class="text-uppercase">
-                <strong>the fastest way to ship your small parcel</strong>
-                </h1>
-                <p>
-                <strong
-                    >We Connect those who have urgent parcel with travelers.</strong
-                >
-                </p>
-                <a class="btn btn-lg btn-primary" href="{% url 'account_signup' %}" aria-label="Button join us">
-                <strong>Join Us!</strong>
-                </a>
-            </div>
+<div class="banner-container">
+    <div class="opaque-overlay">&nbsp;</div>
+        <div class="jumbotron m-4">
+            <h1 class="text-uppercase">
+            <strong>the fastest way to ship your small parcel</strong>
+            </h1>
+            <p>
+            <strong
+                >We Connect those who have urgent parcel with travelers.</strong
+            >
+            </p>
+            <a class="btn btn-lg btn-primary" href="{% url 'account_signup' %}" aria-label="Button join us">
+            <strong>Join Us!</strong>
+            </a>
         </div>
-    </section>
+    
 </div>
 {% endif %}
 
@@ -48,9 +46,7 @@
                 <button type="submit" class="btn btn-primary col-12 ">Find Flights</button>
             </div>
         </form>
-        
     </div>
-    
 </div>
 
         
@@ -65,8 +61,8 @@
                 <div class="row pic-name-date">
                     <div class="col-12 col-sm-3">
                         <img src="{% static 'images/default-profile-pic.jpeg' %}" class="rounded-circle"
-                    height="50px"
-                    width="50px" alt="traveler">
+                    height="50"
+                    width="50" alt="traveler">
                     </div>
                     <div class="name-postdate col-12 col-sm-9">
                         <h5>{{ flight_details.traveler }}</h5>
@@ -99,7 +95,7 @@
     <div class="row">
         {% endif %}
         {% endfor %}
-    <div/>
+    </div>
     {% else %}
     <!-- When no flights match user search -->
     <div>

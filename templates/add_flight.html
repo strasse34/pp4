@@ -14,7 +14,7 @@
             <form id="myForm" method="POST" action="{% url 'add_flight' %}" class="form text-muted" enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ form | crispy }}
-                <div class="mb-4">
+                <div class="mb-4 mt-2">
                     <button type="submit" class="btn btn-primary">Submit</button>
                     <a href="{% url 'home' %}" class="btn btn-secondary my-2" aria-label="Button cancel">Cancel</a>
                 </div>

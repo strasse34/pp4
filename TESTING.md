@@ -5,7 +5,7 @@
 ## Table of Contents
 
 ## Performance and Accessibility
-
+### Initial Results
 For testing site performance and Accessibility, I used [google lighthouse.](https://developer.chrome.com/docs/lighthouse/overview/) In my initial test, I received a lower score due to several identified issues. <br>
 **Desktop: Home Page**<br>
 ![First lighthouse score: desktop](static/docs/images/testing/lighthouse-desktop-homepage-1.png)<br>
@@ -13,22 +13,22 @@ For testing site performance and Accessibility, I used [google lighthouse.](http
 ![First lighthouse score: mobile](static/docs/images/testing/lighthouse-mobile-homepage-1.png)
 <br>
 To enhance the performance and achieve a better score, I implemented the following changes:
+### Optimization
+**Hero Image Optimization**
+- **Image Compression:** The primary issue was with the hero image, which was too large. I compressed the image multiple times to reduce its file size.
+- **Image Format:** I converted the image format from JPG to WebP, which provides better compression without compromising quality.
+- **Responsive Images:** To optimize mobile performance, I used a smaller image specifically for the mobile version, ensuring faster loading on smaller screens.
 
-### Hero Image Optimization:
-
-Image Compression: The primary issue was with the hero image, which was too large. I compressed the image multiple times to reduce its file size.
-Image Format: I converted the image format from JPG to WebP, which provides better compression without compromising quality.
-Responsive Images: To optimize mobile performance, I used a smaller image specifically for the mobile version, ensuring faster loading on smaller screens.
-### Aria Labels:
-
+**Aria Labels**<br>
 I added aria-label attributes to all relevant links throughout the website. This enhances accessibility and ensures that screen readers provide meaningful descriptions for links.
-Bootstrap CDN Duplication:
 
+**Bootstrap CDN Duplication**<br>
 I identified and resolved the issue of duplicating Bootstrap CDNs in the HTML head section. By removing one of them, I streamlined the page loading process.
-### Image Ratio Standardization:
 
-In the quote section, I standardized the aspect ratios of images to maintain consistency. This not only improved visual appeal but also eliminated layout reflows, contributing to better performance. <Br>
-Below are the final results of google lighthouse score:<br>
+**Image Ratio Standardization**<br>
+In the quote section, I standardized the aspect ratios of images to maintain consistency. This not only improved visual appeal but also eliminated layout reflows, contributing to better performance.
+### Final Score after Optimisation
+Below are the final results of google lighthouse scores:<br>
 **Desktop: Home Page**<br>
 ![Final lighthouse score: descktop, home page](static/docs/images/testing/lighthouse-desktop-homepage-2.png)<br>
 **Mobile: Home Page**<br>
@@ -38,11 +38,17 @@ Below are the final results of google lighthouse score:<br>
 **Mobile: My Flight Page**<br>
 ![Final lighthouse score: mobile, my flight page](static/docs/images/testing/lighthouse-mobile-myflightpage.png)<br>
 
-
-
-
-
-
+## Code Validation
+### HTML Valication
+To validate my HTML code, I utilized the [W3C HTML Validator](https://validator.w3.org/). I encountered a few errors initially, but I was able to address and resolve each of them. <br>
+**Initial Validation:**<br>
+![HTML Initial validation](static/docs/images/testing/w3c-homepage-not-auth-1.png)
+**Final Validation:**<br>
+![HTML Final validation](static/docs/images/testing/w3c-homepage-not-auth-2.png)
+I got no error for all of other pages. 
+### CSS Validation
+I also ran my CSS file through the [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) and found that it had no issues or errors.
+![CSS file validation](static/docs/images/testing/w3c-css.png)
 
 
 

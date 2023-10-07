@@ -327,12 +327,11 @@ div.container-fluid {
 /* style for add flight template ----------------------------------------------- */
 
 .form-control {
-    margin-top: 5px;
+   margin-bottom: 10px;
 }
 
 input {
     width: 100%;
-    margin-top: 5px;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
     font-size: 1rem;
@@ -342,6 +341,14 @@ input {
     padding: 0.375rem 0.75rem;
 }
 
+.dateinput, .numberinput, .textinput {
+    margin-bottom: 10px;
+}
+.control-label requiredField{
+    display: inline-block;
+    font-size: medium;
+    margin-left: 5px;
+}
 #id_remember.checkboxinput {
     width: auto;
     height: auto;

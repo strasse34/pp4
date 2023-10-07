@@ -36,12 +36,12 @@ class AddFlightForm(forms.ModelForm):
 
 
     origin = forms.ChoiceField(
-        choices=CHOICES_ORIGIN, label='', 
+        choices=CHOICES_ORIGIN, label='From', 
         widget=forms.Select(attrs={'class': 'form-control'})
         )
     destination = forms.ChoiceField(
         choices=CHOICES_DESTINATION, 
-        label='', widget=forms.Select(attrs={'class': 'form-control'})
+        label='To', widget=forms.Select(attrs={'class': 'form-control'})
         )
     
 
@@ -62,26 +62,24 @@ class AddFlightForm(forms.ModelForm):
             
         ]
         labels = {
-            'fname': '',  
-            'lname': '',
-            'address': '',
-            'mobile_number': '',
-            'email': '',
+            'fname': "Traveler's First Name",  
+            'lname': "Traveler's Last Name",
+            'address': 'Address',
+            'mobile_number': 'Mobile Number',
+            'email': 'Email',
             'traveler_image': "Traveler's Image",
-            'origin': '',
-            'destination': '',
-            'flight_date': '',
-            'weight_capacity': '',
+            'flight_date': 'Flight Date',
+            'weight_capacity': 'Weight Capacity',
         }
         widgets = {
-            'fname': forms.TextInput(attrs={'placeholder': "Traveler First Name"}),
-            'lname': forms.TextInput(attrs={'placeholder': "Traveler Last Name"}),
+            'fname': forms.TextInput(attrs={'placeholder': "First Name"}),
+            'lname': forms.TextInput(attrs={'placeholder': "Last Name"}),
             'address': forms.TextInput(attrs={'placeholder': 'Address'}),
             'mobile_number': forms.TextInput(attrs={'placeholder': 'Mobile Number'}),
             'email': forms.TextInput(attrs={'placeholder': 'Email'}),
             'origin': forms.TextInput(),
             'destination': forms.TextInput(),
-            'flight_date': forms.DateInput(attrs={'type': 'date', 'placeholder': 'Flight Date' }),
+            'flight_date': forms.DateInput(attrs={'type': 'date' }),
             'weight_capacity': forms.NumberInput(attrs={'placeholder': 'Weight Capacity (kg)'}),
         }
 
