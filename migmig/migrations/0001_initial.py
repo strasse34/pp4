@@ -7,7 +7,6 @@ import django.db.models.deletion
 
 
 class Migration(migrations.Migration):
-
     initial = True
 
     dependencies = [
@@ -16,27 +15,58 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='FlightDetails',
+            name="FlightDetails",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('traveler_image', cloudinary.models.CloudinaryField(blank=None, default='placeholder', max_length=255, verbose_name='image')),
-                ('origin', models.CharField(blank=None, max_length=200)),
-                ('destination', models.CharField(blank=None, max_length=200)),
-                ('flight_date', models.DateField()),
-                ('weight_capacity', models.DecimalField(blank=None, decimal_places=2, max_digits=4)),
-                ('slug', models.SlugField(max_length=200, unique=True)),
-                ('created_on', models.DateTimeField(auto_now_add=True)),
-                ('updated_on', models.DateTimeField(auto_now=True)),
-                ('status', models.IntegerField(choices=[(1, 'Active'), (0, 'Archived')], default=1)),
-                ('fname', models.CharField(blank=None, max_length=50)),
-                ('lname', models.CharField(blank=None, max_length=50)),
-                ('mobile_number', models.CharField(blank=None, max_length=14)),
-                ('address', models.CharField(blank=None, max_length=200)),
-                ('email', models.EmailField(blank=None, max_length=254, unique=True)),
-                ('traveler', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='traveler', to=settings.AUTH_USER_MODEL)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "traveler_image",
+                    cloudinary.models.CloudinaryField(
+                        blank=None,
+                        default="placeholder",
+                        max_length=255,
+                        verbose_name="image",
+                    ),
+                ),
+                ("origin", models.CharField(blank=None, max_length=200)),
+                ("destination", models.CharField(blank=None, max_length=200)),
+                ("flight_date", models.DateField()),
+                (
+                    "weight_capacity",
+                    models.DecimalField(blank=None, decimal_places=2, max_digits=4),
+                ),
+                ("slug", models.SlugField(max_length=200, unique=True)),
+                ("created_on", models.DateTimeField(auto_now_add=True)),
+                ("updated_on", models.DateTimeField(auto_now=True)),
+                (
+                    "status",
+                    models.IntegerField(
+                        choices=[(1, "Active"), (0, "Archived")], default=1
+                    ),
+                ),
+                ("fname", models.CharField(blank=None, max_length=50)),
+                ("lname", models.CharField(blank=None, max_length=50)),
+                ("mobile_number", models.CharField(blank=None, max_length=14)),
+                ("address", models.CharField(blank=None, max_length=200)),
+                ("email", models.EmailField(blank=None, max_length=254, unique=True)),
+                (
+                    "traveler",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="traveler",
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
             ],
             options={
-                'ordering': ['-created_on'],
+                "ordering": ["-created_on"],
             },
         ),
     ]

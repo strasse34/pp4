@@ -5,15 +5,16 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('migmig', '0003_alter_flightdetails_traveler_image'),
+        ("migmig", "0003_alter_flightdetails_traveler_image"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='flightdetails',
-            name='traveler_image',
-            field=cloudinary.models.CloudinaryField(max_length=255, verbose_name='image'),
+            model_name="flightdetails",
+            name="traveler_image",
+            field=cloudinary.models.CloudinaryField(
+                max_length=255, verbose_name="image"
+            ),
         ),
     ]

@@ -4,20 +4,57 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('migmig', '0004_alter_flightdetails_traveler_image'),
+        ("migmig", "0004_alter_flightdetails_traveler_image"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='flightdetails',
-            name='destination',
-            field=models.CharField(blank=None, choices=[('', 'Placeholder'), ('Germany International Airport 1', 'Germany International Airport 1'), ('Germany International Airport 2', 'Germany International Airport 2'), ('Germany International Airport 3', 'Germany International Airport 3')], default='', max_length=200),
+            model_name="flightdetails",
+            name="destination",
+            field=models.CharField(
+                blank=None,
+                choices=[
+                    ("", "Placeholder"),
+                    (
+                        "Germany International Airport 1",
+                        "Germany International Airport 1",
+                    ),
+                    (
+                        "Germany International Airport 2",
+                        "Germany International Airport 2",
+                    ),
+                    (
+                        "Germany International Airport 3",
+                        "Germany International Airport 3",
+                    ),
+                ],
+                default="",
+                max_length=200,
+            ),
         ),
         migrations.AlterField(
-            model_name='flightdetails',
-            name='origin',
-            field=models.CharField(blank=None, choices=[('', 'Placeholder'), ('Germany International Airport 1', 'Germany International Airport 1'), ('Germany International Airport 2', 'Germany International Airport 2'), ('Germany International Airport 3', 'Germany International Airport 3')], default='', max_length=200),
+            model_name="flightdetails",
+            name="origin",
+            field=models.CharField(
+                blank=None,
+                choices=[
+                    ("", "Placeholder"),
+                    (
+                        "Germany International Airport 1",
+                        "Germany International Airport 1",
+                    ),
+                    (
+                        "Germany International Airport 2",
+                        "Germany International Airport 2",
+                    ),
+                    (
+                        "Germany International Airport 3",
+                        "Germany International Airport 3",
+                    ),
+                ],
+                default="",
+                max_length=200,
+            ),
         ),
     ]

@@ -46,11 +46,30 @@ To validate my HTML code, I utilized the [W3C HTML Validator](https://validator.
 **Final Validation:**<br>
 ![HTML Final validation](static/docs/images/testing/w3c-homepage-not-auth-2.png)
 I got no error for all of other pages. 
+
 ### CSS Validation
 I also ran my CSS file through the [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) and found that it had no issues or errors.
 ![CSS file validation](static/docs/images/testing/w3c-css.png)
 
+### JS Validation
+I used [JSHint](https://jshint.com/) to test the only function in my base template and below is the result:<br>
 
+![JS test](static/docs/images/testing/js.png)
+
+### Python Validation
+I used [CI Python Linter](https://pep8ci.herokuapp.com/) to validate my Python code and resolved all minor issues. Here are the final test results.
+**Admin**<br>
+![Python test: admin.py](static/docs/images/testing/admin.png)
+**Forms**<br>
+![Python test: forms.py](static/docs/images/testing/forms.png)
+**Models**<br>
+![Python test: models.py](static/docs/images/testing/model.png)
+**App Urls**<br>
+![Python test: app urls.py](static/docs/images/testing/app-url.png)
+**Views**<br>
+![Python test: views.py](static/docs/images/testing/views.png)
+**Project Urls**<br>
+![Python test: project url.py](static/docs/images/testing/project-url.png)
 
 
 

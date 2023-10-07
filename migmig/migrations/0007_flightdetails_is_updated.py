@@ -4,15 +4,14 @@ from django.db import migrations, models
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('migmig', '0006_auto_20230909_1003'),
+        ("migmig", "0006_auto_20230909_1003"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='flightdetails',
-            name='is_updated',
+            model_name="flightdetails",
+            name="is_updated",
             field=models.BooleanField(default=False),
         ),
     ]
