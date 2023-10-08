@@ -182,5 +182,9 @@ I conducted manual testing based on user stories, defining and testing multiple 
 | --- | --- | --- | --- |
 | Test Case 1: Verify Updated Date display | 1- Log in as a registered user. 2- Go to the My Flight page. 3- Locate a flight card you have posted. 4- Click on the "Edit Flight" button for that card. 5- Modify the card information. 6- Click the "Update" button to update the card. | The flight card should display an "Updated" label along with the date and time of the last modification. This label indicates that the flight card has been modified, and the updated date and time should accurately reflect the changes made. | Pass |
 
+## Browser Testing
 
-
+The application underwent testing on the following web browsers and functioned seamlessly without encountering any problems:
+- Chrome
+- Edge
+- Firefox
