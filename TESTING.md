@@ -120,6 +120,60 @@ I conducted manual testing based on user stories, defining and testing multiple 
 | Test Case 7:<br> Verify "Cancel" Button navigation| 1- Navigate to the Add Flight page.<br> 2- Heat the "Cancel" button. | User should be directed to the Home page. | Pass |
 <br>
 
+**User Story: As a guest visitor or authenticated user, I can search among available cards on the home page, so that I can find proper flight cards quickly and easily.**
+
+| **Test Case** | **Steps** | **Expected Result** | **Pass/Fail** |
+| --- | --- | --- | --- |
+| Test Case 1:<br> Search by selecting from dropdown list menu in search field | 1- Navigate to the Home page as a guest visitor or authenticated user.<br> 2- Click on the dropdown list menu within the search field at the top of the Home page.<br> 3- Select an airport from the list.<br> 4- Click on "Find Flight" button.<br> | The flight cards matching the search criteria should be displayed on the page. | Pass |
+| Test Case 2:<br> Search when there is no match | 1- Navigate to the Home page as a guest visitor or authenticated user.<br> 2- Click on the dropdown list menu within the search field at the top of the Home page.<br> 3- Select an airport from the list which is not included in any flight cards.<br> 4- Click on "Find Flight" button.<br> | The user should see a message on the page indicating "No flight was found!" as there are no matching flight cards for the search criteria. | Pass |
 
 
+**As a user, after authentication, I can see all of my cards on the 'My Flights' page that I have already posted, so that I can manage my flight cards easily.**
+
+| **Test Case** | **Steps** | **Expected Result** | **Pass/Fail** |
+| --- | --- | --- | --- |
+| Test Case 1: Reaching My Flights page from navigation | 1- Log in as a registered user.<br> 2- Navigate to the "My Flights" page using the navigation menu.<br> | The user should be directed to the My Flights page, displaying a all flight cards user has posted, both active and archived. | Pass |
+
+
+**User Story: As a user, after authentication, I can edit my posted cards. so that I can change the card information and repost it.**
+
+| **Test Case** | **Steps** | **Expected Result** | **Pass/Fail** |
+| --- | --- | --- | --- |
+| Test Case 1: Editing a Flight Card | 1- Log in as a registered user.<br>2- Go to the My Flight page.<br>3- Locate a flight card you have posted.<br>4- Click on the "Edit Flight" button for that card.<br>5- Modify the card information.<br>6- Click the "Update" button to update the card. | The card information should be updated, and the changes should be reflected on the card. A success message will be displayed. | Pass |
+| Test Case 2: Error when Origin and Destination are the same | 1- Log in as a registered user.<br>2- Go to the My Flight page.<br>3- Locate a flight card you have posted.<br>4- Click on the "Edit Flight" button for that card.<br>5- Set the origin and destination to be the same.<br>6- Click the "Update" button to update the card. | An error message should be displayed indicating that the origin and destination cannot be the same. The card should not be updated. | Pass |
+| Test Case 3: Error when Flight Date is in the past |  1- Log in as a registered user.<br>2- Go to the My Flight page.<br>3- Locate a flight card you have posted.<br>4- Click on the "Edit Flight" button for that card.<br>5- Set the Flight Date to previous date.<br>6- Click the "Update" button to update the card. | An error message should be displayed indicating that the flight date cannot be in the past. The card should not be updated. | Pass |
+| Test Case 4: Error when a Field is Empty | 1- Log in as a registered user.<br>2- Go to the My Flight page.<br>3- Locate a flight card you have posted.<br>4- Click on the "Edit Flight" button for that card.<br>5- Leave onr or more fields blank.<br>6- Click the "Update" button to update the card. | An error message should be displayed indicating that the empty field needs to be filled. The card should not be updated. | Pass |
+| Test Case 7:<br> Verify "Cancel" Button navigation| 1- Log in as a registered user.<br>2- Go to the My Flight page.<br>3- Locate a flight card you have posted.<br>4- Click on the "Edit Flight" button for that card.<br>5- Heat the "Cancel" button.| User should be directed to the Home page. | Pass |
+
+
+**As a user, after authentication, I can archive my posted cards so that I can hide those cards from public view.**
+| **Test Case** | **Steps** | **Expected Result** | **Pass/Fail** |
+| Test Case 1: Verify archiving a Card | 1- Log in to the web app as a registered user.<br>
+2- Navigate to the "My Flight" page.<br> 3- Locate one of your posted cards that you want to archive.<br>
+4- Click on the "Archive Flight" button associated with the card. | You are directed to another page to get confirmation. If you click on "Archive" button, The card should be successfully archived. The card should no longer be visible to other users on the public homepage. "Archived" word should be added at the top of the card and the buttons for Archive and Edit should be removed. If you click on "Cancel" button, you should be directed to My Flight page. | Pass |
+
+
+**As a user, after authentication, I can delete my posted cards, so that I can remove card information from the database.**
+| **Test Case** | **Steps** | **Expected Result** | **Pass/Fail** |
+| Test Case 1: Verify deleting a Card | 1- Log in to the web app as a registered user.<br>
+2- Navigate to the "My Flight" page.<br> 3- Locate one of your posted cards that you want to delete.<br>
+4- Click on the "Delete Flight" button associated with the card. | You are directed to another page to get confirmation. If you click on "Delete" button, The card should be successfully deleted. The card should no longer be visible to other users on the public homepage and your My Flight page. | Pass |
+
+
+
+As a user,
+I want flight cards to be archived when they cross the flight date.
+so that other users will not misunderstand outdated flight cards.
+
+As a logged in user,
+while filling out the form, I can select the airport from the dropdown list.
+so that I can find the origin and destination airports easily.
+
+As a user,
+after authentication, I can see my username on the website after login,
+so that I can be sure that I am logged in.
+
+As a user,
+I want to see the updated date after I or other users edit a card,
+So that I and other users will understand that the card has been modified.
 

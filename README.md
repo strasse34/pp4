@@ -105,15 +105,16 @@ The application was developed considering the four planes of User Experience:
 - As a logged-in user, I can click on flight cards, so that I can see the complete flight details and traveler's contact details.
 
 **EPIC-3: Manage cards**
+- As a user, after authentication, I can see all of my cards in My Flights page those I already posted, so that I can manage my flight cards easily.
 - As a user, after authentication, I can edit my posted cards. so that I can change the card information and repost it.
-- As a user, after authentication, I can archive my posted cards. so that I can move those cards from the public page to my flight page.
+- As a user, after authentication, I can archive my posted cards so that I can hide those cards from public view.
 - As a user, after authentication, I can delete my posted cards. so that I can remove card information from the database.
 - As a user, I want to see the updated date after I or other users edit a card, So that I and other users will understand that the card has been modified.
 - As a user, I want flight cards to be archived when they cross the flight date. so that other users will not misunderstand outdated flight cards.
 
 **EPIC-4: Landing page**
 - As a guest visitor user, I can see all the flight cards and other information on the first page, so that I can get familiar with the app and view the basic flight information.
-- As a guest visitor user, I can search among available cards, so that I can find proper flight cards quickly and easily.
+- As a guest visitor or authenticated user, I can search among available cards on the home page, so that I can find proper flight cards quickly and easily..
 
 
 #### Target Audience
