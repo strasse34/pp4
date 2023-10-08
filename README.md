@@ -12,6 +12,7 @@
    - [Project Goals](#project-goals)
    - [Database Design](#data-base-design)
    - [User Experience - UX](#user-experience---ux)
+      - [EPICS and User Stories](#epics-and-user-stories)
    - [Scope](#scope)
    - [Structure](#structure)
    - [Colors and Fonts Used](#colors-and-fonts-used)
