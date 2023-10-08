@@ -144,6 +144,7 @@ The website has 10 pages for the users who get registered.
 - **Edit Flight Page**  allows the authenticated user to edit their recorded cards.
 - **Archived Flight Page**  gets confirmation from an authenticated user for archiving a specific card.
 - **Delete Flight Page**  gets confirmation from an authenticated user for deleting a specific card.
+- **404 page** when a page gets problem and user can not reach it.
 
 ### Colors and Fonts used
 

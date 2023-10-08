@@ -71,6 +71,41 @@ I used [CI Python Linter](https://pep8ci.herokuapp.com/) to validate my Python c
 **Project Urls**<br>
 ![Python test: project url.py](static/docs/images/testing/project-url.png)
 
+## Manual Testing
+I conducted manual testing based on user stories, defining and testing multiple scenarios for each story.<br>
+
+<p style="background-color: #fae4b3; font-weight: bold;">User Story: As a user, I can make an account, so that I can use web app services.</p>
+
+
+| Test Case | Steps | Expected Result | Pass/Fail |
+| --- | ---- | --- | --- |
+| Test Case 1:<br> Verify Successful Register | 1- Navigate to the registration page.<br> 2- Fill in valid registration details.<br> 3- Click the "Register" button. | User should be redirected to the profile page with a success message. | Pass |
+| Test Case 2:<br> Verify Invalid Register Attempt | 1- Navigate to the registration page.<br> 2- Fill in incomplete or invalid registration details.<br> 3- Click the "Register" button. | User should see an error message indicating invalid registration data (e.g., incomplete form or existing username/email). | Pass |
+
+
+<p style="background-color: #fae4b3; font-weight: bold;">As a user, I can use my username and password, so that I can log in to my account.</p>
+
+| **Test Case** | **Steps** | **Expected Result** | **Pass/Fail** |
+| --- | --- | --- | --- |
+| Test Case 1:<br> Verify Successful Login | 1- Navigate to the login page.<br> 2- Enter valid username and password.<br> 3- Click the "Login" button. | User should be redirected to the dashboard or home page with a welcome message. | Pass |
+| Test Case 2:<br> Verify Invalid Login Attempt | 1- Navigate to the login page.<br> 2- Enter incorrect username or password.<br> 3- Click the "Login" button. | User should see an error message indicating invalid login credentials. | Pass |
+
+<p style="background-color: #fae4b3; font-weight: bold;">As a guest visitor user, I can see all the flight cards and other information on the first page, so that I can get familiar with the app and view the basic flight information.</p>
+
+| **Test Case** | **Steps** | **Expected Result** | **Pass/Fail** |
+| --- | --- | --- | --- |
+| Test Case 1:<br> Verify Viewing Flight Cards as a Guest | 1- Open the web app as a guest visitor (not logged in).<br> 2- Navigate to the homepage.<br> 3- Observe the flight cards including flight information and other information displayed on the first page. | All flight cards and relevant information are visible and accessible to the guest visitor on the first page. | Pass |
+| Test Case 2:<br> Verify Not navigation to travelers' contact information | 1- Open the web app as a guest visitor (not logged in).<br> 2- Navigate to the homepage.<br> 3- Click on button 'Contact Traveler' on each card. | The guest visitor can click on the button but he/she is redirected to the sign-up page instead of viewing the contact details. | Pass |
+| Test Case 3:<br> Verify Navigation to Registration Page | 1- Open the web app as a guest visitor (not logged in).<br> 2- Navigate to the homepage.<br> 3- Click on the "Join Us!" or similar button if available. | The guest visitors should be directed to the registration page where they can register for an account if they choose to do so. | Pass |
+
+<p style="background-color: #fae4b3; font-weight: bold;">As a logged-in user, I can click on flight cards, so that I can see the complete flight details and traveler's contact details.</p>
+
+| **Test Case** | **Steps** | **Expected Result** | **Pass/Fail** |
+| --- | --- | --- | --- |
+| Test Case 1:<br> Verify Viewing Home Page Including All Flight Cards | 1- Log in to the web app as a registered user. | The user should be able to log in and access the homepage containing all flight cards without encountering any errors or redirection issues. | Pass |
+| Test Case 2:<br> Verify Viewing Traveler's Contact Info | 1- Log in to the web app as a registered user.2- Click on the "Contact Traveler" button associated with a flight card. | The user should be able to click on the "Contact Traveler" button and redirected to 'Traveler Contact Details' page where there are the contact information of the traveler associated with the selected flight card, including name, email, or other contact details provided by the traveler. | Pass |
+| Test Case 3:<br> Verify Navigation Back to Flight Cards from Traveler's Contact Info | 1- Log in to the web app as a registered user.<br> 2- Click on the "Contact Traveler" button on one of the flight card to view traveler's contact info.<br> 3- After viewing traveler's contact info, click on a "home" navigation in navbar. | The user should be able to easily navigate back to the list of flight cards on the homepage after viewing traveler's contact info. | Pass |
+
 
 
 
