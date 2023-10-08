@@ -147,17 +147,17 @@ I conducted manual testing based on user stories, defining and testing multiple 
 
 
 **As a user, after authentication, I can archive my posted cards so that I can hide those cards from public view.**
-| **Test Case** | **Steps** | **Expected Result** | **Pass/Fail** |
-| Test Case 1: Verify archiving a Card | 1- Log in to the web app as a registered user.<br>
-2- Navigate to the "My Flight" page.<br> 3- Locate one of your posted cards that you want to archive.<br>
-4- Click on the "Archive Flight" button associated with the card. | You are directed to another page to get confirmation. If you click on "Archive" button, The card should be successfully archived. The card should no longer be visible to other users on the public homepage. "Archived" word should be added at the top of the card and the buttons for Archive and Edit should be removed. If you click on "Cancel" button, you should be directed to My Flight page. | Pass |
+
+| <td width="10%">**Test Case** </td>| <td width="40%">**Steps** </td>| <td width="40%">**Expected Result**</td> | <td width="10%">**Pass/Fail**</td>|
+| --- | --- | --- | --- |
+|<td width="10%"> Test Case 1: Verify archiving a Card </td>|<td width="40%"> 1- Log in to the web app as a registered user.<br> 2- Navigate to the "My Flight" page.<br> 3- Locate one of your posted cards that you want to archive.<br> 4- Click on the "Archive Flight" button associated with the card. </td>|<td width="40%"> You are directed to another page to get confirmation. If you click on "Archive" button, The card should be successfully archived. The card should no longer be visible to other users on the public homepage. "Archived" word should be added at the top of the card and the buttons for Archive and Edit should be removed. If you click on "Cancel" button, you should be directed to My Flight page.</td> |<td width="10%"> Pass </td>|
 
 
 **As a user, after authentication, I can delete my posted cards, so that I can remove card information from the database.**
+
 | **Test Case** | **Steps** | **Expected Result** | **Pass/Fail** |
-| Test Case 1: Verify deleting a Card | 1- Log in to the web app as a registered user.<br>
-2- Navigate to the "My Flight" page.<br> 3- Locate one of your posted cards that you want to delete.<br>
-4- Click on the "Delete Flight" button associated with the card. | You are directed to another page to get confirmation. If you click on "Delete" button, The card should be successfully deleted. The card should no longer be visible to other users on the public homepage and your My Flight page. | Pass |
+| --- | --- | --- | --- |
+| Test Case 1: Verify deleting a Card | 1- Log in to the web app as a registered user.<br> 2- Navigate to the "My Flight" page.<br> 3- Locate one of your posted cards that you want to delete.<br> 4- Click on the "Delete Flight" button associated with the card. | You are directed to another page to get confirmation. If you click on "Delete" button, The card should be successfully deleted. The card should no longer be visible to other users on the public homepage and your My Flight page. | Pass |
 
 
 
