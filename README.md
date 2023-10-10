@@ -4,7 +4,7 @@
 
 [Live webpage](https://migmig-bcca17837059.herokuapp.com/)
 
-[Repository](https://github.com/strasse34/pp4-migmig)
+[Repository](https://github.com/strasse34/pp4)
 
 # Table of Contents
 1. [Introduction](#introduction)
