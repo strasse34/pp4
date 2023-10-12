@@ -160,11 +160,26 @@ I have used two distinct fonts in my website design:
 - **Roboto:** For the main body text, I've chosen the 'Roboto' font. It's a popular and easy-to-read typeface that ensures a comfortable reading experience for visitors.
 
 #### Wireframes
-- [Home (Not authenticated)](static/docs/images/wireframes/home-not-login.png)
-- [Home (Authenticated)](static/docs/images/wireframes/home-loggedin.png)
-- [Add Flight](static/docs/images/wireframes/add-flight.png)
-- [My Flight](static/docs/images/wireframes/my-flight.png)
-- [Contact Traveler](static/docs/images/wireframes/contact-traveler.png)
+<details>
+<summary>Home (Not authenticated)</summary>
+<img src="static/docs/images/wireframes/home-not-login.png" >
+</details>
+<details>
+<summary>Home (Authenticated)</summary>
+<img src="static/docs/images/wireframes/home-loggedin.png" >
+</details>
+<details>
+<summary>Add Flight</summary>
+<img src="static/docs/images/wireframes/add-flight.png" >
+</details>
+<details>
+<summary>My Flight</summary>
+<img src="static/docs/images/wireframes/my-flight.png" >
+</details>
+<details>
+<summary>Contact Traveler</summary>
+<img src="static/docs/images/wireframes/contact-traveler.png" >
+</details>
 
 
 ## Agile Development
@@ -178,47 +193,92 @@ Githup was used to complete this project. The project was completed in 5 iterati
 
 ### Developed Features
 #### Header and Navigation
-**For authenticated users**
-![Navbar and  header when user is not authenticated](static/docs/images/screenshots/navbar-not-auth.png)
-**For unauthenticated users**
-![Navbar and  header when user is authenticated](static/docs/images/screenshots/navbar-auth.png)
+<details>
+<summary>For authenticated users</summary>
+<img src="static/docs/images/screenshots/navbar-not-auth.png" >
+</details>
+<details>
+<summary>For unauthenticated users</summary>
+<img src="static/docs/images/screenshots/navbar-auth.png" >
+</details>
 
 #### Alarm
-**Successful Message**
-![Messages for successful operation](static/docs/images/screenshots/alarm-success.png)<br>
-**dismissed Message**
-![Messages for unsuccessful operation](static/docs/images/screenshots/alarm-error.png)
+<details>
+<summary>Successful Message</summary>
+<img src="static/docs/images/screenshots/alarm-success.png" >
+</details>
+<details>
+<summary>Dismissed Message</summary>
+<img src="static/docs/images/screenshots/alarm-error.png" >
+</details>
+
 #### Hero Image
-![Hero image](static/docs/images/screenshots/banner.png)
+<details>
+<img src="static/docs/images/screenshots/banner.png" >
+</details>
+
 #### Page Title and Search bar
 The search bar is available on both authenticated and unauthenticated home pages. Users can select an airport from the list to find relevant flights. 
-![Page Title and Search bar](static/docs/images/screenshots/page-title-searchbar.png)
+<details>
+<img src="static/docs/images/screenshots/page-title-searchbar.png" >
+</details>
+
+
 #### Upcoming Flights (Home page)
 The upcoming flight list is identical for both authenticated and unauthenticated users. Each page displays six cards, and users can navigate between pages using a button at the bottom of the card space.
-![Upcomming Flights page (home)](static/docs/images/screenshots/hompage.png)
+<details>
+<img src="static/docs/images/screenshots/hompage.png" >
+</details>
+
 #### Flight Card on home page
-The flight cards on the home page feature the poster's username, the card's creation or update date, and essential flight details. Notably, traveler contact details are intentionally omitted. To access complete information, only registered users can click the 'Contact Traveler' button.<br>
-![Flight Card in home page](static/docs/images/screenshots/card-home.png)
+The flight cards on the home page feature the poster's username, the card's creation or update date, and essential flight details. Notably, traveler contact details are intentionally omitted. To access complete information, only registered users can click the 'Contact Traveler' button.
+<details>
+<img src="static/docs/images/screenshots/card-home.png" >
+</details>
+
 #### Quote 
-![Quote section](static/docs/images/screenshots/quote.png)
+<details>
+<img src="static/docs/images/screenshots/quote.png" >
+</details>
+
 #### Footer 
-![Footer](static/docs/images/screenshots/footer.png)
+<details>
+<img src="static/docs/images/screenshots/footer.png" >
+</details>
+
 #### Add Flight page
-![Add Flight page](static/docs/images/screenshots/add-flight.png)
+<details>
+<img src="static/docs/images/screenshots/add-flight.png" >
+</details>
+
 #### My Flights page
 This page showcases all the cards created by the logged-in user. It comprises both active cards (status=1, indicating flights with future dates still visible on the homepage) and archived cards (status=0, which can either be manually archived by the user or automatically when the flight date becomes outdated). Active cards offer three options for editing, archiving, and deleting, while archived cards have a single option for deletion.
-![My Flighs page](static/docs/images/screenshots/my-flights.png)
+<details>
+<img src="static/docs/images/screenshots/my-flights.png" >
+</details>
+
 #### Flight Card on my flights page
 Each card displays the traveler's photo, name, and contact information. Account holders can also post on behalf of travelers who are not registered on the website. When a user archives a card, effectively removing it from the homepage, the card is visually marked with the word 'Archived' at the top, and the 'edit' and 'archive' buttons are no longer displayed.
-![Cards in my flights page](static/docs/images/screenshots/card-my-flights.png)
+<details>
+<img src="static/docs/images/screenshots/card-my-flights.png" >
+</details>
+
 #### Edit, archive and delete pages
-![Edit, archive and delete pages](static/docs/images/screenshots/edit-archive-delete.png)
+<details>
+<img src="static/docs/images/screenshots/edit-archive-delete.png" >
+</details>
+
 #### Contact Traveler page
 On the Traveler's Contact Details page, you will find a single card. This card shares many similarities with the cards on the 'My Flights' page, featuring both flight details and traveler contact information. However, it is presented in a distinct style.
-![Contact traveler page](static/docs/images/screenshots/contact-traveler.png)
+<details>
+<img src="static/docs/images/screenshots/contact-traveler.png" >
+</details>
 
 #### All_Auth pages
-![All-auth pages](static/docs/images/screenshots/all-auth.png)
+<details>
+<img src="static/docs/images/screenshots/all-auth.png" >
+</details>
+
 
 ## Future Development
 

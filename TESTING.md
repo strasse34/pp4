@@ -7,11 +7,16 @@
 ## Performance and Accessibility
 ### Initial Results
 For testing site performance and Accessibility, I used [google lighthouse.](https://developer.chrome.com/docs/lighthouse/overview/) In my initial test, I received a lower score due to several identified issues. <br>
-**Desktop: Home Page**<br>
-![First lighthouse score: desktop](static/docs/images/testing/lighthouse-desktop-homepage-1.png)<br>
-**Mobile: Home Page**<Br>
-![First lighthouse score: mobile](static/docs/images/testing/lighthouse-mobile-homepage-1.png)
-<br>
+**Desktop: Home Page**
+<details>
+<img src="static/docs/images/testing/lighthouse-desktop-homepage-1.png" >
+</details>
+
+**Mobile: Home Page**
+<details>
+<img src="static/docs/images/testing/lighthouse-mobile-homepage-1.png" >
+</details>
+
 To enhance the performance and achieve a better score, I implemented the following changes:
 ### Optimization
 **Hero Image Optimization**
@@ -29,47 +34,86 @@ I identified and resolved the issue of duplicating Bootstrap CDNs in the HTML he
 In the quote section, I standardized the aspect ratios of images to maintain consistency. This not only improved visual appeal but also eliminated layout reflows, contributing to better performance.
 ### Final Score after Optimisation
 Below are the final results of google lighthouse scores:<br>
-**Desktop: Home Page**<br>
-![Final lighthouse score: descktop, home page](static/docs/images/testing/lighthouse-desktop-homepage-2.png)<br>
-**Mobile: Home Page**<br>
-![Final lighthouse score: mobile, home page](static/docs/images/testing/lighthouse-mobile-homepage-2.png)<br>
-**Desktop: My Flight Page**<br>
-![Final lighthouse score: descktop, my flight page](static/docs/images/testing/lighthouse-desktop-myflightpage.png)<br>
-**Mobile: My Flight Page**<br>
-![Final lighthouse score: mobile, my flight page](static/docs/images/testing/lighthouse-mobile-myflightpage.png)<br>
+**Desktop: Home Page**
+<details>
+<img src="static/docs/images/testing/lighthouse-desktop-homepage-2.png" >
+</details>
+
+**Mobile: Home Page**
+<details>
+<img src="static/docs/images/testing/lighthouse-mobile-homepage-2.png" >
+</details>
+
+**Desktop: My Flight Page**
+<details>
+<img src="static/docs/images/testing/lighthouse-desktop-myflightpage.png" >
+</details>
+
+**Mobile: My Flight Page**
+<details>
+<img src="static/docs/images/testing/lighthouse-mobile-myflightpage.png" >
+</details>
+
 
 ## Code Validation
 ### HTML Valication
 To validate my HTML code, I utilized the [W3C HTML Validator](https://validator.w3.org/). I encountered a few errors initially, but I was able to address and resolve each of them. <br>
-**Initial Validation:**<br>
-![HTML Initial validation](static/docs/images/testing/w3c-homepage-not-auth-1.png)
-**Final Validation:**<br>
-![HTML Final validation](static/docs/images/testing/w3c-homepage-not-auth-2.png)
-I got no error for all of other pages. 
+**Initial Validation:**
+<details>
+<img src="static/docs/images/testing/w3c-homepage-not-auth-1.png" >
+</details>
+
+**Final Validation:**
+<details>
+<img src="static/docs/images/testing/w3c-homepage-not-auth-2.png" >
+</details>
+
+I fixed these errors in other pages too. So no erros in other pages found. 
 
 ### CSS Validation
 I also ran my CSS file through the [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) and found that it had no issues or errors.
-![CSS file validation](static/docs/images/testing/w3c-css.png)
+<details>
+<img src="static/docs/images/testing/w3c-css.png" >
+</details>
 
 ### JS Validation
 I used [JSHint](https://jshint.com/) to test the only function in my base template and below is the result:<br>
-
-![JS test](static/docs/images/testing/js.png)
+<details>
+<img src="static/docs/images/testing/js.png" >
+</details>
 
 ### Python Validation
 I used [CI Python Linter](https://pep8ci.herokuapp.com/) to validate my Python code and resolved all minor issues. Here are the final test results.
-**Admin**<br>
-![Python test: admin.py](static/docs/images/testing/admin.png)
-**Forms**<br>
-![Python test: forms.py](static/docs/images/testing/forms.png)
-**Models**<br>
-![Python test: models.py](static/docs/images/testing/model.png)
-**App Urls**<br>
-![Python test: app urls.py](static/docs/images/testing/app-url.png)
-**Views**<br>
-![Python test: views.py](static/docs/images/testing/views.png)
+**Admin**
+<details>
+<img src="static/docs/images/testing/admin.png" >
+</details>
+
+**Forms**
+<details>
+<img src="static/docs/images/testing/forms.png" >
+</details>
+
+**Models**
+<details>
+<img src="static/docs/images/testing/model.png" >
+</details>
+
+**App Urls**
+<details>
+<img src="static/docs/images/testing/app-url.png" >
+</details>
+
+**Views**
+<details>
+<img src="static/docs/images/testing/views.png" >
+</details>
+
 **Project Urls**<br>
-![Python test: project url.py](static/docs/images/testing/project-url.png)
+<details>
+<img src="static/docs/images/testing/project-url.png" >
+</details>
+
 
 ## Manual Testing
 I conducted manual testing based on user stories, defining and testing multiple scenarios for each story.<br>
@@ -182,9 +226,26 @@ I conducted manual testing based on user stories, defining and testing multiple 
 | --- | --- | --- | --- |
 | Test Case 1: Verify Updated Date display | 1- Log in as a registered user. 2- Go to the My Flight page. 3- Locate a flight card you have posted. 4- Click on the "Edit Flight" button for that card. 5- Modify the card information. 6- Click the "Update" button to update the card. | The flight card should display an "Updated" label along with the date and time of the last modification. This label indicates that the flight card has been modified, and the updated date and time should accurately reflect the changes made. | Pass |
 
+
+## Bugs and Fixes
+| **Test Case** | **Steps** |
+| --- | --- |
+| Removing outdated card from HomeView did not work. | Although I had defined the state converter within the ContextMixin class, I had to invoke it within the HomeView class itself. |
+| Error with deployment | Debug set to 'True' in settings. |
+| Active tag in links did not work. | Defined a specific class for active. |
+| User name did not display in all logged-in pages. | Fixed the username tag in templates. |
+| `created_on` and `updated_on` were always the same date. | Added an `is_updated` field in the model to manage `created_on` and `updated_on` fields. |
+| Not uploading Traveler_image in the form | Added `enctype=multipart/form-data` to the form tag. |
+| Form did not save | Added quotations in the `action` attribute. |
+| Did not get slug-associated pages | Redefined the Model to create a unique slug. |
+| Pagination did not fix at the bottom of the page | Override CSS |
+
 ## Browser Testing
 
 The application underwent testing on the following web browsers and functioned seamlessly without encountering any problems:
 - Chrome
 - Edge
 - Firefox
+
+
+[Back to the README](README.md)
