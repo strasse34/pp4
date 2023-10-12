@@ -194,11 +194,11 @@ Githup was used to complete this project. The project was completed in 5 iterati
 ### Developed Features
 #### Header and Navigation
 <details>
-<summary>For authenticated users</summary>
+<summary>For unauthenticated users</summary>
 <img src="static/docs/images/screenshots/navbar-not-auth.png" >
 </details>
 <details>
-<summary>For unauthenticated users</summary>
+<summary>For authenticated users</summary>
 <img src="static/docs/images/screenshots/navbar-auth.png" >
 </details>
 

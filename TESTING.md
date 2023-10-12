@@ -17,8 +17,9 @@ For testing site performance and Accessibility, I used [google lighthouse.](http
 <img src="static/docs/images/testing/lighthouse-mobile-homepage-1.png" >
 </details>
 
-To enhance the performance and achieve a better score, I implemented the following changes:
+
 ### Optimization
+To enhance the performance and achieve a better score, I implemented the following changes:
 **Hero Image Optimization**
 - **Image Compression:** The primary issue was with the hero image, which was too large. I compressed the image multiple times to reduce its file size.
 - **Image Format:** I converted the image format from JPG to WebP, which provides better compression without compromising quality.
