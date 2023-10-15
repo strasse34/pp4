@@ -21,3 +21,4 @@ urlpatterns = [
     path("", include("migmig.urls"), name="migmig_urls"),
     path("accounts/", include("allauth.urls")),
 ]
+

@@ -249,3 +249,7 @@ class ArchiveFlightView(LoginRequiredMixin, ContextMixin, View):
         flight_details.save()
         messages.success(request, "Flight details archived successfully")
         return redirect("my_flights")
+
+
+
+   
