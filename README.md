@@ -146,7 +146,8 @@ The website has 10 pages for the users who get registered.
 - **Edit Flight Page**  allows the authenticated user to edit their recorded cards.
 - **Archived Flight Page**  gets confirmation from an authenticated user for archiving a specific card.
 - **Delete Flight Page**  gets confirmation from an authenticated user for deleting a specific card.
-- **404 page** when a page gets problem and user can not reach it.
+- **404 Page** is displayed when a user attempts to access a page that doesn't exist and then directs user to Home page.
+- **500 Page** appears when there is an internal server error and then directs user to Home page.
 
 ### Colors and Fonts used
 
@@ -281,7 +282,7 @@ On the Traveler's Contact Details page, you will find a single card. This card s
 
 
 ## Future Development
-
+In the early stages of app development, I envisioned several features that were beyond the scope of the pp4. These features have been earmarked for future development in future projects.
 - **Request Feature:** Travelers will receive requests from parcel holders, and only after a traveler's confirmation, will the parcel holder gain access to the traveler's contact information. Parcel holders can provide additional details about their parcels when sending a request to a traveler.
 - **Accept Request Feature:** Travelers have the option to accept or reject a request from a parcel holder.
 - **Payment Feature:** Adding a payment feature, ensuring payment before revealing the traveler's contact information to the parcel holder.

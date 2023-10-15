@@ -4,7 +4,7 @@
 {% block content %}
 <!-- Show flight details with full information -->
 <div class="container card-space">
-    <h4><strong>Traveler's Contact Details</strong></h4>
+    <h2><strong>Traveler's Contact Details</strong></h2>
     <div class="traveler-contact">
         <div class="row">
             <p style="font-size: small; margin: 0;">Posted on {{ flightinfo.created_on }}  By {{ flightinfo.traveler }}</p>
@@ -16,7 +16,7 @@
                              alt="traveler">
             </div>
             <div class="col-12 col-lg-4 contact-container">
-                <h4>Traveler's Contact Details:</h4>
+                <h3>Traveler's Contact Details:</h3>
                 <p><strong>Traveler Name: </strong>{{ flightinfo.fname | capfirst }} {{ flightinfo.lname | capfirst }}</p>
                 <p><strong>Address: </strong>{{ flightinfo.address }}</p>
                 <p><strong>Email Address: </strong>{{ flightinfo.email }}</p>
@@ -24,7 +24,7 @@
                 
             </div>
             <div class="col-12 col-lg-5 flight-container">
-                <h4>Flight Details:</h4>
+                <h3>Flight Details:</h3>
                 <p><strong>From: </strong>{{ flightinfo.origin }}</p>
                 <p><strong>To: </strong>{{ flightinfo.destination }}</p>
                 <p><strong>Flight Date: </strong>{{ flightinfo.flight_date }}</p>

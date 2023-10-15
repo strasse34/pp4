@@ -6,7 +6,7 @@
 
 <div class="container card-space">
     <div class="row" >
-        <h4><strong>My Flights</strong></h4>
+        <h2><strong>My Flights</strong></h2>
         <div class="row">
             {% if flightdetails_list %}
             {% for flight_details in flightdetails_list %}
@@ -21,9 +21,9 @@
                         </div>
                         <div class="name-postdate col-12 col-sm-9">
                             {% if flight_details.status == 0 %}
-                            <h5 style="color: green;"><strong>ARCHIVED</strong></h5>
+                            <h3 style="color: green;"><strong>ARCHIVED</strong></h3>
                             {% endif %}
-                        <h5><strong></strong>{{ flight_details.fname | capfirst }} {{ flight_details.lname | capfirst }}</h5>
+                        <h3><strong></strong>{{ flight_details.fname | capfirst }} {{ flight_details.lname | capfirst }}</h3>
                         {% if flight_details.is_updated %}
                             <p style="font-size: 0.7rem;">Updated on: {{ flight_details.updated_on }}</p>
                         {% else %}
@@ -33,13 +33,13 @@
                     </div>
                     <hr>
                     <div class="flight-details">
-                        <h6>Flight Details:</h6>
+                        <h4>Flight Details:</h4>
                         <p><strong>From: </strong>{{ flight_details.origin }}</p>
                         <p><strong>To: </strong>{{ flight_details.destination }}</p>
                         <p><strong>Flight Date: </strong>{{ flight_details.flight_date }}</p>
                         <p><strong>Weight Capacity: </strong>{{ flight_details.weight_capacity }} kg</p>
                         <br>
-                        <h6>Contact Details:</h6>
+                        <h4>Contact Details:</h4>
                         <p><strong>Address: </strong>{{ flight_details.address }}</p>
                         <p><strong>Email Address: </strong>{{ flight_details.email }}</p>
                         <p><strong>Phone No.: </strong>{{ flight_details.mobile_number }}</p>

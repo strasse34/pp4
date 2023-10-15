@@ -34,6 +34,7 @@ I identified and resolved the issue of duplicating Bootstrap CDNs in the HTML he
 **Image Ratio Standardization**<br>
 In the quote section, I standardized the aspect ratios of images to maintain consistency. This not only improved visual appeal but also eliminated layout reflows, contributing to better performance.
 ### Final Score after Optimisation
+The initial visit to the website might not yield the highest score due to browser caching. Typically, a better score can be achieved during subsequent visits after the browser has cached the necessary files.
 Below are the final results of google lighthouse scores:<br>
 **Desktop: Home Page**
 <details>

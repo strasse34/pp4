@@ -7,7 +7,9 @@ body {
     border: none;
 }
 
-
+h2 {
+    font-size: x-large;
+}
 /* style for navbar-------------------------------------------- */
 
 .navbar {
@@ -188,9 +190,9 @@ div.container-fluid {
     align-items: center;
 }
 
-.title h4{
+.title h2{
     margin-bottom: 0;
-    
+    font-size: x-large;
 }
 
 .index-title-search {
@@ -222,7 +224,7 @@ div.container-fluid {
     
 }
 
-.card h5 {
+.card h3 {
     
     font-weight: bold;
     font-size: 1rem;
@@ -230,7 +232,7 @@ div.container-fluid {
     margin: 0;
 }
 
-.card h6 {
+.card h4 {
     
     font-size: 0.9rem;
     padding: 0;
@@ -293,8 +295,8 @@ div.container-fluid {
 }
 
 
-.traveler-contact h4 {
-    
+.traveler-contact h3 {
+    font-size: large;
     margin-bottom: 15px;
 }
 
@@ -355,6 +357,10 @@ input {
     margin-top: 10px;
 }
 
+p .help-block{
+    color: red;
+}
+
 /* style for footer ----------------------------------------------------------- */
 .footer {
     background-color: #f09d46;
@@ -387,8 +393,8 @@ input {
         line-height: 1rem;
     }
 
-    .traveler-contact h4 {
-        font-size: medium;
+    .traveler-contact h3 {
+        font-size: large;
         
         margin-bottom: 10px;
         margin-top: 20px;
@@ -438,9 +444,9 @@ input {
         
     }
 
-    .traveler-contact h4 {
+    .traveler-contact h3 {
         font-size: medium;
-        
+        margin-top: 15px;
         
     }
 
