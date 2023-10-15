@@ -220,7 +220,7 @@ I conducted manual testing based on user stories, defining and testing multiple 
 
 | **Test Case** | **Steps** | **Expected Result** | **Pass/Fail** |
 | --- | --- | --- | --- |
-| Test Case 1: Verify automatic archiving of outdated a Flight Cards |1- Log in to the web app as a registered user. 2- Navigate to the Add Flight page. 3- Fill out all the required fields on the Add Flight form with valid information but set Flight Date field for tomorrow. 4- Click the "Add Flight" button. 5- Tomorrow check the card in Home page and your My Flight page. | The flight card with the modified flight date should be automatically archived since its flight date has passed. So it sould be removed from Home page but still exist in My Flights page with "Archived" title at the top of the card and removing "Edit Flight" and "Archive Flight" buttons.| Pass |
+| Test Case 1: Verify automatic archiving of outdated a Flight Cards |1- Log in to the web app as a registered user. 2- Navigate to the Add Flight page. 3- Fill out all the required fields on the Add Flight form with valid information but set Flight Date field for tomorrow. 4- Click the "Add Flight" button. 5- check the new card in home page and in your My Flight page. 6- The day after tomorrow check the card in Home page and in your My Flight page. | The flight card should be automatically archived since its flight date has passed. So it sould be removed from Home page but still exist in My Flights page with "Archived" title at the top of the card and removing "Edit Flight" and "Archive Flight" buttons.| Pass |
 
 
 **As a user, I want to see the updated date after I or other users edit a card. So that I and other users will understand that the card has been modified.**
