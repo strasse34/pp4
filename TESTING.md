@@ -19,7 +19,7 @@ For testing site performance and Accessibility, I used [google lighthouse.](http
 
 
 ### Optimization
-To enhance the performance and achieve a better score, I implemented the following changes:
+To enhance the performance and achieve a better score, I implemented the following changes:<br>
 **Hero Image Optimization**
 - **Image Compression:** The primary issue was with the hero image, which was too large. I compressed the image multiple times to reduce its file size.
 - **Image Format:** I converted the image format from JPG to WebP, which provides better compression without compromising quality.
@@ -198,8 +198,8 @@ I conducted manual testing based on user stories, defining and testing multiple 
 | Test Case 1: Editing a Flight Card | 1- Log in as a registered user. 2- Go to the My Flight page. 3- Locate a flight card you have posted. 4- Click on the "Edit Flight" button for that card. 5- Modify the card information. 6- Click the "Update" button to update the card. | The card information should be updated, and the changes should be reflected on the card. A success message will be displayed. | Pass |
 | Test Case 2: Error when Origin and Destination are the same | 1- Log in as a registered user. 2- Go to the My Flight page. 3- Locate a flight card you have posted. 4- Click on the "Edit Flight" button for that card. 5- Set the origin and destination to be the same. 6- Click the "Update" button to update the card. | An error message should be displayed indicating that the origin and destination cannot be the same. The card should not be updated. | Pass |
 | Test Case 3: Error when Flight Date is in the past |  1- Log in as a registered user. 2- Go to the My Flight page. 3- Locate a flight card you have posted. 4- Click on the "Edit Flight" button for that card. 5- Set the Flight Date to previous date. 6- Click the "Update" button to update the card. | An error message should be displayed indicating that the flight date cannot be in the past. The card should not be updated. | Pass |
-| Test Case 4: Error when a Field is Empty | 1- Log in as a registered user.<br>2- Go to the My Flight page.<br>3- Locate a flight card you have posted.<br>4- Click on the "Edit Flight" button for that card.<br>5- Leave onr or more fields blank.<br>6- Click the "Update" button to update the card. | An error message should be displayed indicating that the empty field needs to be filled. The card should not be updated. | Pass |
-| Test Case 7:<br> Verify "Cancel" Button navigation| 1- Log in as a registered user.<br>2- Go to the My Flight page.<br>3- Locate a flight card you have posted.<br>4- Click on the "Edit Flight" button for that card.<br>5- Heat the "Cancel" button.| User should be directed to the Home page. | Pass |
+| Test Case 4: Error when a Field is Empty | 1- Log in as a registered user. 2- Go to the My Flight page.<br>3- Locate a flight card you have posted. 4- Click on the "Edit Flight" button for that card. 5- Leave onr or more fields blank. 6- Click the "Update" button to update the card. | An error message should be displayed indicating that the empty field needs to be filled. The card should not be updated. | Pass |
+| Test Case 7:<br> Verify "Cancel" Button navigation| 1- Log in as a registered user. 2- Go to the My Flight page. 3- Locate a flight card you have posted. 4- Click on the "Edit Flight" button for that card.<br>5- Heat the "Cancel" button.| User should be directed to the Home page. | Pass |
 
 
 **User Story: As a user, after authentication, I can archive my posted cards. So that I can hide those cards from public view.**
@@ -230,7 +230,7 @@ I conducted manual testing based on user stories, defining and testing multiple 
 
 
 ## Bugs and Fixes
-| **Test Case** | **Steps** |
+| **Bugs** | **Fixes** |
 | --- | --- |
 | Removing outdated card from HomeView did not work. | Although I had defined the state converter within the ContextMixin class, I had to invoke it within the HomeView class itself. |
 | Error with deployment | Debug set to 'True' in settings. |
