@@ -409,9 +409,9 @@ To install all the packages listed in the requirements file, you can use the fol
 
 ### Code
 - I drew inspiration from the following resources:
-  - "I Think Therefore I Blog" (Please provide full name or source if available).
-  - "The WorldTravel Log" by [Ulrike Riemenschneider](https://github.com/URiem).
-  - "Jobs-A-Gooden" by [David Bowers](https://github.com/dnlbowers).
+  - "I Think Therefore I Blog" 
+  - "The WorldTravel Log" by [Ulrike Riemenschneider](https://github.com/URiem)
+  - "Jobs-A-Gooden" by [David Bowers](https://github.com/dnlbowers)
 
 - I frequently consulted the following resources during my project:
   - [Stack Overflow](https://stackoverflow.com)
